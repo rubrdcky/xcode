@@ -28,7 +28,7 @@
     
     [tableView setSortDescriptors:[NSArray arrayWithObjects:[[NSSortDescriptor alloc] initWithKey:KEY_PART ascending:YES], [[NSSortDescriptor alloc] initWithKey:KEY_WORKCENTER ascending:YES], nil]];
     
-    //[tableView setSortDescriptors:[NSArray arrayWithObjects:[[NSSortDescriptor alloc] initWithKey:KEY_WORKCENTER ascending:YES], nil]];
+    [tableView setSortDescriptors:[NSArray arrayWithObjects:[[NSSortDescriptor alloc] initWithKey:KEY_WORKCENTER ascending:YES], nil]];
     
     [partList addObserver:self forKeyPath:@"selectionIndexes" options:NSKeyValueObservingOptionNew context:nil];
     

@@ -15,8 +15,12 @@
 IBOutlet NSTableView *tableView;
 IBOutlet NSDictionaryController *dictController;
 IBOutlet NSArrayController *partList;
+//IBOutlet NSArrayController *workCenter;
 NSDictionary *currentPart;
+    IBOutlet NSArrayController *workCenter;
 }
+
+
 
 @property (retain) NSDictionary *currentPart;
 
