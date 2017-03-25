@@ -26,9 +26,9 @@
     NSString *path = [bundle pathForResource:@"LayoutList" ofType:@"plist"];
     NSArray *listFromFile = [NSMutableArray arrayWithContentsOfFile:path];
     
-    [tableView setSortDescriptors:[NSArray arrayWithObjects:[[NSSortDescriptor alloc] initWithKey:KEY_PART ascending:YES], [[NSSortDescriptor alloc] initWithKey:KEY_WORKCENTER ascending:YES], nil]];
+    [tableView setSortDescriptors:[NSArray arrayWithObjects:[[NSSortDescriptor alloc] initWithKey:KEY_PART ascending:YES], nil]];
     
-    [tableView setSortDescriptors:[NSArray arrayWithObjects:[[NSSortDescriptor alloc] initWithKey:KEY_WORKCENTER ascending:YES], nil]];
+    //[tableView setSortDescriptors:[NSArray arrayWithObjects:[[NSSortDescriptor alloc] initWithKey:KEY_WORKCENTER ascending:YES], nil]];
     
     [partList addObserver:self forKeyPath:@"selectionIndexes" options:NSKeyValueObservingOptionNew context:nil];
     
@@ -46,9 +46,6 @@
     NSString *partNumberLocalizedKey = NSLocalizedString(KEY_PART, @"");
     NSString *workcenterLocalizedKey = NSLocalizedString(KEY_WORKCENTER, @"");
     [dictController setLocalizedKeyDictionary:[NSDictionary dictionaryWithObjectsAndKeys:partNumberLocalizedKey,KEY_PART, workcenterLocalizedKey, KEY_WORKCENTER, nil]];
-    
-    //NSString *workcenterLocalizedKey = NSLocalizedString(KEY_WORKCENTER, @"");
-    //[dictController setLocalizedKeyDictionary:[NSDictionary dictionaryWithObjectsAndKeys:workcenterLocalizedKey,KEY_WORKCENTER, nil]];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context

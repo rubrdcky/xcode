@@ -753,10 +753,10 @@
                                             <string key="NSPredicateFormat">partNumber contains [cd] $value</string>
                                         </dictionary>
                                     </binding>
-                                    <binding destination="gud-q9-E62" name="predicate2" keyPath="filterPredicate" previousBinding="n9a-fT-FUz" id="Wlp-xd-6LB">
+                                    <binding destination="jyd-fc-XMn" name="predicate2" keyPath="filterPredicate" previousBinding="n9a-fT-FUz" id="4ej-oV-ykR">
                                         <dictionary key="options">
-                                            <string key="NSDisplayName">Work Center</string>
-                                            <string key="NSPredicateFormat">workCenter contains [cd] $value</string>
+                                            <string key="NSDisplayName">predicate2</string>
+                                            <string key="NSPredicateFormat">Workcenter contains [cd] $value</string>
                                         </dictionary>
                                     </binding>
                                 </connections>
@@ -820,7 +820,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <connections>
-                                                        <binding destination="gud-q9-E62" name="value" keyPath="arrangedObjects.Workcenter" id="XQS-uO-yfe">
+                                                        <binding destination="jyd-fc-XMn" name="value" keyPath="arrangedObjects.Workcenter" id="LCN-W7-JgL">
                                                             <dictionary key="options">
                                                                 <bool key="NSConditionallySetsEditable" value="NO"/>
                                                                 <bool key="NSContinuouslyUpdatesValue" value="YES"/>
@@ -865,12 +865,10 @@
                         <outlet property="dictController" destination="tbF-Hh-5Ym" id="Zqh-lW-DhO"/>
                         <outlet property="partList" destination="jyd-fc-XMn" id="2Vl-lE-HnD"/>
                         <outlet property="tableView" destination="nu6-Vp-t3h" id="whF-wo-QMc"/>
-                        <outlet property="workCenter" destination="gud-q9-E62" id="m8a-2M-oaa"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController id="jyd-fc-XMn"/>
-                <arrayController id="gud-q9-E62"/>
                 <dictionaryController objectClassName="_NSControllerKeyValuePair" id="tbF-Hh-5Ym"/>
             </objects>
             <point key="canvasLocation" x="25.5" y="661.5"/>
