@@ -46,6 +46,8 @@
     NSString *partNumberLocalizedKey = NSLocalizedString(KEY_PART, @"");
     NSString *workcenterLocalizedKey = NSLocalizedString(KEY_WORKCENTER, @"");
     [dictController setLocalizedKeyDictionary:[NSDictionary dictionaryWithObjectsAndKeys:partNumberLocalizedKey,KEY_PART, workcenterLocalizedKey, KEY_WORKCENTER, nil]];
+    
+    [self getDate];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -76,26 +78,37 @@
     return [tableView sortDescriptors];
 }
 
--(void)getDate
+-(int)getDate
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"EEEE"];
-    NSLog(@"The day of the week: %@", [dateFormatter stringFromDate:[NSDate date]]);
+    NSLog(@"The day of the week is: %@", [dateFormatter stringFromDate:[NSDate date]]);
     
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *comps = [gregorian components:NSCalendarUnitWeekday fromDate:[NSDate date]];
     int weekday = (int)[comps weekday];
     
     NSLog(@"The week day number: %d", weekday);
+    
+    return weekday;
 }
 
 - (IBAction)heartButton:(id)sender {
+    
+    if ([self getDate] == 1){
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle:@"Cancel"];
+        [alert addButtonWithTitle:@"I love You Too"];
+        [alert setMessageText:@""];
+        [alert runModal];
+    }else{
     
     NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"Cancel"];
     [alert addButtonWithTitle:@"I love You Too"];
     [alert setMessageText:@"I love you babycakes! \nYou are lookin' hot today"];
     [alert runModal];
+    }
 }
 
 @end

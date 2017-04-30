@@ -4,6 +4,16 @@
 <array>
 	<dict>
 		<key>collection</key>
+		<string>Tables</string>
+		<key>workcenter</key>
+		<string>48007</string>
+		<key>layout</key>
+		<string>4</string>
+		<key>partNumber</key>
+		<string>TM90-P</string>
+	</dict>
+	<dict>
+		<key>collection</key>
 		<string>Fire Tables</string>
 		<key>workcenter</key>
 		<string>48008</string>
