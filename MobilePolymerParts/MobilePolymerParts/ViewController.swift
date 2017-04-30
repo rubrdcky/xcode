@@ -14,15 +14,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        performSegue(withIdentifier: detailSequeIdentifier, sender: self)
-        
         print("You selected row # \([indexPath.row])")
         
         let detailPolymer = polymerParts[indexPath.row]
-        partNumberToPass = detailPolymer.partNumber
-        layoutToPass = detailPolymer.layout
-
         
+        let partNumber = detailPolymer.partNumber
+        let layout = detailPolymer.layout
+        
+        print("Part number from detail polymer is \(partNumber)")
+        print("Layout from detail polymer is \(layout)")
+        partNumberToPass = partNumber
+        layoutToPass = String(layout)
+
+        performSegue(withIdentifier: detailSequeIdentifier, sender: self)
         
     }
 }

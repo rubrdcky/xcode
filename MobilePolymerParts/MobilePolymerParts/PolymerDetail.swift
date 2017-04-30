@@ -14,20 +14,22 @@ class PolymerDetail: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     @IBOutlet weak var tableView: UITableView!
     let cellIdentifier = "Polymer Cell"
-    //var detail = [String]()
+    var detail = [String]()
     let category = ["PART NUMBER", "LAYOUT"]
     var partNumberPassed:String!
     var layoutPassed:String!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         
-        //detail = [partNumberPassed, layoutPassed]
+        detail = [partNumberPassed, layoutPassed]
         
-        navigationItem.title = "Part Detail"
+        navigationItem.title = "\(partNumberPassed) Detail"
+        navigationItem.hidesBackButton = false
         
-        let backItem = UIBarButtonItem()
-        backItem.title = "Back"
-        navigationItem.backBarButtonItem = backItem
+        //let backItem = UIBarButtonItem()
+        //backItem.title = "Back"
+        //navigationItem.backBarButtonItem = backItem
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,10 +42,10 @@ class PolymerDetail: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
-        cell.textLabel?.text = "Hello There"
+        //cell.textLabel?.text = "Hello There"
         
-        //cell.textLabel?.text = category[indexPath.row]
-        //cell.detailTextLabel?.text = detail[indexPath.row]
+        cell.textLabel?.text = category[indexPath.row]
+        cell.detailTextLabel?.text = detail[indexPath.row]
         
         return cell
     }
