@@ -15,37 +15,50 @@ class PolymerDetail: UIViewController, UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var tableView: UITableView!
     let cellIdentifier = "Polymer Cell"
     var detail = [String]()
-    let category = ["PART NUMBER", "LAYOUT"]
+    var detailSecond = [String]()
+    let category = ["WORKCENTER", "COLLECTION","PART NUMBER", "LAYOUT", "SECOND PART", "SECOND LAYOUT"]
     var partNumberPassed:String!
     var layoutPassed:String!
+    var workcenterPassed:String!
+    var collectionPassed:String!
+    var secondPartPassed:String!
+    var secondLayoutPassed:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        detail = [partNumberPassed, layoutPassed]
+        if (secondPartPassed == nil)
+        {
+            detail = [workcenterPassed, collectionPassed,partNumberPassed, layoutPassed]
+        }else{
+            detailSecond = [workcenterPassed, collectionPassed,partNumberPassed, layoutPassed, secondPartPassed, secondLayoutPassed]
+        }
         
-        navigationItem.title = "\(partNumberPassed) Detail"
-        navigationItem.hidesBackButton = false
-        
-        //let backItem = UIBarButtonItem()
-        //backItem.title = "Back"
-        //navigationItem.backBarButtonItem = backItem
+        navigationItem.title = partNumberPassed + " " + "Detail"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        //return detail.count
-        return category.count
+        
+        if (secondPartPassed == nil)
+        {
+            return detail.count
+        }else{
+            return detailSecond.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+
+            cell.textLabel?.text = category[indexPath.row]
         
-        //cell.textLabel?.text = "Hello There"
-        
-        cell.textLabel?.text = category[indexPath.row]
-        cell.detailTextLabel?.text = detail[indexPath.row]
+        if (secondPartPassed == nil){
+            cell.detailTextLabel?.text = detail[indexPath.row]
+        }else{
+            cell.detailTextLabel?.text = detailSecond[indexPath.row]
+        }
         
         return cell
     }

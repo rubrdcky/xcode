@@ -14,20 +14,58 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        print("You selected row # \([indexPath.row])")
+        if searchController.isActive &&
+            searchController.searchBar.text! != ""{
+            let detailPolymer = filteredPolymerParts[indexPath.row]
+            
+            let partNumber = detailPolymer.partNumber
+            let layout = detailPolymer.layout
+            let workcenter = detailPolymer.workcenter
+            let collection = detailPolymer.collection
+            let secondPart = detailPolymer.secondPart
+            let secondLayout = detailPolymer.secondLayout
+            
+            print("Part number from detail polymer is \(partNumber)")
+            print("Layout from detail polymer is \(layout)")
+            partNumberToPass = partNumber
+            layoutToPass = String(layout)
+            workcenterToPass = String(workcenter)
+            collectionToPass = collection
+            secondPartToPass = secondPart
+            secondLayoutToPass = secondLayout
+            
+            performSegue(withIdentifier: detailSequeIdentifier, sender: self)
+        }else{
         
-        let detailPolymer = polymerParts[indexPath.row]
+            print("You selected row # \([indexPath.row])")
         
-        let partNumber = detailPolymer.partNumber
-        let layout = detailPolymer.layout
+            let detailPolymer = polymerParts[indexPath.row]
         
-        print("Part number from detail polymer is \(partNumber)")
-        print("Layout from detail polymer is \(layout)")
-        partNumberToPass = partNumber
-        layoutToPass = String(layout)
+            let partNumber = detailPolymer.partNumber
+            let layout = detailPolymer.layout
+            let workcenter = detailPolymer.workcenter
+            let collection = detailPolymer.collection
+            let secondPart = detailPolymer.secondPart
+            let secondLayout = detailPolymer.secondLayout
+        
+            print("Part number from detail polymer is \(partNumber)")
+            print("Layout from detail polymer is \(layout)")
+            partNumberToPass = partNumber
+            layoutToPass = String(layout)
+            workcenterToPass = String(workcenter)
+            collectionToPass = collection
+            secondPartToPass = secondPart
+            secondLayoutToPass = secondLayout
 
-        performSegue(withIdentifier: detailSequeIdentifier, sender: self)
+            performSegue(withIdentifier: detailSequeIdentifier, sender: self)
+        }
         
+    }
+}
+
+extension ViewController : UISearchResultsUpdating{
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchText: searchController.searchBar.text!)
     }
 }
 
@@ -35,10 +73,16 @@ class ViewController: UIViewController {
     
     var currentIndexPath: NSIndexPath?
     var polymerParts: [Polymer] = []
+    var filteredPolymerParts = [Polymer]()
     weak var tableView: UITableView! //make it weak for memory consideration
     var partNumberToPass:String!
     var layoutToPass:String!
+    var workcenterToPass:String!
+    var collectionToPass:String!
+    var secondPartToPass:String!
+    var secondLayoutToPass:String!
     let detailSequeIdentifier = "detailSegue"
+    let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +102,12 @@ class ViewController: UIViewController {
         
         //Nav Bar Title
         navigationItem.title = "Polymer Parts"
+        
+        //SearchController Stuff
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,6 +117,10 @@ class ViewController: UIViewController {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        if searchController.isActive && searchController.searchBar.text! != ""{
+            return filteredPolymerParts.count
+        }
+        
         return polymerParts.count
     }
     
@@ -74,7 +128,13 @@ class ViewController: UIViewController {
         
         let polymer:Polymer
         
+        if searchController.isActive && searchController.searchBar.text! != ""{
+            polymer = filteredPolymerParts[indexPath.row]
+        }else{
+        
         polymer = polymerParts[indexPath.row]
+            
+        }
         
         //Instantiate the Cell && reuse cells
         let cellIdentifer = "PolymerCell"
@@ -88,13 +148,24 @@ class ViewController: UIViewController {
         return cell
     }
     
+    func filterContentForSearchText(searchText:String, scope:String = "All"){
+        filteredPolymerParts = polymerParts.filter{polymerParts in
+            return polymerParts.partNumber.lowercased().contains(searchText.lowercased())
+        }
+        
+        tableView.reloadData()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == detailSequeIdentifier {
             let viewController = segue.destination as! PolymerDetail
             
             viewController.partNumberPassed = partNumberToPass
             viewController.layoutPassed = layoutToPass
-            
+            viewController.workcenterPassed = workcenterToPass
+            viewController.collectionPassed = collectionToPass
+            viewController.secondPartPassed = secondPartToPass
+            viewController.secondLayoutPassed = secondLayoutToPass
             
             let backItem = UIBarButtonItem()
             backItem.title = "Back"
