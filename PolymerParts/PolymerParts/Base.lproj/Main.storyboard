@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -736,7 +736,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
-                            <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="716-o5-gOy">
+                            <searchField wantsLayer="YES" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="716-o5-gOy">
                                 <rect key="frame" x="15" y="325" width="184" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="184" id="q4Y-cX-mD8"/>
@@ -747,16 +747,16 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </searchFieldCell>
                                 <connections>
-                                    <binding destination="jyd-fc-XMn" name="predicate" keyPath="filterPredicate" id="n9a-fT-FUz">
+                                    <binding destination="jyd-fc-XMn" name="predicate2" keyPath="filterPredicate.workcenter" previousBinding="04f-yk-5g7" id="8QD-9d-Fkg">
+                                        <dictionary key="options">
+                                            <string key="NSDisplayName">predicate3</string>
+                                            <string key="NSPredicateFormat">workcenter contains [cd] $value</string>
+                                        </dictionary>
+                                    </binding>
+                                    <binding destination="jyd-fc-XMn" name="predicate" keyPath="filterPredicate" id="04f-yk-5g7">
                                         <dictionary key="options">
                                             <string key="NSDisplayName">Part Number</string>
                                             <string key="NSPredicateFormat">partNumber contains [cd] $value</string>
-                                        </dictionary>
-                                    </binding>
-                                    <binding destination="jyd-fc-XMn" name="predicate2" keyPath="filterPredicate" previousBinding="n9a-fT-FUz" id="4ej-oV-ykR">
-                                        <dictionary key="options">
-                                            <string key="NSDisplayName">predicate2</string>
-                                            <string key="NSPredicateFormat">Workcenter contains [cd] $value</string>
                                         </dictionary>
                                     </binding>
                                 </connections>
@@ -820,12 +820,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <connections>
-                                                        <binding destination="jyd-fc-XMn" name="value" keyPath="arrangedObjects.Workcenter" id="LCN-W7-JgL">
-                                                            <dictionary key="options">
-                                                                <bool key="NSConditionallySetsEditable" value="NO"/>
-                                                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
-                                                            </dictionary>
-                                                        </binding>
+                                                        <binding destination="jyd-fc-XMn" name="value" keyPath="arrangedObjects.workcenter" id="ONu-gB-9cX"/>
                                                     </connections>
                                                 </tableColumn>
                                             </tableColumns>

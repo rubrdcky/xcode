@@ -99,8 +99,16 @@
         NSAlert *alert = [[NSAlert alloc] init];
         [alert addButtonWithTitle:@"Cancel"];
         [alert addButtonWithTitle:@"I love You Too"];
-        [alert setMessageText:@""];
+        [alert setMessageText:@"You'll probably never see this one since it's Sunday \n If you do...quit working so hard!!!"];
         [alert runModal];
+    }else if([self getDate] == 2)
+    {
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle:@"Cancel"];
+        [alert addButtonWithTitle:@"I love You Too"];
+        [alert setMessageText:@"I hope your Monday goes swimmingly! \n I Love You!!"];
+        [alert runModal];
+        
     }else{
     
     NSAlert *alert = [[NSAlert alloc] init];

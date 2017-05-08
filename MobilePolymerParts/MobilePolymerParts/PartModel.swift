@@ -17,23 +17,10 @@ struct Polymer {
     let collection:String
     let secondPart:String?
     let secondLayout:String?
+    let thirdPart:String?
+    let thirdLayout:String?
     
-    /*init (workcenter:String, partNumber:String, layout:String, collection:String)
-    {
-        self.workcenter = workcenter
-        self.partNumber = partNumber
-        self.layout = layout
-        self.collection = collection
-    }*/
-    
-    /*init (workcenter:String, partNumber:String, layout:String, collection:String, secondPart:String = "Nothing Here")
-    {
-        self.workcenter = workcenter
-        self.partNumber = partNumber
-        self.layout = layout
-        self.collection = collection
-        self.secondPart = secondPart
-    }*/
+
 }
 
 //var polymerStruct = Polymer()
@@ -47,13 +34,17 @@ func from (dict: [String: AnyObject]) -> Polymer{
     let collection = dict["collection"] as! String
     let secondPart = dict["secondPart"] as! String?
     let secondLayout = dict["secondLayout"] as! String?
+    let thirdPart = dict["thirdPart"] as! String?
+    let thirdLayout = dict["thirdLayout"] as! String?
     
     return Polymer (workcenter: workcenter,
                     partNumber: partNumber,
                     layout: layout,
                     collection:collection,
                     secondPart:secondPart,
-                    secondLayout: secondLayout
+                    secondLayout: secondLayout,
+                    thirdPart: thirdPart,
+                    thirdLayout: thirdLayout
                     )
 }
 

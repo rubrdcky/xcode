@@ -16,7 +16,6 @@ IBOutlet NSTableView *tableView;
 IBOutlet NSDictionaryController *dictController;
 IBOutlet NSArrayController *partList;
 NSDictionary *currentPart;
-IBOutlet NSArrayController *workCenter;
 }
 
 
