@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  pcCell.swift
 //  TelescopeImagery
 //
 //  Created by Jacob Warren on 5/13/17.
@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+class pcCell : UICollectionViewCell{
+    
+    @IBOutlet weak var pcColorLabel: UILabel!
+    
+}
