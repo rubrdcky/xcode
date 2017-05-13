@@ -12,7 +12,7 @@
 		232F57011EC7396000E6CB7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232F56FF1EC7396000E6CB7A /* Main.storyboard */; };
 		232F57031EC7396000E6CB7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 232F57021EC7396000E6CB7A /* Assets.xcassets */; };
 		232F57061EC7396000E6CB7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232F57041EC7396000E6CB7A /* LaunchScreen.storyboard */; };
-		232F57101EC744C900E6CB7A /* Collections.plist in Resources */ = {isa = PBXBuildFile; fileRef = 232F570F1EC744C900E6CB7A /* Collections.plist */; };
+		232F57181EC75B2200E6CB7A /* mgpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232F57171EC75B2200E6CB7A /* mgpCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		232F57021EC7396000E6CB7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		232F57051EC7396000E6CB7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		232F57071EC7396000E6CB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		232F570F1EC744C900E6CB7A /* Collections.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Collections.plist; sourceTree = "<group>"; };
+		232F57171EC75B2200E6CB7A /* mgpCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mgpCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +56,9 @@
 		232F56FA1EC7396000E6CB7A /* TelescopeImagery */ = {
 			isa = PBXGroup;
 			children = (
+				232F57171EC75B2200E6CB7A /* mgpCell.swift */,
 				232F56FB1EC7396000E6CB7A /* AppDelegate.swift */,
 				232F56FD1EC7396000E6CB7A /* ViewController.swift */,
-				232F570F1EC744C900E6CB7A /* Collections.plist */,
 				232F56FF1EC7396000E6CB7A /* Main.storyboard */,
 				232F57021EC7396000E6CB7A /* Assets.xcassets */,
 				232F57041EC7396000E6CB7A /* LaunchScreen.storyboard */,
@@ -129,7 +129,6 @@
 			files = (
 				232F57061EC7396000E6CB7A /* LaunchScreen.storyboard in Resources */,
 				232F57031EC7396000E6CB7A /* Assets.xcassets in Resources */,
-				232F57101EC744C900E6CB7A /* Collections.plist in Resources */,
 				232F57011EC7396000E6CB7A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +142,7 @@
 			files = (
 				232F56FE1EC7396000E6CB7A /* ViewController.swift in Sources */,
 				232F56FC1EC7396000E6CB7A /* AppDelegate.swift in Sources */,
+				232F57181EC75B2200E6CB7A /* mgpCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
