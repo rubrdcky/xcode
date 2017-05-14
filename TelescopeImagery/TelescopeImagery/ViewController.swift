@@ -23,7 +23,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate
         
         if (collectionView == mgpCollectionView){
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mgpCell", for: indexPath) as! mgpCell
-            let cellColor = colorForIndexPath(indexPath: indexPath as NSIndexPath)
+            let cellColor = colorForMGPCollection(indexPath: indexPath as NSIndexPath)
             cell.backgroundColor = cellColor
             cell.mgpColorLabel.text = mgpAccents[indexPath.row]
             cell.mgpColorLabel.textColor = UIColor.black
@@ -31,7 +31,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate
             
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pcCell", for: indexPath) as! pcCell
-            let cellColor = colorForIndexPath(indexPath: indexPath as NSIndexPath)
+            let cellColor = colorForMGPCollection(indexPath: indexPath as NSIndexPath)
             cell.backgroundColor = cellColor
             cell.pcColorLabel.text = pcAccents[indexPath.row]
             cell.pcColorLabel.textColor = UIColor.black
@@ -77,6 +77,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var productCode:String!
     var productColor:String!
     var mgpHues = [UIColor.brown,UIColor.gray, UIColor.brown, UIColor.white, UIColor(red: 0.898, green: 0.702, blue: 0, alpha: 1.0), UIColor.black, UIColor.red, UIColor.blue, UIColor.cyan, UIColor.orange, UIColor.darkGray]
+    //var pcCollColors = [UIImage(named:"24.tif"),UIImage(named:"34.tif")]
     let mgpColors:Int = 11
     let pcColors:Int = 11
     
@@ -96,13 +97,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     func reloadProductLabel()
     {
+        
         if productAccent != nil && productCode != nil && productColor != nil{
-        productCodeLabel.text! = productCode+""+productColor+""+productAccent+""+"01"
+                productCodeLabel.text! = productCode+""+productColor+""+productAccent+""+"01"
+                chairImage.image = UIImage(named: "Configuration_"+""+productCodeLabel.text!+""+".png")
         } else {
             productCodeLabel.text = "Choose Accent Colors"
+                chairImage.image = UIImage(named:"telescope-Casual-square-logo.jpg")
         }
         
-        chairImage.image = UIImage(named: "Configuration_"+""+productCodeLabel.text!+""+".png")
+        //chairImage.image = UIImage(named: "Configuration_"+""+productCodeLabel.text!+""+".png")
         
     }
 
@@ -137,7 +141,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
         case 0:
             
-            URL = "https://www.telescopecasual.com/wp-content/uploads/IMAGE_MASTER/PRODUCTS/1208_1-580x391.jpg"
+            URL = "https://myroomsfurnituregallery.com/sites/default/files/styles/brand_page/public/brands/telescope-Casual-square-logo.jpg?itok=K5Hp1ZyA"
             
         case 1:
 
@@ -148,20 +152,20 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             URL = "https://www.telescopecasual.com/wp-content/uploads/IMAGE_MASTER/PRODUCTS/1716_1-580x391.jpg"
             
         default:
+            URL = "https://myroomsfurnituregallery.com/sites/default/files/styles/brand_page/public/brands/telescope-Casual-square-logo.jpg?itok=K5Hp1ZyA"
             
-            URL = "https://www.telescopecasual.com/wp-content/uploads/IMAGE_MASTER/PRODUCTS/1709_1-580x391.jpg"
     }
         if let url = NSURL(string:URL){
             if let data = NSData(contentsOf: url as URL){
                 chairImage.image = UIImage(data:data as Data)
                 //chairImage.contentMode = UIViewContentMode(rawValue: 2)!
-                chairImage.contentMode = .scaleAspectFit
+                //chairImage.contentMode = .scaleAspectFit
             }}
 
 
     }
     
-    func colorForIndexPath(indexPath: NSIndexPath) -> UIColor
+    func colorForMGPCollection(indexPath: NSIndexPath) -> UIColor
     {
         
         let hueValue:UIColor = mgpHues[indexPath.row]
@@ -169,6 +173,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return hueValue
         
     }
+    
+   /* func colorForPCColorCollection(indexPath:IndexPath) -> UIImage
+    {
+        
+        let pcCollPic:UIImage = pcCollColors[indexPath.row]!
+        
+        return pcCollPic
+        
+    }*/
     
     
 }
