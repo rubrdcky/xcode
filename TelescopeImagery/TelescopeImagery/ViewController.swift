@@ -13,9 +13,9 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if (collectionView == mgpCollectionView){
-            return mgpColors
+            return mgpAccents.count
         }else{
-            return pcColors
+            return pcAccents.count
         }
     }
     
@@ -31,11 +31,11 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate
             
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pcCell", for: indexPath) as! pcCell
-            cell.pcColorLabel.textColor = UIColor.white
-            cell.pcColorLabel.text = pcAccents[indexPath.row]
-            
             let cellColor = colorForIndexPath(indexPath: indexPath as NSIndexPath)
             cell.backgroundColor = cellColor
+            cell.pcColorLabel.text = pcAccents[indexPath.row]
+            cell.pcColorLabel.textColor = UIColor.black
+            
             return cell
         }
         
@@ -43,6 +43,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate
 
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //let cell  = collectionView.cellForItem(at: indexPath)
+        //cell?.layer.borderWidth = 4.0
+        //cell?.layer.borderColor = UIColor.black.cgColor
         
         //print("Selected cell number \(mgpAccents[indexPath.row])")
         if (collectionView == mgpCollectionView){
@@ -54,7 +58,6 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate
             reloadProductLabel()
         }
     }
-    
 }
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -66,7 +69,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var powdercoatCollectionView: UICollectionView!
     @IBOutlet weak var productCodeLabel: UILabel!
     
-    var pickerData = ["Collection:","Avant", "Bazza MGP Chair", "Playmouth Bay"]
+    var pickerData = ["Collection:","Avant", "Bazza MGP Chair", "Plymouth Bay"]
     let mgpAccents = ["P10", "P30", "P40", "P50", "P60", "P70", "PR0", "PA0", "PQ0", "PM0", "PN0"]
     var pcAccents = ["K", "J", "T", "5", "6", "D", "8", "A", "L"]
     var productCodeArray = ["Hello", "893", "8Z1", "1P9"]
@@ -75,7 +78,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var productColor:String!
     var mgpHues = [UIColor.brown,UIColor.gray, UIColor.brown, UIColor.white, UIColor(red: 0.898, green: 0.702, blue: 0, alpha: 1.0), UIColor.black, UIColor.red, UIColor.blue, UIColor.cyan, UIColor.orange, UIColor.darkGray]
     let mgpColors:Int = 11
-    let pcColors:Int = 9
+    let pcColors:Int = 11
     
     
     override func viewDidLoad() {
@@ -88,8 +91,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.powdercoatCollectionView.dataSource = self
         self.powdercoatCollectionView.delegate = self
         
-        reloadProductLabel()
-        
+        productCodeLabel.text = "Please Select a Collection"
     }
     
     func reloadProductLabel()
@@ -97,8 +99,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if productAccent != nil && productCode != nil && productColor != nil{
         productCodeLabel.text! = productCode+""+productColor+""+productAccent+""+"01"
         } else {
-            productCodeLabel.text = "Please Make a Selection"
+            productCodeLabel.text = "Choose Accent Colors"
         }
+        
+        chairImage.image = UIImage(named: "Configuration_"+""+productCodeLabel.text!+""+".png")
         
     }
 
@@ -133,11 +137,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
         case 0:
             
-                URL = "https://www.telescopecasual.com/wp-content/uploads/IMAGE_MASTER/PRODUCTS/1208_1-580x391.jpg"
+            URL = "https://www.telescopecasual.com/wp-content/uploads/IMAGE_MASTER/PRODUCTS/1208_1-580x391.jpg"
             
         case 1:
 
-                URL = "https://www.telescopecasual.com/wp-content/uploads/IMAGE_MASTER/PRODUCTS/1010_1-580x391.jpg"
+            URL = "https://www.telescopecasual.com/wp-content/uploads/IMAGE_MASTER/PRODUCTS/1010_1-580x391.jpg"
             
         case 2:
             
@@ -151,6 +155,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             if let data = NSData(contentsOf: url as URL){
                 chairImage.image = UIImage(data:data as Data)
                 //chairImage.contentMode = UIViewContentMode(rawValue: 2)!
+                chairImage.contentMode = .scaleAspectFit
             }}
 
 
@@ -158,12 +163,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     func colorForIndexPath(indexPath: NSIndexPath) -> UIColor
     {
-        if indexPath.row >= mgpColors
-        {
-            return UIColor.black
-        }
         
-        //let hueValue:CGFloat = CGFloat(indexPath.row)/CGFloat(mgpColors)
         let hueValue:UIColor = mgpHues[indexPath.row]
         
         return hueValue
