@@ -25,16 +25,30 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mgpCell", for: indexPath) as! mgpCell
             let cellColor = colorForMGPCollection(indexPath: indexPath as NSIndexPath)
             cell.backgroundColor = cellColor
+            if (cellColor == black || cellColor == kona || cellColor == navy)
+            {
+                cell.mgpColorLabel.textColor = UIColor.white
+            }else{
+                
+               cell.mgpColorLabel.textColor = UIColor.black
+            }
             cell.mgpColorLabel.text = mgpAccents[indexPath.row]
-            cell.mgpColorLabel.textColor = UIColor.black
+            
             return cell
             
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pcCell", for: indexPath) as! pcCell
-            let cellColor = colorForMGPCollection(indexPath: indexPath as NSIndexPath)
+            let cellColor = colorForPCColorCollection(indexPath: indexPath as NSIndexPath)
             cell.backgroundColor = cellColor
+            
+            if (cellColor == black || cellColor == kona || cellColor == agedBronze)
+            {
+                cell.pcColorLabel.textColor = UIColor.white
+            }else{
+                cell.pcColorLabel.textColor = UIColor.black
+            }
+
             cell.pcColorLabel.text = pcAccents[indexPath.row]
-            cell.pcColorLabel.textColor = UIColor.black
             
             return cell
         }
@@ -69,6 +83,23 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var powdercoatCollectionView: UICollectionView!
     @IBOutlet weak var productCodeLabel: UILabel!
     
+    var kona:UIColor = UIColor(red: 0.2588, green: 0.1569, blue: 0.0196, alpha: 1.0)
+    var beachwood:UIColor = UIColor(red: 0.439, green: 0.439, blue: 0.439, alpha: 1.0)
+    var graphite:UIColor = UIColor(red: 0.4863, green: 0.4118, blue: 0.1451, alpha: 1)
+    var white = UIColor.white
+    var desert:UIColor = UIColor(red: 0.8863, green: 0.7255, blue: 0, alpha: 1.0)
+    var black = UIColor.black
+    var red = UIColor.red
+    var atlantis:UIColor = UIColor(red: 0.0824, green: 0.2275, blue: 0.5686, alpha: 1.0)
+    var aqua:UIColor = UIColor(red: 0, green: 0.8157, blue: 1, alpha: 1.0)
+    var mango:UIColor = UIColor(red: 1, green: 0.4, blue: 0, alpha: 1.0)
+    var navy:UIColor = UIColor(red: 0.051, green: 0.149, blue: 0.3098, alpha: 1.0)
+    
+    var agedBronze:UIColor = UIColor(red: 0.3294, green: 0.1529, blue: 0.0627, alpha: 1.0)
+    var silver:UIColor = UIColor(red: 0.7176, green: 0.7098, blue: 0.6745, alpha: 1.0)
+    var snow:UIColor = UIColor(red: 0.9098, green: 0.898, blue: 0.8549, alpha: 1.0)
+    
+    
     var pickerData = ["Collection:","Avant", "Bazza MGP Chair", "Plymouth Bay Table", "Plymouth Bay Bench", "36in Fire Table"]
     let mgpAccents = ["P10", "P30", "P40", "P50", "P60", "P70", "PR0", "PA0", "PQ0", "PM0", "PN0"]
     var pcAccents = ["K", "J", "T", "5", "6", "D", "8", "A", "L"]
@@ -76,14 +107,18 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var productAccent:String!
     var productCode:String!
     var productColor:String!
-    var mgpHues = [UIColor.brown,UIColor.gray, UIColor.brown, UIColor.white, UIColor(red: 0.898, green: 0.702, blue: 0, alpha: 1.0), UIColor.black, UIColor.red, UIColor.blue, UIColor.cyan, UIColor.orange, UIColor.darkGray]
-    //var pcCollColors = [UIImage(named:"24.tif"),UIImage(named:"34.tif")]
+    var mgpHues = [UIColor]()
+    var pcCollColors = [UIColor]()
     let mgpColors:Int = 11
     let pcColors:Int = 11
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mgpHues = [kona, beachwood, graphite, white, desert, black, red, atlantis, aqua, mango, navy]
+        
+        pcCollColors = [kona, beachwood, graphite, white, snow, desert, black, agedBronze, silver]
         
         self.collectionPicker.dataSource = self
         self.collectionPicker.delegate = self
@@ -174,14 +209,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
-   /* func colorForPCColorCollection(indexPath:IndexPath) -> UIImage
+   func colorForPCColorCollection(indexPath:NSIndexPath) -> UIColor
     {
         
-        let pcCollPic:UIImage = pcCollColors[indexPath.row]!
+        let pcCollPic:UIColor = pcCollColors[indexPath.row]
         
         return pcCollPic
         
-    }*/
+    }
     
     
 }
