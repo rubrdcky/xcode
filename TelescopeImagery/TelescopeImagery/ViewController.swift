@@ -86,8 +86,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var productCodeLabel: UILabel!
     
     var kona:UIColor = UIColor(red: 0.2588, green: 0.1569, blue: 0.0196, alpha: 1.0)
-    var beachwood:UIColor = UIColor(red: 0.4863, green: 0.4118, blue: 0.1451, alpha: 1)
-    var graphite:UIColor = UIColor(red: 0.439, green: 0.439, blue: 0.439, alpha: 1.0)
+    var beachwood:UIColor = UIColor(red: 0.439, green: 0.439, blue: 0.439, alpha: 1.0)
+    var graphite:UIColor = UIColor(red: 0.4863, green: 0.4118, blue: 0.1451, alpha: 1)
     var white = UIColor.white
     var desert:UIColor = UIColor(red: 0.8863, green: 0.7255, blue: 0, alpha: 1.0)
     var black = UIColor.black
@@ -97,6 +97,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var mango:UIColor = UIColor(red: 1, green: 0.4, blue: 0, alpha: 1.0)
     var navy:UIColor = UIColor(red: 0.051, green: 0.149, blue: 0.3098, alpha: 1.0)
     
+
     var agedBronze:UIColor = UIColor(red: 0.3294, green: 0.1529, blue: 0.0627, alpha: 1.0)
     var silver:UIColor = UIColor(red: 0.7176, green: 0.7098, blue: 0.6745, alpha: 1.0)
     var snow:UIColor = UIColor(red: 0.9098, green: 0.898, blue: 0.8549, alpha: 1.0)
@@ -104,7 +105,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     var pickerData = ["Collection:","Avant", "Bazza MGP Chair", "Plymouth Bay Table", "Plymouth Bay Bench", "36in Fire Table"]
     let mgpAccents = ["P10", "P30", "P40", "P50", "P60", "P70", "PR0", "PA0", "PQ0", "PM0", "PN0"]
-    var pcAccents = ["K", "J", "T", "5", "6", "D", "8", "A", "L"]
+    var pcAccents = ["K", "T", "J", "5", "6", "D", "8", "A", "L"]
     var productCodeArray = ["Hello", "893", "8Z1", "1P9", "1P1", "3F6"]
     var productAccent:String!
     var productCode:String!
