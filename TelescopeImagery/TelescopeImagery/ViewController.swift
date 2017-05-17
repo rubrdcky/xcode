@@ -71,6 +71,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate
             productColor = String(pcAccents[indexPath.row])
             reloadProductLabel()
         }
+        
     }
 }
 
@@ -78,14 +79,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     
     @IBOutlet weak var chairImage: UIImageView!
+    @IBOutlet weak var telescopeImage: UIImageView!
     @IBOutlet weak var collectionPicker: UIPickerView!
     @IBOutlet weak var mgpCollectionView: UICollectionView!
     @IBOutlet weak var powdercoatCollectionView: UICollectionView!
     @IBOutlet weak var productCodeLabel: UILabel!
     
     var kona:UIColor = UIColor(red: 0.2588, green: 0.1569, blue: 0.0196, alpha: 1.0)
-    var beachwood:UIColor = UIColor(red: 0.439, green: 0.439, blue: 0.439, alpha: 1.0)
-    var graphite:UIColor = UIColor(red: 0.4863, green: 0.4118, blue: 0.1451, alpha: 1)
+    var beachwood:UIColor = UIColor(red: 0.4863, green: 0.4118, blue: 0.1451, alpha: 1)
+    var graphite:UIColor = UIColor(red: 0.439, green: 0.439, blue: 0.439, alpha: 1.0)
     var white = UIColor.white
     var desert:UIColor = UIColor(red: 0.8863, green: 0.7255, blue: 0, alpha: 1.0)
     var black = UIColor.black
@@ -110,7 +112,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var mgpHues = [UIColor]()
     var pcCollColors = [UIColor]()
     let mgpColors:Int = 11
-    let pcColors:Int = 11
+    let pcColors:Int = 9
     
     
     override func viewDidLoad() {
@@ -134,14 +136,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     {
         
         if productAccent != nil && productCode != nil && productColor != nil{
+            
                 productCodeLabel.text! = productCode+""+productColor+""+productAccent+""+"01"
                 chairImage.image = UIImage(named: "Configuration_"+""+productCodeLabel.text!+""+".png")
+            
+                self.telescopeImage.image = nil
+            
         } else {
-            productCodeLabel.text = "Choose Accent Colors"
-                chairImage.image = UIImage(named:"telescope-Casual-square-logo.jpg")
+            
+                productCodeLabel.text = "Please Select Accent Colors"
+                telescopeImage.image = UIImage(named:"telescope-Casual-square-logo.jpg")
         }
-        
-        //chairImage.image = UIImage(named: "Configuration_"+""+productCodeLabel.text!+""+".png")
         
     }
 
@@ -168,12 +173,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        let URL:String
+        //let URL:String
         productCode = productCodeArray[row]
         reloadProductLabel()
         
-        switch row {
-            
+        /*switch row {
+        
         case 0:
             
             URL = "https://myroomsfurnituregallery.com/sites/default/files/styles/brand_page/public/brands/telescope-Casual-square-logo.jpg?itok=K5Hp1ZyA"
@@ -198,7 +203,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }}
 
 
-    }
+    */}
     
     func colorForMGPCollection(indexPath: NSIndexPath) -> UIColor
     {
