@@ -115,6 +115,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     let mgpColors:Int = 11
     let pcColors:Int = 9
     
+    let imageURL = "https://www.dropbox.com/sh/ivwwuc1n579u96p/AACEIn1lzlwIc6ACnRLWhilWa?dl=0"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -141,6 +143,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 productCodeLabel.text! = productCode+""+productColor+""+productAccent+""+"01"
                 chairImage.image = UIImage(named: "Configuration_"+""+productCodeLabel.text!+""+".png")
             
+            /*if let url = NSURL(string:imageURL){
+                if let data = NSData(contentsOf: url as URL){
+                    chairImage.image = UIImage(data:data as Data)
+                }
+            }*/
                 self.telescopeImage.image = nil
             
         } else {
@@ -174,13 +181,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        let URL:String
-        var URLVariance:String
+        //let URL:String = " "
+        //var URLVariance:String
         productCode = productCodeArray[row]
         reloadProductLabel()
         
-        URL = ""
-        URLVariance = "Configuration_"+""+productCodeLabel.text!+""+".png"
+        //URLVariance = "Configuration_"+""+productCodeLabel.text!+""+".png"
         
         /*switch row {
         
@@ -199,13 +205,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         default:
             URL = "https://myroomsfurnituregallery.com/sites/default/files/styles/brand_page/public/brands/telescope-Casual-square-logo.jpg?itok=K5Hp1ZyA"
             
-    }*/
+    }
         if let url = NSURL(string:URL){
             if let data = NSData(contentsOf: url as URL){
                 chairImage.image = UIImage(data:data as Data)
                 //chairImage.contentMode = UIViewContentMode(rawValue: 2)!
                 //chairImage.contentMode = .scaleAspectFit
-            }}
+            }}*/
 
 
     }
