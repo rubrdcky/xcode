@@ -174,9 +174,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        //let URL:String
+        let URL:String
+        var URLVariance:String
         productCode = productCodeArray[row]
         reloadProductLabel()
+        
+        URL = ""
+        URLVariance = "Configuration_"+""+productCodeLabel.text!+""+".png"
         
         /*switch row {
         
@@ -195,7 +199,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         default:
             URL = "https://myroomsfurnituregallery.com/sites/default/files/styles/brand_page/public/brands/telescope-Casual-square-logo.jpg?itok=K5Hp1ZyA"
             
-    }
+    }*/
         if let url = NSURL(string:URL){
             if let data = NSData(contentsOf: url as URL){
                 chairImage.image = UIImage(data:data as Data)
@@ -204,7 +208,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }}
 
 
-    */}
+    }
     
     func colorForMGPCollection(indexPath: NSIndexPath) -> UIColor
     {
