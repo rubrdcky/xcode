@@ -63,7 +63,7 @@
                                         <rect key="frame" x="13.5" y="0.0" width="77" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="77" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="78" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb1-3g-AMo">
@@ -245,7 +245,7 @@
                                             <constraint firstAttribute="bottom" secondItem="o28-fa-jtp" secondAttribute="bottom" id="L27-QG-PPQ"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="mgpColorLabel" destination="o28-fa-jtp" id="cuh-lF-ziL"/>
+                                            <outlet property="patternNumberLabel" destination="o28-fa-jtp" id="UP2-Vf-4eo"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

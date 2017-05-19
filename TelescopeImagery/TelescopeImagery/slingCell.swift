@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 
-class slingCell : UICollectionViewCell{
+class slingCell: UICollectionViewCell{
     
     
-    
+    @IBOutlet weak var patternNumberLabel: UILabel!
+   
 }
