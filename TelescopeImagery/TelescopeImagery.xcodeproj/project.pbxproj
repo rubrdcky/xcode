@@ -14,6 +14,7 @@
 		232F57061EC7396000E6CB7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232F57041EC7396000E6CB7A /* LaunchScreen.storyboard */; };
 		232F57181EC75B2200E6CB7A /* mgpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232F57171EC75B2200E6CB7A /* mgpCell.swift */; };
 		2359F1951EC7A46300D8584E /* pcCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2359F1941EC7A46300D8584E /* pcCell.swift */; };
+		237DDD8A1ECF05F800DC93EF /* slingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DDD891ECF05F800DC93EF /* slingCell.swift */; };
 		238740DF1ECBD5D10028BCFD /* Sling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238740DE1ECBD5D10028BCFD /* Sling.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		232F57071EC7396000E6CB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		232F57171EC75B2200E6CB7A /* mgpCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mgpCell.swift; sourceTree = "<group>"; };
 		2359F1941EC7A46300D8584E /* pcCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pcCell.swift; sourceTree = "<group>"; };
+		237DDD891ECF05F800DC93EF /* slingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = slingCell.swift; sourceTree = "<group>"; };
 		238740DE1ECBD5D10028BCFD /* Sling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 			children = (
 				232F57171EC75B2200E6CB7A /* mgpCell.swift */,
 				2359F1941EC7A46300D8584E /* pcCell.swift */,
+				237DDD891ECF05F800DC93EF /* slingCell.swift */,
 				232F56FB1EC7396000E6CB7A /* AppDelegate.swift */,
 				232F56FD1EC7396000E6CB7A /* ViewController.swift */,
 				238740DE1ECBD5D10028BCFD /* Sling.swift */,
@@ -149,6 +152,7 @@
 				238740DF1ECBD5D10028BCFD /* Sling.swift in Sources */,
 				232F56FE1EC7396000E6CB7A /* ViewController.swift in Sources */,
 				232F56FC1EC7396000E6CB7A /* AppDelegate.swift in Sources */,
+				237DDD8A1ECF05F800DC93EF /* slingCell.swift in Sources */,
 				2359F1951EC7A46300D8584E /* pcCell.swift in Sources */,
 				232F57181EC75B2200E6CB7A /* mgpCell.swift in Sources */,
 			);

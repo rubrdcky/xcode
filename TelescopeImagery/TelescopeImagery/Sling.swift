@@ -16,12 +16,14 @@ extension Sling: UICollectionViewDataSource, UICollectionViewDelegate
             return pcAccents.count
         }else{
             
-            return 1 //need sling array here
+            return 25 //need sling array here
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        
+        if (collectionView == pcCollectionView){
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pcCell", for: indexPath) as! pcCell
             let cellColor = colorForPCColorCollection(indexPath: indexPath as NSIndexPath)
             cell.backgroundColor = cellColor
@@ -36,6 +38,12 @@ extension Sling: UICollectionViewDataSource, UICollectionViewDelegate
             cell.pcColorLabel.text = pcAccents[indexPath.row]
             
             return cell
+        }else{
+            
+            
+            
+            return cell
+        }
     }
 }
 
@@ -43,6 +51,8 @@ class Sling: UIViewController
 {
     
     @IBOutlet weak var pcCollectionView: UICollectionView!
+    
+    @IBOutlet weak var slingCollectionView: UICollectionView!
     
     var kona:UIColor = UIColor(red: 0.2588, green: 0.1569, blue: 0.0196, alpha: 1.0)
     var beachwood:UIColor = UIColor(red: 0.439, green: 0.439, blue: 0.439, alpha: 1.0)
