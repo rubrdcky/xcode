@@ -16,7 +16,7 @@ extension Sling: UICollectionViewDataSource, UICollectionViewDelegate
             return pcAccents.count
         }else{
             
-            return 25 //need sling array here
+            return slingPats.count //need sling array here
         }
     }
     
@@ -37,10 +37,17 @@ extension Sling: UICollectionViewDataSource, UICollectionViewDelegate
             
             cell.pcColorLabel.text = pcAccents[indexPath.row]
             
+            
             return cell
         }else{
             
+            let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "slingCell", for: indexPath) as! slingCell
             
+            let imageString:String = slingPats[indexPath.row]
+            
+            patImage.patImageView.image = UIImage(named: "\(imageString)" + "" + ".jpg")
+            
+            cell.contentView.addSubview(patImage)
             
             return cell
         }
@@ -53,6 +60,10 @@ class Sling: UIViewController
     @IBOutlet weak var pcCollectionView: UICollectionView!
     
     @IBOutlet weak var slingCollectionView: UICollectionView!
+    
+    @IBOutlet weak var slingProductCodeLabel: UILabel!
+    
+    var patImage = slingCell()
     
     var kona:UIColor = UIColor(red: 0.2588, green: 0.1569, blue: 0.0196, alpha: 1.0)
     var beachwood:UIColor = UIColor(red: 0.439, green: 0.439, blue: 0.439, alpha: 1.0)
@@ -67,6 +78,7 @@ class Sling: UIViewController
     var pcCollColors = [UIColor]()
     
     var pcAccents = ["K", "T", "J", "5", "6", "D", "8", "A", "L"]
+    var slingPats = ["70D", "310", "365", "465"]
     
     override func viewDidLoad() {
         
@@ -74,6 +86,8 @@ class Sling: UIViewController
         
         self.pcCollectionView.dataSource = self
         self.pcCollectionView.delegate = self
+        self.slingCollectionView.dataSource = self
+        self.slingCollectionView.delegate = self
     }
     
     

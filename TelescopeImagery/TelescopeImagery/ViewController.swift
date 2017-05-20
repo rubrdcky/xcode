@@ -103,10 +103,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var snow:UIColor = UIColor(red: 0.9098, green: 0.898, blue: 0.8549, alpha: 1.0)
     
     
-    var pickerData = ["Collection:","Avant", "Bazza MGP Chair", "Plymouth Bay Table", "Plymouth Bay Bench", "36in Fire Table"]
+    var pickerData = ["Collection:","Avant", "Bazza MGP Chair", "Plymouth Bay Table", "Plymouth Bay Bench", "36in Fire Table", "Jetset"]
     let mgpAccents = ["P10", "P30", "P40", "P50", "P60", "P70", "PR0", "PA0", "PQ0", "PM0", "PN0"]
     var pcAccents = ["K", "T", "J", "5", "6", "D", "8", "A", "L"]
-    var productCodeArray = ["Hello", "893", "8Z1", "1P9", "1P1", "3F6"]
+    var productCodeArray = ["Hello", "893", "8Z1", "1P9", "1P1", "3F6", "1J7"]
     var productAccent:String!
     var productCode:String!
     var productColor:String!

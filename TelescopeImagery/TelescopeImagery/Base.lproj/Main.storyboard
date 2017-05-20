@@ -63,7 +63,7 @@
                                         <rect key="frame" x="13.5" y="0.0" width="77" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="78" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="77" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb1-3g-AMo">
@@ -188,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="819.7265625" y="-734.375"/>
+            <point key="canvasLocation" x="1188" y="-830"/>
         </scene>
         <!--Sling-PC-->
         <scene sceneID="jw3-a9-V2X">
@@ -232,19 +232,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="77" height="66"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o28-fa-jtp">
-                                                    <rect key="frame" x="26.5" y="45" width="25" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o28-fa-jtp">
+                                                    <rect key="frame" x="20" y="45" width="37" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="InV-S8-y9R">
+                                                    <rect key="frame" x="0.0" y="0.0" width="77" height="66"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="o28-fa-jtp" firstAttribute="centerX" secondItem="RLp-OD-Oh0" secondAttribute="centerX" id="B6f-eW-q6g"/>
-                                            <constraint firstAttribute="bottom" secondItem="o28-fa-jtp" secondAttribute="bottom" id="L27-QG-PPQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="InV-S8-y9R" secondAttribute="bottom" id="0B1-q7-PGJ"/>
+                                            <constraint firstItem="InV-S8-y9R" firstAttribute="leading" secondItem="RLp-OD-Oh0" secondAttribute="leading" id="FCr-dw-Jwg"/>
+                                            <constraint firstAttribute="trailing" secondItem="InV-S8-y9R" secondAttribute="trailing" id="M0S-Rs-fqV"/>
+                                            <constraint firstItem="o28-fa-jtp" firstAttribute="centerX" secondItem="RLp-OD-Oh0" secondAttribute="centerX" id="dID-Jh-Cwg"/>
+                                            <constraint firstItem="o28-fa-jtp" firstAttribute="leading" secondItem="RLp-OD-Oh0" secondAttribute="leadingMargin" constant="12" id="fdV-vp-ZK1"/>
+                                            <constraint firstItem="InV-S8-y9R" firstAttribute="top" secondItem="RLp-OD-Oh0" secondAttribute="top" id="tuA-mT-g0W"/>
+                                            <constraint firstAttribute="bottom" secondItem="o28-fa-jtp" secondAttribute="bottom" id="wwf-um-S0B"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="patImageView" destination="InV-S8-y9R" id="No0-vl-E6C"/>
                                             <outlet property="patternNumberLabel" destination="o28-fa-jtp" id="UP2-Vf-4eo"/>
                                         </connections>
                                     </collectionViewCell>
@@ -298,6 +307,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpP-FN-n9m">
+                                <rect key="frame" x="350" y="20" width="325" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="AdS-bp-Bkc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -308,7 +326,9 @@
                             <constraint firstItem="7Ug-Lk-5tm" firstAttribute="trailing" secondItem="Bsc-L0-sZ3" secondAttribute="trailingMargin" id="Hed-EV-goi"/>
                             <constraint firstItem="ouc-GL-oRy" firstAttribute="leading" secondItem="Bsc-L0-sZ3" secondAttribute="leading" id="Hmt-6m-q7D"/>
                             <constraint firstItem="ouc-GL-oRy" firstAttribute="top" secondItem="jb5-HX-fWH" secondAttribute="bottom" constant="20" id="T6R-al-rqI"/>
+                            <constraint firstItem="PpP-FN-n9m" firstAttribute="centerX" secondItem="ouc-GL-oRy" secondAttribute="centerX" id="Vr9-Oo-CSl"/>
                             <constraint firstItem="5He-cy-vRc" firstAttribute="top" secondItem="kAH-0N-rvU" secondAttribute="bottom" constant="8" symbolic="YES" id="atO-FY-nWl"/>
+                            <constraint firstItem="PpP-FN-n9m" firstAttribute="top" secondItem="jb5-HX-fWH" secondAttribute="bottom" id="dPd-5v-EHq"/>
                             <constraint firstItem="ouc-GL-oRy" firstAttribute="bottom" secondItem="VqQ-dQ-WHR" secondAttribute="top" id="h9t-9x-4ub"/>
                             <constraint firstItem="kAH-0N-rvU" firstAttribute="leading" secondItem="Bsc-L0-sZ3" secondAttribute="leadingMargin" constant="14" id="q57-wn-kQl"/>
                             <constraint firstItem="5He-cy-vRc" firstAttribute="bottom" secondItem="VqQ-dQ-WHR" secondAttribute="top" id="wH7-MC-S1b"/>
@@ -321,11 +341,12 @@
                     <connections>
                         <outlet property="pcCollectionView" destination="5He-cy-vRc" id="fd4-s3-Sw3"/>
                         <outlet property="slingCollectionView" destination="7Ug-Lk-5tm" id="Oh4-rT-HWa"/>
+                        <outlet property="slingProductCodeLabel" destination="PpP-FN-n9m" id="hOe-Ey-g4l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqW-gW-964" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="819.7265625" y="-3.90625"/>
+            <point key="canvasLocation" x="1188" y="115"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0Pk-nE-Vev">

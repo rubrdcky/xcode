@@ -94,6 +94,7 @@ class ViewController: UIViewController {
     var thirdLayoutToPass:String!
     let detailSequeIdentifier = "detailSegue"
     let searchController = UISearchController(searchResultsController: nil)
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

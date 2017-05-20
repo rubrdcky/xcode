@@ -14,4 +14,6 @@ class slingCell: UICollectionViewCell{
     
     @IBOutlet weak var patternNumberLabel: UILabel!
    
+    @IBOutlet weak var patImageView: UIImageView!
+    
 }
