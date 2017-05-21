@@ -43,23 +43,26 @@ extension Sling: UICollectionViewDataSource, UICollectionViewDelegate
             
             let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "slingCell", for: indexPath) as! slingCell
             
-            let imageString:String = slingPats[indexPath.row]
+            let cellImage = imageForSlingCollectionView(indexPath: indexPath as NSIndexPath)
+            cell.patImageView.image = cellImage
             
-            patImage.patImageView.image = UIImage(named: "\(imageString)" + "" + ".jpg")
-            
-            cell.contentView.addSubview(patImage)
+            cell.patternNumberLabel.text = slingPats[indexPath.row]
+            cell.patternNumberLabel.textColor = UIColor.black
             
             return cell
         }
     }
 }
 
-class Sling: UIViewController
+class Sling: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
 {
     
     @IBOutlet weak var pcCollectionView: UICollectionView!
     
     @IBOutlet weak var slingCollectionView: UICollectionView!
+    
+    @IBOutlet weak var collectionPicker: UIPickerView!
+    
     
     @IBOutlet weak var slingProductCodeLabel: UILabel!
     
@@ -79,6 +82,12 @@ class Sling: UIViewController
     
     var pcAccents = ["K", "T", "J", "5", "6", "D", "8", "A", "L"]
     var slingPats = ["70D", "310", "365", "465"]
+    var patPics = [UIImage(named:"70D.jpg"), UIImage(named:"310.jpg"), UIImage(named:"365.jpg"), UIImage(named:"465.jpg")]
+    var patImages = [UIImage]()
+    var productCode:String!
+    
+    var pickerData = ["Colection:", "Dune Chaise", "Belle Isle Sling"]
+    var productCodeArray = ["Hello","9N3", "L17"]
     
     override func viewDidLoad() {
         
@@ -90,13 +99,42 @@ class Sling: UIViewController
         self.slingCollectionView.delegate = self
     }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        return pickerData[row]
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        return pickerData.count
+    }
     
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        
+        productCode = productCodeArray[row]
+        
+    }
     
     func colorForPCColorCollection(indexPath:NSIndexPath)-> UIColor
     {
         let pcCollPic:UIColor = pcCollColors[indexPath.row]
         
         return pcCollPic
+    }
+    
+    func imageForSlingCollectionView(indexPath:NSIndexPath) -> UIImage
+    {
+        
+        let patternImage:UIImage = patPics[indexPath.row]!
+        
+        return patternImage
+        
     }
 }

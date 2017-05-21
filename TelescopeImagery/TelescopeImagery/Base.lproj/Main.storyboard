@@ -316,9 +316,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0J-hz-Pvm">
+                                <rect key="frame" x="411" y="617" width="203" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="203" id="5V7-UD-zPh"/>
+                                    <constraint firstAttribute="height" constant="102" id="sxo-ZE-SXx"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="6M3-Yf-cVH"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="20S-5x-te1"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="I0J-hz-Pvm" firstAttribute="centerX" secondItem="ouc-GL-oRy" secondAttribute="centerX" id="2Mj-sf-ESh"/>
                             <constraint firstItem="7Ug-Lk-5tm" firstAttribute="top" secondItem="jDA-Yy-KcS" secondAttribute="bottom" constant="5" id="B9p-lt-AYO"/>
                             <constraint firstItem="5He-cy-vRc" firstAttribute="centerX" secondItem="kAH-0N-rvU" secondAttribute="centerX" id="CFm-Po-Tzs"/>
                             <constraint firstItem="kAH-0N-rvU" firstAttribute="top" secondItem="jb5-HX-fWH" secondAttribute="bottom" constant="30" id="FCq-sc-5bd"/>
@@ -331,6 +343,7 @@
                             <constraint firstItem="PpP-FN-n9m" firstAttribute="top" secondItem="jb5-HX-fWH" secondAttribute="bottom" id="dPd-5v-EHq"/>
                             <constraint firstItem="ouc-GL-oRy" firstAttribute="bottom" secondItem="VqQ-dQ-WHR" secondAttribute="top" id="h9t-9x-4ub"/>
                             <constraint firstItem="kAH-0N-rvU" firstAttribute="leading" secondItem="Bsc-L0-sZ3" secondAttribute="leadingMargin" constant="14" id="q57-wn-kQl"/>
+                            <constraint firstItem="I0J-hz-Pvm" firstAttribute="bottom" secondItem="VqQ-dQ-WHR" secondAttribute="top" id="vqG-7Z-rHA"/>
                             <constraint firstItem="5He-cy-vRc" firstAttribute="bottom" secondItem="VqQ-dQ-WHR" secondAttribute="top" id="wH7-MC-S1b"/>
                             <constraint firstItem="5He-cy-vRc" firstAttribute="leading" secondItem="Bsc-L0-sZ3" secondAttribute="leadingMargin" id="xEN-HY-Acx"/>
                             <constraint firstAttribute="trailing" secondItem="ouc-GL-oRy" secondAttribute="trailing" id="xF8-Ed-0vV"/>
@@ -339,6 +352,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Sling-PC" image="spa-saturn" id="sWM-7b-iXY"/>
                     <connections>
+                        <outlet property="collectionPicker" destination="I0J-hz-Pvm" id="mFT-bT-wjQ"/>
                         <outlet property="pcCollectionView" destination="5He-cy-vRc" id="fd4-s3-Sw3"/>
                         <outlet property="slingCollectionView" destination="7Ug-Lk-5tm" id="Oh4-rT-HWa"/>
                         <outlet property="slingProductCodeLabel" destination="PpP-FN-n9m" id="hOe-Ey-g4l"/>
