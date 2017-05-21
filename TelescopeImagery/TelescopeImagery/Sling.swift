@@ -77,15 +77,10 @@ class Sling: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
 {
     
     @IBOutlet weak var pcCollectionView: UICollectionView!
-    
     @IBOutlet weak var slingCollectionView: UICollectionView!
-    
     @IBOutlet weak var collectionPicker: UIPickerView!
-    
     @IBOutlet weak var telescopeImage: UIImageView!
-    
     @IBOutlet weak var chairImage: UIImageView!
-    
     @IBOutlet weak var slingProductCodeLabel: UILabel!
     
     var patImage = slingCell()
@@ -116,7 +111,7 @@ class Sling: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     override func viewDidLoad() {
         
         pcCollColors = [kona, beachwood, graphite, white, snow, desert, black, agedBronze, silver]
-        
+    
         self.pcCollectionView.dataSource = self
         self.pcCollectionView.delegate = self
         self.slingCollectionView.dataSource = self

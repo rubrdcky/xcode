@@ -85,6 +85,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var powdercoatCollectionView: UICollectionView!
     @IBOutlet weak var productCodeLabel: UILabel!
     
+    @IBOutlet weak var favoriteButton: UIButton!
+    
+    
     var kona:UIColor = UIColor(red: 0.2588, green: 0.1569, blue: 0.0196, alpha: 1.0)
     var beachwood:UIColor = UIColor(red: 0.439, green: 0.439, blue: 0.439, alpha: 1.0)
     var graphite:UIColor = UIColor(red: 0.4863, green: 0.4118, blue: 0.1451, alpha: 1)

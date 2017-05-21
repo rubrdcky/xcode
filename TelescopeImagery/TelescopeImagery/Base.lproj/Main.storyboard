@@ -105,7 +105,7 @@
                                         <rect key="frame" x="14.5" y="0.0" width="77" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="78" height="66"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="77" height="66"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jm-1w-ULh">
@@ -146,6 +146,11 @@
                                     <constraint firstAttribute="height" constant="354" id="d5S-ze-aMK"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dv-M5-37z">
+                                <rect key="frame" x="741" y="14" width="107" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Favorite"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -180,6 +185,7 @@
                     <connections>
                         <outlet property="chairImage" destination="vHU-3H-RFV" id="POr-bj-vrc"/>
                         <outlet property="collectionPicker" destination="g3S-aw-ys7" id="Nbn-HN-OT3"/>
+                        <outlet property="favoriteButton" destination="3Dv-M5-37z" id="lZ4-dq-LNW"/>
                         <outlet property="mgpCollectionView" destination="3PQ-df-3UA" id="aJe-sB-ivZ"/>
                         <outlet property="powdercoatCollectionView" destination="g7S-66-eaA" id="1p0-N2-LPp"/>
                         <outlet property="productCodeLabel" destination="Bca-Qw-5aP" id="usa-Yo-3Xg"/>
@@ -188,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="829" y="-970"/>
+            <point key="canvasLocation" x="828.515625" y="-970.3125"/>
         </scene>
         <!--Sling-PC-->
         <scene sceneID="jw3-a9-V2X">
@@ -407,6 +413,10 @@
                                         <constraint firstItem="5vR-Ux-bWc" firstAttribute="centerY" secondItem="jlP-j5-Vwi" secondAttribute="centerY" id="mDA-Tg-7KS"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="productImage" destination="5vR-Ux-bWc" id="vZT-a6-JwK"/>
+                                    <outlet property="productTableCellLabel" destination="3nr-YZ-nxn" id="vly-MI-tX2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -416,10 +426,6 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="UaV-th-hOS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="productImage" destination="5vR-Ux-bWc" id="rdF-eP-Ibq"/>
-                        <outlet property="productLabel" destination="3nr-YZ-nxn" id="aSG-X6-2NZ"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCp-0b-E3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
