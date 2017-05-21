@@ -16,6 +16,8 @@
 		2359F1951EC7A46300D8584E /* pcCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2359F1941EC7A46300D8584E /* pcCell.swift */; };
 		237DDD8C1ECF083000DC93EF /* slingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DDD8B1ECF083000DC93EF /* slingCell.swift */; };
 		238740DF1ECBD5D10028BCFD /* Sling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238740DE1ECBD5D10028BCFD /* Sling.swift */; };
+		23AA52F91ED1C6A60069CB98 /* ProductTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA52F81ED1C6A60069CB98 /* ProductTableView.swift */; };
+		23AA52FB1ED1C7A80069CB98 /* ProductTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA52FA1ED1C7A80069CB98 /* ProductTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		2359F1941EC7A46300D8584E /* pcCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pcCell.swift; sourceTree = "<group>"; };
 		237DDD8B1ECF083000DC93EF /* slingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = slingCell.swift; sourceTree = "<group>"; };
 		238740DE1ECBD5D10028BCFD /* Sling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sling.swift; sourceTree = "<group>"; };
+		23AA52F81ED1C6A60069CB98 /* ProductTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableView.swift; sourceTree = "<group>"; };
+		23AA52FA1ED1C7A80069CB98 /* ProductTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +69,12 @@
 				232F57171EC75B2200E6CB7A /* mgpCell.swift */,
 				2359F1941EC7A46300D8584E /* pcCell.swift */,
 				237DDD8B1ECF083000DC93EF /* slingCell.swift */,
+				23AA52FA1ED1C7A80069CB98 /* ProductTableCell.swift */,
 				232F56FB1EC7396000E6CB7A /* AppDelegate.swift */,
 				232F56FD1EC7396000E6CB7A /* ViewController.swift */,
 				238740DE1ECBD5D10028BCFD /* Sling.swift */,
 				232F56FF1EC7396000E6CB7A /* Main.storyboard */,
+				23AA52F81ED1C6A60069CB98 /* ProductTableView.swift */,
 				232F57021EC7396000E6CB7A /* Assets.xcassets */,
 				232F57041EC7396000E6CB7A /* LaunchScreen.storyboard */,
 				232F57071EC7396000E6CB7A /* Info.plist */,
@@ -151,6 +157,8 @@
 			files = (
 				238740DF1ECBD5D10028BCFD /* Sling.swift in Sources */,
 				232F56FE1EC7396000E6CB7A /* ViewController.swift in Sources */,
+				23AA52FB1ED1C7A80069CB98 /* ProductTableCell.swift in Sources */,
+				23AA52F91ED1C6A60069CB98 /* ProductTableView.swift in Sources */,
 				232F56FC1EC7396000E6CB7A /* AppDelegate.swift in Sources */,
 				237DDD8C1ECF083000DC93EF /* slingCell.swift in Sources */,
 				2359F1951EC7A46300D8584E /* pcCell.swift in Sources */,

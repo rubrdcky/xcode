@@ -52,6 +52,25 @@ extension Sling: UICollectionViewDataSource, UICollectionViewDelegate
             return cell
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //let cell  = collectionView.cellForItem(at: indexPath)
+        //cell?.layer.borderWidth = 4.0
+        //cell?.layer.borderColor = UIColor.black.cgColor
+        
+        //print("Selected cell number \(slingPats[indexPath.row])")
+        
+        if (collectionView == slingCollectionView){
+            slingPattern = String(slingPats[indexPath.row])
+            reloadProductLabel()
+        }else{
+            
+            productColor = String(pcAccents[indexPath.row])
+            reloadProductLabel()
+        }
+        
+    }
 }
 
 class Sling: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
@@ -63,6 +82,9 @@ class Sling: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     @IBOutlet weak var collectionPicker: UIPickerView!
     
+    @IBOutlet weak var telescopeImage: UIImageView!
+    
+    @IBOutlet weak var chairImage: UIImageView!
     
     @IBOutlet weak var slingProductCodeLabel: UILabel!
     
@@ -85,6 +107,8 @@ class Sling: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     var patPics = [UIImage(named:"70D.jpg"), UIImage(named:"310.jpg"), UIImage(named:"365.jpg"), UIImage(named:"465.jpg")]
     var patImages = [UIImage]()
     var productCode:String!
+    var slingPattern:String!
+    var productColor:String!
     
     var pickerData = ["Colection:", "Dune Chaise", "Belle Isle Sling"]
     var productCodeArray = ["Hello","9N3", "L17"]
@@ -97,6 +121,28 @@ class Sling: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         self.pcCollectionView.delegate = self
         self.slingCollectionView.dataSource = self
         self.slingCollectionView.delegate = self
+        self.collectionPicker.delegate = self
+        self.collectionPicker.dataSource = self
+        
+        reloadProductLabel()
+    }
+    
+    func reloadProductLabel()
+    {
+        
+        if productColor != nil && productCode != nil && slingPattern != nil{
+            
+            slingProductCodeLabel.text! = productCode+""+productColor+""+slingPattern+""+"01"
+            chairImage.image = UIImage(named: "Configuration_"+""+slingProductCodeLabel.text!+""+".png")
+
+            self.telescopeImage.image = nil
+            
+        } else {
+            
+            slingProductCodeLabel.text = "Please Select Accent Colors"
+            telescopeImage.image = UIImage(named:"telescope-Casual-square-logo.jpg")
+        }
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -119,6 +165,7 @@ class Sling: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     {
         
         productCode = productCodeArray[row]
+        reloadProductLabel()
         
     }
     
