@@ -84,9 +84,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var mgpCollectionView: UICollectionView!
     @IBOutlet weak var powdercoatCollectionView: UICollectionView!
     @IBOutlet weak var productCodeLabel: UILabel!
-    
     @IBOutlet weak var favoriteButton: UIButton!
     
+    @IBAction func touchUpInside(_ sender: Any) {
+        
+        //favoritedProductArray.favoritedProduct.append(productCodeLabel.text!)
+        favoritedProductGlobal.append(productCodeLabel.text!)
+        print("added \(productCodeLabel.text ?? "Nothing") to array")
+        print("There are \(favoritedProductGlobal.count) Items in this array")
+        
+    }
     
     var kona:UIColor = UIColor(red: 0.2588, green: 0.1569, blue: 0.0196, alpha: 1.0)
     var beachwood:UIColor = UIColor(red: 0.439, green: 0.439, blue: 0.439, alpha: 1.0)
@@ -117,6 +124,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var pcCollColors = [UIColor]()
     let mgpColors:Int = 11
     let pcColors:Int = 9
+    
+    var favoritedProductArray = ProductTableView()
+    var favoriteProducts = [String]()
     
     let imageURL = "https://www.dropbox.com/sh/ivwwuc1n579u96p/AACEIn1lzlwIc6ACnRLWhilWa?dl=0"
     

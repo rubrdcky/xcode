@@ -39,6 +39,7 @@ extension Sling: UICollectionViewDataSource, UICollectionViewDelegate
             
             
             return cell
+            
         }else{
             
             let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "slingCell", for: indexPath) as! slingCell
