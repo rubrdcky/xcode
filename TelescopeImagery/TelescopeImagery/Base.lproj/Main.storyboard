@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="40" width="1024" height="671"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PC Colors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dr-md-Uiv">
-                                <rect key="frame" x="33" y="42" width="77" height="21"/>
+                                <rect key="frame" x="33" y="42" width="76" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g7S-66-eaA">
-                                <rect key="frame" x="20" y="71" width="104" height="640"/>
+                                <rect key="frame" x="20" y="71" width="103" height="640"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="640" id="GNq-S0-4Cj"/>
@@ -60,7 +60,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pcCell" id="FBC-Wo-Qjc" customClass="pcCell" customModule="TelescopeImagery" customModuleProvider="target">
-                                        <rect key="frame" x="13.5" y="0.0" width="77" height="70"/>
+                                        <rect key="frame" x="13" y="0.0" width="77" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="77" height="70"/>
@@ -102,7 +102,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mgpCell" id="dI8-J7-SP3" customClass="mgpCell" customModule="TelescopeImagery" customModuleProvider="target">
-                                        <rect key="frame" x="14.5" y="0.0" width="77" height="66"/>
+                                        <rect key="frame" x="15" y="0.0" width="77" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="77" height="66"/>
@@ -141,14 +141,18 @@
                                 </connections>
                             </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i0Z-3m-0MY">
-                                <rect key="frame" x="170" y="201" width="689" height="354"/>
+                                <rect key="frame" x="169" y="201" width="690" height="354"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="354" id="d5S-ze-aMK"/>
+                                    <constraint firstAttribute="width" constant="690" id="mtz-og-qZG"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dv-M5-37z">
-                                <rect key="frame" x="741" y="14" width="107" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dv-M5-37z">
+                                <rect key="frame" x="724" y="20" width="135" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jlR-DW-z8c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Favorite"/>
                                 <connections>
                                     <action selector="touchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h61-TK-Kf7"/>
@@ -157,6 +161,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="3Dv-M5-37z" firstAttribute="leading" secondItem="Bca-Qw-5aP" secondAttribute="trailing" constant="50" id="2PQ-X4-X99"/>
                             <constraint firstItem="g7S-66-eaA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BFm-p1-ZAz"/>
                             <constraint firstItem="g7S-66-eaA" firstAttribute="top" secondItem="3PQ-df-3UA" secondAttribute="top" id="CM8-yS-GhO"/>
                             <constraint firstItem="Bca-Qw-5aP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EGh-Cb-h8U"/>
@@ -164,6 +169,7 @@
                             <constraint firstItem="g7S-66-eaA" firstAttribute="centerX" secondItem="2dr-md-Uiv" secondAttribute="centerX" id="PWK-5V-kMd"/>
                             <constraint firstItem="vHU-3H-RFV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Pgp-9T-qPl"/>
                             <constraint firstItem="g3S-aw-ys7" firstAttribute="top" secondItem="i0Z-3m-0MY" secondAttribute="bottom" constant="62" id="Quv-Il-lCo"/>
+                            <constraint firstItem="3Dv-M5-37z" firstAttribute="trailing" secondItem="i0Z-3m-0MY" secondAttribute="trailing" id="S4s-ct-bAR"/>
                             <constraint firstItem="2dr-md-Uiv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="SIk-dZ-6Ps"/>
                             <constraint firstItem="UGa-Nx-ApG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Tsj-UH-fzZ"/>
                             <constraint firstItem="vHU-3H-RFV" firstAttribute="top" secondItem="UGa-Nx-ApG" secondAttribute="top" id="WXp-ag-iE1"/>
@@ -171,6 +177,7 @@
                             <constraint firstItem="g7S-66-eaA" firstAttribute="top" secondItem="2dr-md-Uiv" secondAttribute="bottom" constant="8" symbolic="YES" id="XC6-Ed-wW5"/>
                             <constraint firstItem="vHU-3H-RFV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="YMg-K8-l7l"/>
                             <constraint firstItem="vHU-3H-RFV" firstAttribute="centerX" secondItem="g3S-aw-ys7" secondAttribute="centerX" id="aFI-MV-4cd"/>
+                            <constraint firstItem="3Dv-M5-37z" firstAttribute="top" secondItem="Bca-Qw-5aP" secondAttribute="top" id="cCs-WL-mZd"/>
                             <constraint firstItem="g3S-aw-ys7" firstAttribute="centerX" secondItem="Bca-Qw-5aP" secondAttribute="centerX" id="esW-Sp-S17"/>
                             <constraint firstItem="i0Z-3m-0MY" firstAttribute="leading" secondItem="g7S-66-eaA" secondAttribute="trailing" constant="46" id="fin-W9-ekr"/>
                             <constraint firstItem="3PQ-df-3UA" firstAttribute="leading" secondItem="i0Z-3m-0MY" secondAttribute="trailing" constant="39" id="hIU-V7-8eG"/>
@@ -235,7 +242,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="slingCell" id="RLp-OD-Oh0" customClass="slingCell" customModule="TelescopeImagery" customModuleProvider="target">
-                                        <rect key="frame" x="14.5" y="0.0" width="77" height="66"/>
+                                        <rect key="frame" x="15" y="0.0" width="77" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="77" height="66"/>
@@ -339,6 +346,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZwW-e3-Mdy">
                                 <rect key="frame" x="168" y="202" width="689" height="354"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkB-8W-JU0">
+                                <rect key="frame" x="722" y="20" width="135" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7f7-9i-79g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Favorite"/>
+                                <connections>
+                                    <action selector="addfavoriteSling:" destination="o2U-fC-MX2" eventType="touchUpInside" id="fTp-AU-nBQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -346,15 +364,18 @@
                             <constraint firstItem="7Ug-Lk-5tm" firstAttribute="top" secondItem="jDA-Yy-KcS" secondAttribute="bottom" constant="5" id="B9p-lt-AYO"/>
                             <constraint firstItem="5He-cy-vRc" firstAttribute="centerX" secondItem="kAH-0N-rvU" secondAttribute="centerX" id="CFm-Po-Tzs"/>
                             <constraint firstItem="kAH-0N-rvU" firstAttribute="top" secondItem="jb5-HX-fWH" secondAttribute="bottom" constant="30" id="FCq-sc-5bd"/>
+                            <constraint firstItem="PkB-8W-JU0" firstAttribute="top" secondItem="PpP-FN-n9m" secondAttribute="top" id="FaH-3s-bC0"/>
                             <constraint firstItem="jDA-Yy-KcS" firstAttribute="centerX" secondItem="7Ug-Lk-5tm" secondAttribute="centerX" id="FbQ-28-O0D"/>
                             <constraint firstItem="7Ug-Lk-5tm" firstAttribute="trailing" secondItem="Bsc-L0-sZ3" secondAttribute="trailingMargin" id="Hed-EV-goi"/>
                             <constraint firstItem="ouc-GL-oRy" firstAttribute="leading" secondItem="Bsc-L0-sZ3" secondAttribute="leading" id="Hmt-6m-q7D"/>
+                            <constraint firstItem="PkB-8W-JU0" firstAttribute="leading" secondItem="PpP-FN-n9m" secondAttribute="trailing" constant="47" id="POf-V3-BOL"/>
                             <constraint firstItem="ouc-GL-oRy" firstAttribute="top" secondItem="jb5-HX-fWH" secondAttribute="bottom" constant="20" id="T6R-al-rqI"/>
                             <constraint firstItem="ZwW-e3-Mdy" firstAttribute="centerX" secondItem="I0J-hz-Pvm" secondAttribute="centerX" id="Ua5-a6-GqY"/>
                             <constraint firstItem="PpP-FN-n9m" firstAttribute="centerX" secondItem="ouc-GL-oRy" secondAttribute="centerX" id="Vr9-Oo-CSl"/>
                             <constraint firstItem="7Ug-Lk-5tm" firstAttribute="leading" secondItem="ZwW-e3-Mdy" secondAttribute="trailing" constant="41" id="a9h-hN-hcR"/>
                             <constraint firstItem="5He-cy-vRc" firstAttribute="top" secondItem="kAH-0N-rvU" secondAttribute="bottom" constant="8" symbolic="YES" id="atO-FY-nWl"/>
                             <constraint firstItem="PpP-FN-n9m" firstAttribute="top" secondItem="jb5-HX-fWH" secondAttribute="bottom" id="dPd-5v-EHq"/>
+                            <constraint firstItem="PkB-8W-JU0" firstAttribute="trailing" secondItem="ZwW-e3-Mdy" secondAttribute="trailing" id="ghg-iB-zCT"/>
                             <constraint firstItem="ouc-GL-oRy" firstAttribute="bottom" secondItem="VqQ-dQ-WHR" secondAttribute="top" id="h9t-9x-4ub"/>
                             <constraint firstItem="ZwW-e3-Mdy" firstAttribute="centerY" secondItem="ouc-GL-oRy" secondAttribute="centerY" id="kfY-Kd-ova"/>
                             <constraint firstItem="kAH-0N-rvU" firstAttribute="leading" secondItem="Bsc-L0-sZ3" secondAttribute="leadingMargin" constant="14" id="q57-wn-kQl"/>
@@ -372,6 +393,7 @@
                         <outlet property="collectionPicker" destination="I0J-hz-Pvm" id="mFT-bT-wjQ"/>
                         <outlet property="pcCollectionView" destination="5He-cy-vRc" id="fd4-s3-Sw3"/>
                         <outlet property="slingCollectionView" destination="7Ug-Lk-5tm" id="Oh4-rT-HWa"/>
+                        <outlet property="slingFavoriteButton" destination="PkB-8W-JU0" id="HgH-05-2uf"/>
                         <outlet property="slingProductCodeLabel" destination="PpP-FN-n9m" id="hOe-Ey-g4l"/>
                         <outlet property="telescopeImage" destination="ZwW-e3-Mdy" id="9N8-ay-bAw"/>
                     </connections>
@@ -383,17 +405,17 @@
         <!--Favorite Items-->
         <scene sceneID="ptE-qm-ANK">
             <objects>
-                <tableViewController title="Favorite Items" id="3kh-Gd-jdy" customClass="ProductTableView" customModule="TelescopeImagery" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Favorite Items" extendedLayoutIncludesOpaqueBars="YES" id="3kh-Gd-jdy" customClass="ProductTableView" customModule="TelescopeImagery" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="28" sectionFooterHeight="28" id="qOe-Ip-O82">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" focusStyle="custom" rowHeight="116" id="Rw2-33-SYK">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="productCell" rowHeight="116" id="Rw2-33-SYK">
                                 <rect key="frame" x="0.0" y="28" width="1024" height="116"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="right" tableViewCell="Rw2-33-SYK" id="jlP-j5-Vwi">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="116"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="115.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Atx-D6-Yyd">

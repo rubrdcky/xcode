@@ -29,6 +29,8 @@ class ProductTableView: UITableViewController
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
+        self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
+        
         tableView.reloadData()
         
     }
@@ -53,8 +55,8 @@ class ProductTableView: UITableViewController
         
         //let product:String = favoritedProductGlobal[indexPath.row]
     
-        
-        //cell.textLabel?.text = favoritedArrayPassed.favoriteProducts[indexPath.row]
+        let myFont:UIFont = UIFont.init(name: "Arial", size: 25.0)!
+        cell.textLabel?.font = myFont
         cell.textLabel?.text = favoritedProductGlobal[indexPath.row]
         
         let product:String! = cell.textLabel?.text!

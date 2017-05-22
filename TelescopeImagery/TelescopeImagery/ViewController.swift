@@ -146,6 +146,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.powdercoatCollectionView.delegate = self
         
         productCodeLabel.text = "Please Select a Collection"
+        
+        telescopeImage.image = UIImage(named:"telescope-Casual-square-logo.jpg")
     }
     
     func reloadProductLabel()

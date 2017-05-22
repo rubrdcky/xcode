@@ -84,6 +84,17 @@ class Sling: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     @IBOutlet weak var chairImage: UIImageView!
     @IBOutlet weak var slingProductCodeLabel: UILabel!
     
+    @IBOutlet weak var slingFavoriteButton: UIButton!
+    
+    
+    @IBAction func addfavoriteSling(_ sender: Any) {
+        
+        favoritedProductGlobal.append(slingProductCodeLabel.text!)
+        print("added \(slingProductCodeLabel.text ?? "Nothing") to array")
+        print("There are \(favoritedProductGlobal.count) Items in this array")
+    }
+    
+    
     var patImage = slingCell()
     
     var kona:UIColor = UIColor(red: 0.2588, green: 0.1569, blue: 0.0196, alpha: 1.0)
