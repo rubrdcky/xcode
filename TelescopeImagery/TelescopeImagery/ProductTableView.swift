@@ -14,9 +14,12 @@ var favoritedProductGlobal = [String]()
 class ProductTableView: UITableViewController
 {
     
+    @IBOutlet weak var cellProductImage: UIImageView!
+    
+    
     var productTableCell = ProductTableCell()
     //var favoritedArrayPassed = ViewController()
-    var favoritedProduct = [String]()
+    //var favoritedProduct = [String]()
     let cellIdentifier = "productCell"
     
     override func viewDidLoad() {
@@ -25,8 +28,14 @@ class ProductTableView: UITableViewController
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        //updateTableVIew()
-        //favoritedProduct = ["Nothing to see here"]
+        tableView.reloadData()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
+        tableView.reloadData()
         
     }
     
@@ -38,24 +47,26 @@ class ProductTableView: UITableViewController
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //updateTableVIew()
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        
+        //let product:String = favoritedProductGlobal[indexPath.row]
+    
         
         //cell.textLabel?.text = favoritedArrayPassed.favoriteProducts[indexPath.row]
         cell.textLabel?.text = favoritedProductGlobal[indexPath.row]
         
+        let product:String! = cell.textLabel?.text!
+        let imageName = "Configuration_"+"\(product!)"+".png"
+        
+        cellProductImage.image = UIImage(named: imageName)
+        
         return cell
     }
     
-    /*func updateTableVIew()
+    func getCellImage(indexPath:IndexPath)
     {
-        tableView.beginUpdates()
-        tableView.insertRows(at: [IndexPath(row: favoritedProductGlobal.count-1, section:0)], with: .automatic)
-        tableView.endUpdates()
-        
-        tableView.reloadData()
-        
-    }*/
+        cellProductImage.image = UIImage(named: "Configuration_"+""+"\(favoritedProductGlobal[indexPath.row])"+""+".png")
+    }
     
 }

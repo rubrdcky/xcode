@@ -389,26 +389,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" focusStyle="custom" rowHeight="116" id="Rw2-33-SYK" customClass="ProductTableCell" customModule="TelescopeImagery" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" focusStyle="custom" rowHeight="116" id="Rw2-33-SYK">
                                 <rect key="frame" x="0.0" y="28" width="1024" height="116"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="right" tableViewCell="Rw2-33-SYK" id="jlP-j5-Vwi">
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="116"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5vR-Ux-bWc">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5vR-Ux-bWc">
                                             <rect key="frame" x="8" y="0.0" width="162" height="115"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="162" id="68Y-yU-4ln"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nr-YZ-nxn">
-                                            <rect key="frame" x="198" y="33" width="147" height="50"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="5vR-Ux-bWc" firstAttribute="top" secondItem="jlP-j5-Vwi" secondAttribute="top" id="aRp-Wd-3OI"/>
@@ -416,10 +409,6 @@
                                         <constraint firstItem="5vR-Ux-bWc" firstAttribute="centerY" secondItem="jlP-j5-Vwi" secondAttribute="centerY" id="mDA-Tg-7KS"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="productImage" destination="5vR-Ux-bWc" id="vZT-a6-JwK"/>
-                                    <outlet property="productTableCellLabel" destination="3nr-YZ-nxn" id="vly-MI-tX2"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -429,6 +418,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="UaV-th-hOS"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cellProductImage" destination="5vR-Ux-bWc" id="fFS-pw-WmH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCp-0b-E3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
