@@ -439,6 +439,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="UaV-th-hOS"/>
+                    <navigationItem key="navigationItem" title="Favortie Items" id="PeS-ga-Ksh"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </tableViewController>
