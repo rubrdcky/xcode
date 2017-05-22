@@ -58,9 +58,11 @@ class ProductTableView: UITableViewController
         cell.textLabel?.text = favoritedProductGlobal[indexPath.row]
         
         let product:String! = cell.textLabel?.text!
-        let imageName = "Configuration_"+"\(product!)"+".png"
+        let imageName = "Configuration_"+"\(product!)"
         
-        cellProductImage.image = UIImage(named: imageName)
+        cell.imageView?.image = UIImage(named: imageName)
+        
+        //cellProductImage.image = UIImage(named: imageName)
         
         return cell
     }
