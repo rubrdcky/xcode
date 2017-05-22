@@ -13,4 +13,6 @@ class mgpCell: UICollectionViewCell{
     
     @IBOutlet weak var mgpColorLabel: UILabel!
     
+    @IBOutlet weak var mgpImageVIew: UIImageView!
+    
 }

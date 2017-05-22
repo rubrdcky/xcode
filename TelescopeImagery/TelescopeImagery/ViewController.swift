@@ -23,15 +23,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate
         
         if (collectionView == mgpCollectionView){
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mgpCell", for: indexPath) as! mgpCell
-            let cellColor = colorForMGPCollection(indexPath: indexPath as NSIndexPath)
-            cell.backgroundColor = cellColor
-            if (cellColor == black || cellColor == kona || cellColor == navy)
-            {
-                cell.mgpColorLabel.textColor = UIColor.white
-            }else{
-                
-               cell.mgpColorLabel.textColor = UIColor.black
-            }
+            
+            let cellImage = imageForMGPCollection(indexPath: indexPath as NSIndexPath)
+            cell.mgpImageVIew.image = cellImage
+            
             cell.mgpColorLabel.text = mgpAccents[indexPath.row]
             
             return cell
@@ -115,12 +110,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     var pickerData = ["Collection:","Avant", "Bazza MGP Chair", "Plymouth Bay Table", "Plymouth Bay Bench", "36in Fire Table", "Jetset"]
     let mgpAccents = ["P10", "P30", "P40", "P50", "P60", "P70", "PR0", "PA0", "PQ0", "PM0", "PN0"]
+    var mgpHues = [UIImage(named:"P10.jpg"), UIImage(named:"P30.jpg"), UIImage(named:"P40.jpg"), UIImage(named:"P50.jpg"), UIImage(named:"P60.jpg"), UIImage(named:"P70.jpg")]
     var pcAccents = ["K", "T", "J", "5", "6", "D", "8", "A", "L"]
     var productCodeArray = ["Hello", "893", "8Z1", "1P9", "1P1", "3F6", "1J7"]
     var productAccent:String!
     var productCode:String!
     var productColor:String!
-    var mgpHues = [UIColor]()
+    //var mgpHues = [UIColor]()
     var pcCollColors = [UIColor]()
     let mgpColors:Int = 11
     let pcColors:Int = 9
@@ -134,7 +130,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mgpHues = [kona, beachwood, graphite, white, desert, black, red, atlantis, aqua, mango, navy]
+        //mgpHues = [kona, beachwood, graphite, white, desert, black, red, atlantis, aqua, mango, navy]
         
         pcCollColors = [kona, beachwood, graphite, white, snow, desert, black, agedBronze, silver]
         
@@ -158,11 +154,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 productCodeLabel.text! = productCode+""+productColor+""+productAccent+""+"01"
                 chairImage.image = UIImage(named: "Configuration_"+""+productCodeLabel.text!+""+".png")
             
-            /*if let url = NSURL(string:imageURL){
-                if let data = NSData(contentsOf: url as URL){
-                    chairImage.image = UIImage(data:data as Data)
-                }
-            }*/
                 self.telescopeImage.image = nil
             
         } else {
@@ -231,10 +222,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     }
     
-    func colorForMGPCollection(indexPath: NSIndexPath) -> UIColor
+    func imageForMGPCollection(indexPath: NSIndexPath) -> UIImage
     {
         
-        let hueValue:UIColor = mgpHues[indexPath.row]
+        let hueValue:UIImage = mgpHues[indexPath.row]!
         
         return hueValue
         
