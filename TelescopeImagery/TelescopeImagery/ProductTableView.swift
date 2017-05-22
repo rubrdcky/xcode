@@ -14,10 +14,11 @@ var favoritedProductGlobal = [String]()
 class ProductTableView: UITableViewController
 {
     
+    
     @IBOutlet weak var cellProductImage: UIImageView!
     
     
-    var productTableCell = ProductTableCell()
+    //var productTableCell = ProductTableCell()
     //var favoritedArrayPassed = ViewController()
     //var favoritedProduct = [String]()
     let cellIdentifier = "productCell"
