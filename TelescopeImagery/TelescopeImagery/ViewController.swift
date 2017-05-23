@@ -97,13 +97,22 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBAction func touchUpInside(_ sender: Any) {
         
         //favoritedProductArray.favoritedProduct.append(productCodeLabel.text!)
-        favoritedProductGlobal.append(productCodeLabel.text!)
-        print("added \(productCodeLabel.text ?? "Nothing") to array")
-        print("There are \(favoritedProductGlobal.count) Items in this array")
+        if (favoritedProductGlobal.contains(productCodeLabel.text!))
+        {
+            print("Sorry Item Already in Favorite List")
+            
+        }else if(productCodeLabel.text == "Please Select a Collection" || productCodeLabel.text == "Please Select Accent Colors"){
+                
+            print ("Invalid Item")
+            
+        }else{
+            favoritedProductGlobal.append(productCodeLabel.text!)
+            print("added \(productCodeLabel.text ?? "Nothing") to array")
+            print("There are \(favoritedProductGlobal.count) Items in this array")
+        }
         
     }
-    
-    
+
     var pickerData = ["Collection:","Avant", "Bazza MGP Chair", "Plymouth Bay Table", "Plymouth Bay Bench", "36in Fire Table", "Jetset"]
     let mgpAccents = ["P10", "P30", "P40", "P50", "P60", "P70", "PR0", "PA0", "PQ0", "PM0", "PN0"]
     var mgpHues = [UIImage(named:"P10.jpg"), UIImage(named:"P30.jpg"), UIImage(named:"P40.jpg"), UIImage(named:"P50.jpg"), UIImage(named:"P60.jpg"), UIImage(named:"P70.jpg"), UIImage(named:"PR0.jpg"), UIImage(named:"PA0.jpg"), UIImage(named:"PQ0.jpg"), UIImage(named:"PM0.jpg"), UIImage(named:"PN0.jpg")]

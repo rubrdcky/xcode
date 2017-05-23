@@ -25,18 +25,19 @@ extension Sling: UICollectionViewDataSource, UICollectionViewDelegate
         
         if (collectionView == pcCollectionView){
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pcCell", for: indexPath) as! pcCell
-            let cellColor = colorForPCColorCollection(indexPath: indexPath as NSIndexPath)
-            cell.backgroundColor = cellColor
-            
-            if (cellColor == black || cellColor == kona || cellColor == agedBronze)
-            {
-                cell.pcColorLabel.textColor = UIColor.white
-            }else{
-                cell.pcColorLabel.textColor = UIColor.black
-            }
+            let cellImage = imageForPCColorCollection(indexPath: indexPath as NSIndexPath)
+            cell.pcImageView.image = cellImage
             
             cell.pcColorLabel.text = pcAccents[indexPath.row]
             
+            if (cell.pcImageView.image == UIImage(named: "6.jpg") || cell.pcImageView.image == UIImage(named: "5.jpg") || cell.pcImageView.image == UIImage(named: "D.jpg"))
+            {
+                cell.pcColorLabel.textColor = UIColor.black
+            }else{
+                
+                cell.pcColorLabel.textColor = UIColor.white
+                
+            }
             
             return cell
             
@@ -89,25 +90,27 @@ class Sling: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     @IBAction func addfavoriteSling(_ sender: Any) {
         
-        favoritedProductGlobal.append(slingProductCodeLabel.text!)
-        print("added \(slingProductCodeLabel.text ?? "Nothing") to array")
-        print("There are \(favoritedProductGlobal.count) Items in this array")
+        if (favoritedProductGlobal.contains(slingProductCodeLabel.text!))
+        {
+            print("Sorry Item Already in Favorite List")
+            slingFavoriteButton.isHidden = true
+            slingFavoriteButton.titleLabel?.text = ""
+            
+        }else if(slingProductCodeLabel.text == "Please Select a Collection" || slingProductCodeLabel.text == "Please Select Accent Colors"){
+            
+            print ("Invalid Item")
+            
+        }else{
+            favoritedProductGlobal.append(slingProductCodeLabel.text!)
+            print("added \(slingProductCodeLabel.text ?? "Nothing") to array")
+            print("There are \(favoritedProductGlobal.count) Items in this array")
+        }
     }
     
     
     var patImage = slingCell()
-    
-    var kona:UIColor = UIColor(red: 0.2588, green: 0.1569, blue: 0.0196, alpha: 1.0)
-    var beachwood:UIColor = UIColor(red: 0.439, green: 0.439, blue: 0.439, alpha: 1.0)
-    var graphite:UIColor = UIColor(red: 0.4863, green: 0.4118, blue: 0.1451, alpha: 1)
-    var white = UIColor.white
-    var desert:UIColor = UIColor(red: 0.8863, green: 0.7255, blue: 0, alpha: 1.0)
-    var black = UIColor.black
-    var agedBronze:UIColor = UIColor(red: 0.3294, green: 0.1529, blue: 0.0627, alpha: 1.0)
-    var silver:UIColor = UIColor(red: 0.7176, green: 0.7098, blue: 0.6745, alpha: 1.0)
-    var snow:UIColor = UIColor(red: 0.9098, green: 0.898, blue: 0.8549, alpha: 1.0)
 
-    var pcCollColors = [UIColor]()
+    var pcCollColors = [UIImage(named:"K.jpg"), UIImage(named:"T.jpg"), UIImage(named:"J.jpg"), UIImage(named:"5.jpg"), UIImage(named:"6.jpg"), UIImage(named:"D"), UIImage(named:"8.jpg"), UIImage(named:"A.jpg"), UIImage(named:"L.jpg")]
     
     var pcAccents = ["K", "T", "J", "5", "6", "D", "8", "A", "L"]
     var slingPats = ["70D", "310", "365", "465"]
@@ -121,8 +124,6 @@ class Sling: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     var productCodeArray = ["Hello","9N3", "L17"]
     
     override func viewDidLoad() {
-        
-        pcCollColors = [kona, beachwood, graphite, white, snow, desert, black, agedBronze, silver]
     
         self.pcCollectionView.dataSource = self
         self.pcCollectionView.delegate = self
@@ -176,9 +177,9 @@ class Sling: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         
     }
     
-    func colorForPCColorCollection(indexPath:NSIndexPath)-> UIColor
+    func imageForPCColorCollection(indexPath:NSIndexPath)-> UIImage
     {
-        let pcCollPic:UIColor = pcCollColors[indexPath.row]
+        let pcCollPic:UIImage = pcCollColors[indexPath.row]!
         
         return pcCollPic
     }
