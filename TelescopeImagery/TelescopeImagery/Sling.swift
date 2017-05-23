@@ -66,10 +66,12 @@ extension Sling: UICollectionViewDataSource, UICollectionViewDelegate
         if (collectionView == slingCollectionView){
             slingPattern = String(slingPats[indexPath.row])
             reloadProductLabel()
+            slingFavoriteButton.isHidden = false
         }else{
             
             productColor = String(pcAccents[indexPath.row])
             reloadProductLabel()
+            slingFavoriteButton.isHidden = false
         }
         
     }
@@ -102,8 +104,11 @@ class Sling: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
             
         }else{
             favoritedProductGlobal.append(slingProductCodeLabel.text!)
+            
             print("added \(slingProductCodeLabel.text ?? "Nothing") to array")
             print("There are \(favoritedProductGlobal.count) Items in this array")
+            slingFavoriteButton.titleLabel?.text = ""
+            slingFavoriteButton.isHidden = true
         }
     }
     
