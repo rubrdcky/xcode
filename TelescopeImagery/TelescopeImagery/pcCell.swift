@@ -13,4 +13,5 @@ class pcCell : UICollectionViewCell{
     
     @IBOutlet weak var pcColorLabel: UILabel!
     
+    @IBOutlet weak var pcImageView: UIImageView!
 }

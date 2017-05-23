@@ -33,17 +33,12 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate
             
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pcCell", for: indexPath) as! pcCell
-            let cellColor = colorForPCColorCollection(indexPath: indexPath as NSIndexPath)
-            cell.backgroundColor = cellColor
             
-            if (cellColor == black || cellColor == kona || cellColor == agedBronze)
-            {
-                cell.pcColorLabel.textColor = UIColor.white
-            }else{
-                cell.pcColorLabel.textColor = UIColor.black
-            }
-
+            let cellImage = imageForMGPCollection(indexPath: indexPath as NSIndexPath)
+            cell.pcImageView.image = cellImage
+            
             cell.pcColorLabel.text = pcAccents[indexPath.row]
+            cell.pcColorLabel.textColor = UIColor.black
             
             return cell
         }
@@ -117,7 +112,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var productCode:String!
     var productColor:String!
     //var mgpHues = [UIColor]()
-    var pcCollColors = [UIColor]()
+    //var pcCollColors = [UIColor]()
+    var pcCollColors = [UIImage(named:"K.jpg"), UIImage(named:"T.jpg"), UIImage(named:"J.jpg"), UIImage(named:"5.jpg"), UIImage(named:"6.jpg"), UIImage(named:"D"), UIImage(named:"8.jpg"), UIImage(named:"A.jpg"), UIImage(named:"L.jpg")]
     let mgpColors:Int = 11
     let pcColors:Int = 9
     
@@ -132,7 +128,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         //mgpHues = [kona, beachwood, graphite, white, desert, black, red, atlantis, aqua, mango, navy]
         
-        pcCollColors = [kona, beachwood, graphite, white, snow, desert, black, agedBronze, silver]
+        //pcCollColors = [kona, beachwood, graphite, white, snow, desert, black, agedBronze, silver]
         
         self.collectionPicker.dataSource = self
         self.collectionPicker.delegate = self
@@ -231,12 +227,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
-   func colorForPCColorCollection(indexPath:NSIndexPath) -> UIColor
+   func imageForPCColorCollection(indexPath:NSIndexPath) -> UIImage
     {
         
-        let pcCollPic:UIColor = pcCollColors[indexPath.row]
+        let pcCollImage:UIImage = pcCollColors[indexPath.row]
         
-        return pcCollPic
+        return pcCollImage
         
     }
     

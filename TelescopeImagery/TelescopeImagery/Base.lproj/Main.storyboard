@@ -72,15 +72,23 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9C4-3b-14F">
+                                                    <rect key="frame" x="0.0" y="2" width="77" height="66"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="9C4-3b-14F" firstAttribute="leading" secondItem="FBC-Wo-Qjc" secondAttribute="leading" id="27y-ZS-i21"/>
+                                            <constraint firstItem="9C4-3b-14F" firstAttribute="centerY" secondItem="FBC-Wo-Qjc" secondAttribute="centerY" id="5kL-44-v63"/>
+                                            <constraint firstItem="9C4-3b-14F" firstAttribute="top" secondItem="FBC-Wo-Qjc" secondAttribute="topMargin" constant="-6" id="6M9-jX-c8F"/>
                                             <constraint firstAttribute="bottom" secondItem="Fb1-3g-AMo" secondAttribute="bottom" id="Qfh-E8-lcZ"/>
                                             <constraint firstItem="Fb1-3g-AMo" firstAttribute="centerX" secondItem="FBC-Wo-Qjc" secondAttribute="centerX" id="mTx-wK-lPT"/>
+                                            <constraint firstItem="9C4-3b-14F" firstAttribute="centerX" secondItem="Fb1-3g-AMo" secondAttribute="centerX" id="mhA-fI-AHI"/>
                                             <constraint firstItem="Fb1-3g-AMo" firstAttribute="leading" secondItem="FBC-Wo-Qjc" secondAttribute="leadingMargin" constant="-4" id="ygC-Z0-FTA"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="pcColorLabel" destination="Fb1-3g-AMo" id="SGC-hr-cpo"/>
+                                            <outlet property="pcImageView" destination="9C4-3b-14F" id="aaT-ni-6Af"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
