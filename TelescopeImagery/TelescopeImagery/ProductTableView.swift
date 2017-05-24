@@ -69,6 +69,15 @@ class ProductTableView: UITableViewController
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete{
+            
+            favoritedProductGlobal.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
     func getCellImage(indexPath:IndexPath)
     {
         cellProductImage.image = UIImage(named: "Configuration_"+""+"\(favoritedProductGlobal[indexPath.row])"+""+".png")
