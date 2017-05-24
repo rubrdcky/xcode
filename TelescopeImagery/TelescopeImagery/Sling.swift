@@ -90,24 +90,29 @@ class Sling: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     @IBAction func addfavoriteSling(_ sender: Any) {
         
+        slingFavoriteButton.setTitle("♥︎", for: .normal)
+        
         if (favoritedProductGlobal.contains(slingProductCodeLabel.text!))
         {
-            print("Sorry Item Already in Favorite List")
-            slingFavoriteButton.isHidden = true
-            slingFavoriteButton.titleLabel?.text = ""
+            print("Removed Item From Array")
+            if let index = favoritedProductGlobal.index(of: slingProductCodeLabel.text!){
+                
+                favoritedProductGlobal.remove(at: index)
+                slingFavoriteButton.setTitle("♡", for: .normal)
+            }
+            
             
         }else if(slingProductCodeLabel.text == "Please Select a Collection" || slingProductCodeLabel.text == "Please Select Accent Colors"){
             
             print ("Invalid Item")
             
         }else{
-            favoritedProductGlobal.append(slingProductCodeLabel.text!)
             
+            favoritedProductGlobal.append(slingProductCodeLabel.text!)
             print("added \(slingProductCodeLabel.text ?? "Nothing") to array")
             print("There are \(favoritedProductGlobal.count) Items in this array")
-            slingFavoriteButton.titleLabel?.text = ""
-            slingFavoriteButton.isHidden = true
         }
+        
     }
     
     
@@ -147,6 +152,13 @@ class Sling: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
             chairImage.image = UIImage(named: "Configuration_"+""+slingProductCodeLabel.text!+""+".png")
 
             self.telescopeImage.image = nil
+            
+            if (favoritedProductGlobal.contains(slingProductCodeLabel.text!))
+            {
+                slingFavoriteButton.setTitle("♥︎", for: .normal)
+            }else{
+                slingFavoriteButton.setTitle("♡", for: .normal)
+            }
             
         } else {
             

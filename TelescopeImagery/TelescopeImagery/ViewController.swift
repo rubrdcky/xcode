@@ -65,10 +65,17 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate
 
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         //let cell  = collectionView.cellForItem(at: indexPath)
-        //cell?.layer.borderWidth = 4.0
-        //cell?.layer.borderColor = UIColor.black.cgColor
+        //cell?.layer.borderColor = .none
+        //cell!.layer.borderWidth = 4.0
+        //cell!.layer.borderColor = UIColor.black.cgColor
+        
+        collectionView.allowsMultipleSelection = false
+        /*if cell?.isHighlighted == false
+        {
+            cell?.layer.borderWidth = 0
+            cell?.layer.borderColor = UIColor.clear.cgColor
+        }*/
         
         //print("Selected cell number \(mgpAccents[indexPath.row])")
         if (collectionView == mgpCollectionView){
@@ -80,6 +87,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate
             reloadProductLabel()
         }
         
+    }
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        collectionView.allowsMultipleSelection = false
     }
 }
 
@@ -156,6 +167,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         telescopeImage.image = UIImage(named:"telescope-Casual-square-logo.jpg")
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        reloadProductLabel()
+    }
+    
     func reloadProductLabel()
     {
         
@@ -170,7 +186,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             {
                 favoriteButton.setTitle("♥︎", for: .normal)
             } else {
-                
+       
                 favoriteButton.setTitle("♡", for: .normal)
             }
             

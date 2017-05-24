@@ -78,6 +78,18 @@ class ProductTableView: UITableViewController
         }
     }
     
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+        }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        let item = favoritedProductGlobal[sourceIndexPath.row]
+        favoritedProductGlobal.remove(at: sourceIndexPath.row)
+        favoritedProductGlobal.insert(item, at: destinationIndexPath.row)
+        
+    }
+    
     func getCellImage(indexPath:IndexPath)
     {
         cellProductImage.image = UIImage(named: "Configuration_"+""+"\(favoritedProductGlobal[indexPath.row])"+""+".png")
