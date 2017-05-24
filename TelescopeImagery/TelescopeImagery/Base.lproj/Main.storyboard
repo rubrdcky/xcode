@@ -110,7 +110,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mgpCell" id="dI8-J7-SP3" customClass="mgpCell" customModule="TelescopeImagery" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="0.0" width="77" height="66"/>
+                                        <rect key="frame" x="14.5" y="0.0" width="77" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="77" height="66"/>
@@ -169,8 +169,8 @@
                                     <constraint firstAttribute="width" constant="51" id="fA8-x7-lmR"/>
                                     <constraint firstAttribute="height" constant="44" id="uOU-WZ-7CU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="💙">
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="♡">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -260,7 +260,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="slingCell" id="RLp-OD-Oh0" customClass="slingCell" customModule="TelescopeImagery" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="0.0" width="77" height="66"/>
+                                        <rect key="frame" x="14.5" y="0.0" width="77" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="77" height="66"/>
@@ -307,7 +307,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pcCell" id="hur-S2-9ID" customClass="pcCell" customModule="TelescopeImagery" customModuleProvider="target">
-                                        <rect key="frame" x="14" y="0.0" width="77" height="70"/>
+                                        <rect key="frame" x="13.5" y="0.0" width="77" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="77" height="70"/>
@@ -378,8 +378,8 @@
                                     <constraint firstAttribute="width" constant="51" id="SLy-8Y-sdx"/>
                                     <constraint firstAttribute="height" constant="44" id="TgL-Fg-a0z"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="💙">
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="♡">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>

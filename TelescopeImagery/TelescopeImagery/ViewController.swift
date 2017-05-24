@@ -96,12 +96,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func touchUpInside(_ sender: Any) {
         
-        //favoritedProductArray.favoritedProduct.append(productCodeLabel.text!)
-        favoriteButton.isHidden = true
+        favoriteButton.setTitle("♥︎", for: .normal)
         
         if (favoritedProductGlobal.contains(productCodeLabel.text!))
         {
-            print("Sorry Item Already in Favorite List")
+            print("Removed Item From Array")
+            if let index = favoritedProductGlobal.index(of: productCodeLabel.text!){
+                
+                favoritedProductGlobal.remove(at: index)
+                favoriteButton.setTitle("♡", for: .normal)
+            }
+            
             
         }else if(productCodeLabel.text == "Please Select a Collection" || productCodeLabel.text == "Please Select Accent Colors"){
                 
@@ -163,10 +168,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             if (favoritedProductGlobal.contains(productCodeLabel.text!))
             {
-                favoriteButton.isHidden = true
+                favoriteButton.setTitle("♥︎", for: .normal)
             } else {
                 
-                favoriteButton.isHidden = false
+                favoriteButton.setTitle("♡", for: .normal)
             }
             
         } else if (productCode != nil){
