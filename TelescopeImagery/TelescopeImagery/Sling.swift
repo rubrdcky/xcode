@@ -61,17 +61,15 @@ extension Sling: UICollectionViewDataSource, UICollectionViewDelegate
         //cell?.layer.borderWidth = 4.0
         //cell?.layer.borderColor = UIColor.black.cgColor
         
-        //print("Selected cell number \(slingPats[indexPath.row])")
+        //print("Selected cell number \(slingPats[indexPath.row])"
         
         if (collectionView == slingCollectionView){
             slingPattern = String(slingPats[indexPath.row])
             reloadProductLabel()
-            slingFavoriteButton.isHidden = false
         }else{
             
             productColor = String(pcAccents[indexPath.row])
             reloadProductLabel()
-            slingFavoriteButton.isHidden = false
         }
         
     }

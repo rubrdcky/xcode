@@ -97,6 +97,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBAction func touchUpInside(_ sender: Any) {
         
         //favoritedProductArray.favoritedProduct.append(productCodeLabel.text!)
+        favoriteButton.isHidden = true
+        
         if (favoritedProductGlobal.contains(productCodeLabel.text!))
         {
             print("Sorry Item Already in Favorite List")
@@ -106,6 +108,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             print ("Invalid Item")
             
         }else{
+            
             favoritedProductGlobal.append(productCodeLabel.text!)
             print("added \(productCodeLabel.text ?? "Nothing") to array")
             print("There are \(favoritedProductGlobal.count) Items in this array")
@@ -141,6 +144,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.powdercoatCollectionView.dataSource = self
         self.powdercoatCollectionView.delegate = self
         
+        reloadProductLabel()
+        
         productCodeLabel.text = "Please Select a Collection"
         
         telescopeImage.image = UIImage(named:"telescope-Casual-square-logo.jpg")
@@ -151,15 +156,24 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         if productAccent != nil && productCode != nil && productColor != nil{
             
-                productCodeLabel.text! = productCode+""+productColor+""+productAccent+""+"01"
-                chairImage.image = UIImage(named: "Configuration_"+""+productCodeLabel.text!+""+".png")
+            productCodeLabel.text! = productCode+""+productColor+""+productAccent+""+"01"
+            chairImage.image = UIImage(named: "Configuration_"+""+productCodeLabel.text!+""+".png")
+        
+            self.telescopeImage.image = nil
             
-                self.telescopeImage.image = nil
+            if (favoritedProductGlobal.contains(productCodeLabel.text!))
+            {
+                favoriteButton.isHidden = true
+            } else {
+                
+                favoriteButton.isHidden = false
+            }
             
-        } else {
+        } else if (productCode != nil){
             
-                productCodeLabel.text = "Please Select Accent Colors"
-                telescopeImage.image = UIImage(named:"telescope-Casual-square-logo.jpg")
+            productCodeLabel.text = "Please Select Accent Colors"
+            telescopeImage.image = UIImage(named:"telescope-Casual-square-logo.jpg")
+            
         }
         
     }
