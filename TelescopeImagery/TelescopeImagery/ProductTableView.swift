@@ -17,14 +17,31 @@ class ProductTableView: UITableViewController
     
     @IBOutlet weak var cellProductImage: UIImageView!
     
+    @IBOutlet weak var editBarButton: UIBarButtonItem!
     
     //var productTableCell = ProductTableCell()
     //var favoritedArrayPassed = ViewController()
     //var favoritedProduct = [String]()
     let cellIdentifier = "productCell"
     
+    
+    @IBAction func editTapped(_ sender: Any) {
+    
+        if (editBarButton.title == "Done" && self.tableView.isEditing)
+        {
+            self.tableView.setEditing(false, animated: true)
+            self.editBarButton.title = "Edit"
+        }else{
+            
+            self.tableView.setEditing(true, animated: true)
+            self.editBarButton.title = "Done"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.editBarButton.title = "Edit"
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
