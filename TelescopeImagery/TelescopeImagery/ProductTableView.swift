@@ -19,9 +19,6 @@ class ProductTableView: UITableViewController
     
     @IBOutlet weak var editBarButton: UIBarButtonItem!
     
-    //var productTableCell = ProductTableCell()
-    //var favoritedArrayPassed = ViewController()
-    //var favoritedProduct = [String]()
     let cellIdentifier = "productCell"
     
     
@@ -69,8 +66,6 @@ class ProductTableView: UITableViewController
         
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        
-        //let product:String = favoritedProductGlobal[indexPath.row]
     
         let myFont:UIFont = UIFont.init(name: "Arial", size: 25.0)!
         cell.textLabel?.font = myFont
@@ -80,8 +75,6 @@ class ProductTableView: UITableViewController
         let imageName = "Configuration_"+"\(product!)"
         
         cell.imageView?.image = UIImage(named: imageName)
-        
-        //cellProductImage.image = UIImage(named: imageName)
         
         return cell
     }
