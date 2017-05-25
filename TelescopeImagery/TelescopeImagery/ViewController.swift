@@ -39,6 +39,17 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate
                 
             }
             
+            if (cell.isSelected)
+            {
+                cell.layer.borderColor = .none
+                cell.layer.borderWidth = 4.0
+                cell.layer.borderColor = UIColor.black.cgColor
+            }else{
+                
+                cell.layer.borderWidth = 0
+                cell.layer.borderColor = UIColor.clear.cgColor
+            }
+            
             return cell
             
         }else{
@@ -58,6 +69,17 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate
                 
             }
             
+            if (cell.isSelected)
+            {
+                cell.layer.borderColor = .none
+                cell.layer.borderWidth = 4.0
+                cell.layer.borderColor = UIColor.black.cgColor
+            }else{
+                
+                cell.layer.borderWidth = 0
+                cell.layer.borderColor = UIColor.clear.cgColor
+            }
+            
             return cell
         }
         
@@ -65,19 +87,13 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate
 
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //let cell  = collectionView.cellForItem(at: indexPath)
-        //cell?.layer.borderColor = .none
-        //cell!.layer.borderWidth = 4.0
-        //cell!.layer.borderColor = UIColor.black.cgColor
+
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell!.layer.borderWidth = 6.0
+        cell!.layer.borderColor = UIColor.yellow.cgColor
         
         collectionView.allowsMultipleSelection = false
-        /*if cell?.isHighlighted == false
-        {
-            cell?.layer.borderWidth = 0
-            cell?.layer.borderColor = UIColor.clear.cgColor
-        }*/
         
-        //print("Selected cell number \(mgpAccents[indexPath.row])")
         if (collectionView == mgpCollectionView){
             productAccent = String(mgpAccents[indexPath.row])
             reloadProductLabel()
@@ -89,6 +105,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate
         
     }
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell!.layer.borderWidth = 0
+        cell!.layer.borderColor = UIColor.clear.cgColor
         
         collectionView.allowsMultipleSelection = false
     }
@@ -222,8 +242,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        //let URL:String = " "
-        //var URLVariance:String
+        
         productCode = productCodeArray[row]
         reloadProductLabel()
         

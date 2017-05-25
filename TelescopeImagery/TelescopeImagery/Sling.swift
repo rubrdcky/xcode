@@ -39,6 +39,17 @@ extension Sling: UICollectionViewDataSource, UICollectionViewDelegate
                 
             }
             
+            if (cell.isSelected)
+            {
+                cell.layer.borderColor = .none
+                cell.layer.borderWidth = 4.0
+                cell.layer.borderColor = UIColor.black.cgColor
+            }else{
+                
+                cell.layer.borderWidth = 0
+                cell.layer.borderColor = UIColor.clear.cgColor
+            }
+            
             return cell
             
         }else{
@@ -49,7 +60,7 @@ extension Sling: UICollectionViewDataSource, UICollectionViewDelegate
             cell.patImageView.image = cellImage
             
             cell.patternNumberLabel.text = slingPats[indexPath.row]
-            cell.patternNumberLabel.textColor = UIColor.black
+            cell.patternNumberLabel.textColor = UIColor.white
             
             return cell
         }
@@ -57,11 +68,12 @@ extension Sling: UICollectionViewDataSource, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        //let cell  = collectionView.cellForItem(at: indexPath)
-        //cell?.layer.borderWidth = 4.0
-        //cell?.layer.borderColor = UIColor.black.cgColor
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell!.layer.borderWidth = 6.0
+        cell!.layer.borderColor = UIColor.yellow.cgColor
         
-        //print("Selected cell number \(slingPats[indexPath.row])"
+        collectionView.allowsMultipleSelection = false
+        
         
         if (collectionView == slingCollectionView){
             slingPattern = String(slingPats[indexPath.row])
@@ -72,6 +84,15 @@ extension Sling: UICollectionViewDataSource, UICollectionViewDelegate
             reloadProductLabel()
         }
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell!.layer.borderWidth = 0
+        cell!.layer.borderColor = UIColor.clear.cgColor
+        
+        collectionView.allowsMultipleSelection = false
     }
 }
 
