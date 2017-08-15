@@ -606,7 +606,7 @@
                                 <state key="normal" title="Calculate"/>
                                 <connections>
                                     <action selector="calcButtonPressed:" destination="8Et-vh-rxx" eventType="touchUpInside" id="Hk4-Hp-pAa"/>
-                                    <segue destination="l6B-tB-nNE" kind="show" id="q0Y-dj-fHf"/>
+                                    <segue destination="l6B-tB-nNE" kind="show" identifier="ipmResultsSegue" id="q0Y-dj-fHf"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="HkO-jb-AwB">
@@ -740,7 +740,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ipmResultsButton" destination="NXV-cA-bCq" id="Syh-T5-gvd"/>
+                        <outlet property="ipmResultButton" destination="NXV-cA-bCq" id="yZy-rw-1ri"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="huS-ye-U94" userLabel="First Responder" sceneMemberID="firstResponder"/>

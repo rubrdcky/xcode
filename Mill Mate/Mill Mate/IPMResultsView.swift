@@ -11,7 +11,34 @@ import UIKit
 
 class IPMResultsView: UIViewController
 {
+
+    var ipmPassed: String!
     
-    @IBOutlet weak var ipmResultsButton: UIButton!
+    @IBOutlet weak var ipmResultButton: UIButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.reloadLabel()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        self.reloadLabel()
+    }
+    
+    func reloadLabel()
+    {
+        if (ipmPassed == nil)
+        {
+            self.ipmResultButton.setTitle("ErrorNil", for: .normal)
+            
+        }else if(ipmPassed == ""){
+            
+            self.ipmResultButton.setTitle("Error", for: .normal)
+            
+        }else{
+            
+            self.ipmResultButton.setTitle(ipmPassed, for: .normal)
+        }
+    }
 }
