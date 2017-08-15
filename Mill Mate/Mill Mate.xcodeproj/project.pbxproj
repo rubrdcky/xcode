@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2328667E1F4287730061FC3C /* RPMCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328667D1F4287730061FC3C /* RPMCalcView.swift */; };
 		23311A291F41DB5C00CD0891 /* SFMResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23311A281F41DB5C00CD0891 /* SFMResultsView.swift */; };
 		23311A2B1F41DCD700CD0891 /* IPMCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23311A2A1F41DCD700CD0891 /* IPMCalcView.swift */; };
 		23B63D7E1F3A7DF90080EF44 /* SFMCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B63D7D1F3A7DF90080EF44 /* SFMCalcView.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2328667D1F4287730061FC3C /* RPMCalcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMCalcView.swift; sourceTree = "<group>"; };
 		23311A281F41DB5C00CD0891 /* SFMResultsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFMResultsView.swift; sourceTree = "<group>"; };
 		23311A2A1F41DCD700CD0891 /* IPMCalcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPMCalcView.swift; sourceTree = "<group>"; };
 		23B63D7D1F3A7DF90080EF44 /* SFMCalcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SFMCalcView.swift; path = ../SFMCalcView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				23B944941F3494E400B9C191 /* AppDelegate.swift */,
 				23B63D7D1F3A7DF90080EF44 /* SFMCalcView.swift */,
+				2328667D1F4287730061FC3C /* RPMCalcView.swift */,
 				23311A281F41DB5C00CD0891 /* SFMResultsView.swift */,
 				23311A2A1F41DCD700CD0891 /* IPMCalcView.swift */,
 				23B944981F3494E400B9C191 /* Main.storyboard */,
@@ -145,6 +148,7 @@
 			files = (
 				23311A2B1F41DCD700CD0891 /* IPMCalcView.swift in Sources */,
 				23311A291F41DB5C00CD0891 /* SFMResultsView.swift in Sources */,
+				2328667E1F4287730061FC3C /* RPMCalcView.swift in Sources */,
 				23B63D7E1F3A7DF90080EF44 /* SFMCalcView.swift in Sources */,
 				23B944951F3494E400B9C191 /* AppDelegate.swift in Sources */,
 			);
