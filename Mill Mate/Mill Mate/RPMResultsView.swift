@@ -11,7 +11,36 @@ import UIKit
 
 class RPMResultsView: UIViewController
 {
-    var rpmCalc = RPMResultsView()
+    var rpmCalc = RPMCalcView()
     var rpmPassed:String!
+    @IBOutlet weak var rpmResultButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.reloadLabel()
+        
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.reloadLabel()
+    }
+    
+    func reloadLabel()
+    {
+        if (rpmPassed == nil)
+        {
+            self.rpmResultButton.setTitle("Error", for: .normal)
+            
+        }else if (rpmPassed == ""){
+            
+            self.rpmResultButton.setTitle("Error", for: .normal)
+            
+        }else{
+            
+            self.rpmResultButton.setTitle(rpmPassed, for: .normal)
+        }
+    }
     
 }

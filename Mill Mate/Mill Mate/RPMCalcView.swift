@@ -29,7 +29,7 @@ class RPMCalcView: UIViewController
         
         if (self.toolDiameterField.text == "" || self.sfmField.text == "")
         {
-            storedRPM = 0
+            storedRPM = 0.0
         }else{
             
             toolDiaNum = Float(toolDiameterField.text!)!
@@ -47,7 +47,7 @@ class RPMCalcView: UIViewController
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         if let ident = identifier{
             if ident == rpmResultsSegue{
-                if storedRPM == 0{
+                if storedRPM == 0.0{
                     self.errorLabel.text = "You seem to be missing something"
                 return false
                 }
