@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -253,7 +254,10 @@
                                 <state key="normal" title="Calculate"/>
                                 <connections>
                                     <action selector="calculateButtomPressed:" destination="9TC-RE-ehE" eventType="touchUpInside" id="1Th-0g-8ZN"/>
-                                    <segue destination="Rlt-ez-rEz" kind="show" identifier="rpmResultSegue" id="Bo6-Iq-64a"/>
+                                    <segue destination="Rlt-ez-rEz" kind="show" identifier="rpmResultSegue" id="Bo6-Iq-64a">
+                                        <segue key="commit" inheritsFrom="parent" id="UPF-it-ZzA"/>
+                                        <segue key="preview" inheritsFrom="commit" id="qGR-E0-D0p"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxr-tB-x7I">
@@ -292,6 +296,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="Pxr-tB-x7I" id="aZv-DN-ccT"/>
                         <outlet property="rpmCalculate" destination="IGk-1t-EDr" id="CQn-th-ho4"/>
                         <outlet property="sfmField" destination="NWl-Rb-md1" id="tSS-Zl-rId"/>
                         <outlet property="toolDiameterField" destination="lA3-qK-aJn" id="lNs-Vc-YDa"/>
@@ -301,10 +306,10 @@
             </objects>
             <point key="canvasLocation" x="2812" y="402"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View-->
         <scene sceneID="1wd-OY-qst">
             <objects>
-                <viewController id="Rlt-ez-rEz" sceneMemberID="viewController">
+                <viewController id="Rlt-ez-rEz" customClass="RPMResultsView" customModule="Mill_Mate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jr3-yD-Jht"/>
                         <viewControllerLayoutGuide type="bottom" id="ljp-9d-Vn2"/>
@@ -312,7 +317,20 @@
                     <view key="view" contentMode="scaleToFill" id="PAY-IB-TOX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTk-iO-uhc">
+                                <rect key="frame" x="95" y="276" width="184" height="114"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="RPM"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HTk-iO-uhc" firstAttribute="leading" secondItem="PAY-IB-TOX" secondAttribute="leadingMargin" constant="79" id="Bkv-Kx-yGC"/>
+                            <constraint firstItem="HTk-iO-uhc" firstAttribute="top" secondItem="Jr3-yD-Jht" secondAttribute="bottom" constant="212" id="GkA-kg-rge"/>
+                            <constraint firstItem="HTk-iO-uhc" firstAttribute="centerY" secondItem="PAY-IB-TOX" secondAttribute="centerY" id="nuV-eU-h3b"/>
+                            <constraint firstItem="HTk-iO-uhc" firstAttribute="centerX" secondItem="PAY-IB-TOX" secondAttribute="centerX" id="yJb-Lz-hZf"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOv-qP-AVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -672,4 +690,7 @@
         <image name="SavedTools" width="60" height="60"/>
         <image name="Settings" width="60" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Bo6-Iq-64a"/>
+    </inferredMetricsTieBreakers>
 </document>
