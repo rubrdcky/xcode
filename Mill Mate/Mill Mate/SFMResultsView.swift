@@ -14,6 +14,13 @@ class SFMResultsView: UIViewController
 {
     
     @IBOutlet weak var sfmResult: UIButton!
+    @IBOutlet weak var diamParamLabel: UILabel!
+    @IBOutlet weak var rpmParamLabel: UILabel!
+    
+    
+    var diamParamPassed:String!
+    var rpmParamPassed:String!
+    
     var sfmCalc = SFMCalcView()
     var sfmPassed:String!
     
@@ -22,12 +29,13 @@ class SFMResultsView: UIViewController
         
         super.viewDidLoad()
         self.reloadLabel()
-        //self.sfmResult.setTitle("Test", for: .normal)
+        self.loadParameters()
             
         }
     
     override func viewWillAppear(_ animated: Bool) {
         self.reloadLabel()
+        self.loadParameters()
     }
     
     func reloadLabel()
@@ -45,4 +53,11 @@ class SFMResultsView: UIViewController
             self.sfmResult.setTitle(sfmPassed, for: .normal)
         }
     }
+    
+    func loadParameters()
+    {
+        self.diamParamLabel.text = self.diamParamPassed
+        self.rpmParamLabel.text = self.rpmParamPassed
+    }
+    
     }

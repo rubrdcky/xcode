@@ -16,6 +16,9 @@ class SFMCalcView: UIViewController
     var rpmNum: Float!
     var storedSFM: Float!
     var sfmResultsSegue = "sfmResultSegue"
+    
+    var diamaParamToPass: String!
+    var rpmParamToPass: String!
 
     @IBOutlet weak var toolDiameter: UITextField!
     
@@ -57,6 +60,8 @@ class SFMCalcView: UIViewController
         if segue.identifier == sfmResultsSegue {
             let viewController = segue.destination as! SFMResultsView
             viewController.sfmPassed = String(storedSFM)
+            viewController.diamParamPassed = diamaParamToPass
+            viewController.rpmParamPassed = rpmParamToPass
         }
     }
     

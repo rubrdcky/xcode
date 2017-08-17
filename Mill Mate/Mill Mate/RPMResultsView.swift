@@ -15,6 +15,14 @@ class RPMResultsView: UIViewController
     var rpmPassed:String!
     @IBOutlet weak var rpmResultButton: UIButton!
     
+    @IBOutlet weak var diamParamLabel: UILabel!
+    @IBOutlet weak var sfmParamLabel: UILabel!
+    
+    var diamParamPassed: String!
+    var sfmParamPassed: String!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.reloadLabel()

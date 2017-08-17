@@ -66,9 +66,9 @@
 			children = (
 				23B944941F3494E400B9C191 /* AppDelegate.swift */,
 				23B63D7D1F3A7DF90080EF44 /* SFMCalcView.swift */,
+				23311A281F41DB5C00CD0891 /* SFMResultsView.swift */,
 				2328667D1F4287730061FC3C /* RPMCalcView.swift */,
 				23774E961F4322C9009D0163 /* RPMResultsView.swift */,
-				23311A281F41DB5C00CD0891 /* SFMResultsView.swift */,
 				23311A2A1F41DCD700CD0891 /* IPMCalcView.swift */,
 				23774E981F437B05009D0163 /* IPMResultsView.swift */,
 				23B944981F3494E400B9C191 /* Main.storyboard */,
