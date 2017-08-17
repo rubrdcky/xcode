@@ -48,6 +48,9 @@ class RPMResultsView: UIViewController
         }else{
             
             self.rpmResultButton.setTitle(rpmPassed, for: .normal)
+            
+            self.diamParamLabel.text = diamParamPassed
+            self.sfmParamLabel.text = sfmParamPassed
         }
     }
     

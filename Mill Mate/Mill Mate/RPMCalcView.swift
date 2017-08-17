@@ -17,14 +17,13 @@ class RPMCalcView: UIViewController
     var storedRPM: Float!
     var rpmResultsSegue = "rpmResultSegue"
     
+    var diamParamToPass: String!
+    var sfmParamToPass: String!
+    
     @IBOutlet weak var rpmCalculate: UIButton!
-    
     @IBOutlet weak var errorLabel: UILabel!
-    
     @IBOutlet weak var toolDiameterField: UITextField!
-    
     @IBOutlet weak var sfmField: UITextField!
-    
     @IBAction func calculateButtomPressed(_ sender: Any) {
         
         if (self.toolDiameterField.text == "" || self.sfmField.text == "")
@@ -35,6 +34,9 @@ class RPMCalcView: UIViewController
             toolDiaNum = Float(toolDiameterField.text!)!
             sfmNum = Float(sfmField.text!)!
             storedRPM = (sfmNum * (12/Float.pi))/toolDiaNum
+            
+            self.diamParamToPass = toolDiameterField.text
+            self.sfmParamToPass = sfmField.text
         }
         
     }
@@ -61,6 +63,8 @@ class RPMCalcView: UIViewController
         if segue.identifier == rpmResultsSegue{
             let viewController = segue.destination as! RPMResultsView
             viewController.rpmPassed = String(storedRPM)
+            viewController.diamParamPassed = diamParamToPass
+            viewController.sfmParamPassed = sfmParamToPass
         }
     }
     

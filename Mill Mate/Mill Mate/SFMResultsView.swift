@@ -60,4 +60,4 @@ class SFMResultsView: UIViewController
         self.rpmParamLabel.text = self.rpmParamPassed
     }
     
-    }
+}
