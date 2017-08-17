@@ -18,6 +18,11 @@ class IPMCalcView: UIViewController
     var storedIPM: Float!
     var ipmResultsSegue = "ipmResultsSegue"
     
+    var rpmParamToPass:String!
+    var iptParamToPass:String!
+    var teethParamToPass:String!
+    
+    
     @IBOutlet weak var errorLabel: UILabel!
     
     @IBOutlet weak var rpmField: UITextField!
@@ -40,6 +45,10 @@ class IPMCalcView: UIViewController
             let tempStore = teethNum * iptNum
             
             storedIPM = tempStore * rpmNum
+            
+            rpmParamToPass = self.rpmField.text
+            iptParamToPass = self.iptField.text
+            teethParamToPass = self.teethField.text
         }
         
     }
@@ -49,6 +58,11 @@ class IPMCalcView: UIViewController
         
         self.errorLabel.text = ""
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.errorLabel.text = ""
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
@@ -68,6 +82,10 @@ class IPMCalcView: UIViewController
         if segue.identifier == ipmResultsSegue{
             let viewController = segue.destination as! IPMResultsView
             viewController.ipmPassed = String(storedIPM)
+            
+            viewController.rpmParamPassed = rpmParamToPass
+            viewController.iptParamPassed = iptParamToPass
+            viewController.teethParamPassed = teethParamToPass
         }
     }
     
