@@ -12,6 +12,7 @@
 		23311A2B1F41DCD700CD0891 /* IPMCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23311A2A1F41DCD700CD0891 /* IPMCalcView.swift */; };
 		235374691F460F4500F20253 /* IPRCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235374681F460F4500F20253 /* IPRCalcView.swift */; };
 		2353746B1F46103300F20253 /* IPRResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2353746A1F46103300F20253 /* IPRResultsView.swift */; };
+		237443F11F4F71A200196AB9 /* ToolsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237443F01F4F71A200196AB9 /* ToolsTableView.swift */; };
 		23774E971F4322C9009D0163 /* RPMResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23774E961F4322C9009D0163 /* RPMResultsView.swift */; };
 		23774E991F437B05009D0163 /* IPMResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23774E981F437B05009D0163 /* IPMResultsView.swift */; };
 		23B63D7E1F3A7DF90080EF44 /* SFMCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B63D7D1F3A7DF90080EF44 /* SFMCalcView.swift */; };
@@ -27,6 +28,7 @@
 		23311A2A1F41DCD700CD0891 /* IPMCalcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPMCalcView.swift; sourceTree = "<group>"; };
 		235374681F460F4500F20253 /* IPRCalcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPRCalcView.swift; sourceTree = "<group>"; };
 		2353746A1F46103300F20253 /* IPRResultsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPRResultsView.swift; sourceTree = "<group>"; };
+		237443F01F4F71A200196AB9 /* ToolsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsTableView.swift; sourceTree = "<group>"; };
 		23774E961F4322C9009D0163 /* RPMResultsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMResultsView.swift; sourceTree = "<group>"; };
 		23774E981F437B05009D0163 /* IPMResultsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPMResultsView.swift; sourceTree = "<group>"; };
 		23B63D7D1F3A7DF90080EF44 /* SFMCalcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SFMCalcView.swift; path = ../SFMCalcView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				23774E981F437B05009D0163 /* IPMResultsView.swift */,
 				235374681F460F4500F20253 /* IPRCalcView.swift */,
 				2353746A1F46103300F20253 /* IPRResultsView.swift */,
+				237443F01F4F71A200196AB9 /* ToolsTableView.swift */,
 				23B944981F3494E400B9C191 /* Main.storyboard */,
 				23B9449B1F3494E400B9C191 /* Assets.xcassets */,
 				23B9449D1F3494E400B9C191 /* LaunchScreen.storyboard */,
@@ -167,6 +170,7 @@
 				235374691F460F4500F20253 /* IPRCalcView.swift in Sources */,
 				23774E991F437B05009D0163 /* IPMResultsView.swift in Sources */,
 				23774E971F4322C9009D0163 /* RPMResultsView.swift in Sources */,
+				237443F11F4F71A200196AB9 /* ToolsTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

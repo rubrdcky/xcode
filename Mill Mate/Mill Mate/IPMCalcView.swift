@@ -21,6 +21,7 @@ class IPMCalcView: UIViewController
     var rpmParamToPass:String!
     var iptParamToPass:String!
     var teethParamToPass:String!
+    var rpmButtonTitlePassed:String!
     
     
     @IBOutlet weak var errorLabel: UILabel!

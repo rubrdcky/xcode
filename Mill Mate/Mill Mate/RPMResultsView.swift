@@ -12,6 +12,7 @@ import UIKit
 class RPMResultsView: UIViewController
 {
     var rpmCalc = RPMCalcView()
+    var ipmCalc = IPMCalcView()
     var rpmPassed:String!
     @IBOutlet weak var rpmResultButton: UIButton!
     
@@ -20,7 +21,15 @@ class RPMResultsView: UIViewController
     
     var diamParamPassed: String!
     var sfmParamPassed: String!
+    var rpmButtonTitleToPass: String!
     
+    var rpmToIpmSegue = "rpmToIpm"
+    
+    @IBAction func rpmButtonPressed(_ sender: Any) {
+        
+        ipmCalc.rpmField.text = self.rpmResultButton.title(for: .normal)
+        
+    }
     
     
     override func viewDidLoad() {
@@ -51,6 +60,25 @@ class RPMResultsView: UIViewController
             
             self.diamParamLabel.text = diamParamPassed
             self.sfmParamLabel.text = sfmParamPassed
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
+        if let ident = identifier{
+            if ident == rpmToIpmSegue{
+                if  ipmCalc.rpmField.text == nil{
+                    return false
+                }
+            }
+        }
+        
+        return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == rpmToIpmSegue {
+            let viewController = segue.destination as! IPMCalcView
+            viewController.rpmField.text = self.rpmPassed
         }
     }
     
