@@ -13,6 +13,15 @@ class ToolsTableView: UITableViewController {
     
     let reuseIdentifier = "toolCell"
     
+    @IBOutlet weak var manufacturerField: UITextField!
+    
+    
     @IBOutlet weak var addToolButton: UIBarButtonItem!
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        
+        
+    }
+    
     
 }

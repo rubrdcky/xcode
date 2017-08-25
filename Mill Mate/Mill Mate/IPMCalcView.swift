@@ -59,6 +59,13 @@ class IPMCalcView: UIViewController
         
         self.errorLabel.text = ""
         
+        if (rpmButtonTitlePassed == nil){
+            self.rpmField.text = ""
+        }else {
+            self.rpmField.text = rpmButtonTitlePassed
+        }
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
