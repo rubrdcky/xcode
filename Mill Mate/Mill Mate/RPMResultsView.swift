@@ -27,7 +27,8 @@ class RPMResultsView: UIViewController
     
     @IBAction func rpmButtonPressed(_ sender: Any) {
         
-        ipmCalc.rpmField.text = self.rpmResultButton.title(for: .normal)
+        //ipmCalc.rpmField.text = self.rpmPassed
+        //ipmCalc.rpmField.text = self.rpmResultButton.title(for: .normal)
         
     }
     
@@ -63,28 +64,24 @@ class RPMResultsView: UIViewController
         }
     }
     
-  /*  override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
+  /*override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         if let ident = identifier{
             if ident == rpmToIpmSegue{
-                if  ipmCalc.rpmField.text == nil{
+                if  (ipmCalc.rpmField.text == nil || ipmCalc.iptField.text == nil || ipmCalc.teethField.text == nil){
                     return false
                 }
             }
         }
         
         return true
-    }*/
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == rpmToIpmSegue {
             let viewController = segue.destination as! IPMCalcView
-            viewController.rpmButtonTitlePassed = self.rpmPassed
-            if(viewController.iptField.text == nil || viewController.teethField.text == nil){
-            viewController.iptField.text = ""
-            viewController.teethField.text = ""
-            }
-        
+            viewController.rpmField.text = rpmPassed
+
         }
-    }
+    }*/
     
 }

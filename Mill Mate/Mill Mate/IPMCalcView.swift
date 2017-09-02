@@ -71,6 +71,16 @@ class IPMCalcView: UIViewController
     override func viewWillAppear(_ animated: Bool) {
         
         self.errorLabel.text = ""
+        
+        if (rpmButtonTitlePassed == nil){
+            self.rpmField.text = ""
+            self.iptField.text = ""
+            self.teethField.text = ""
+        }else {
+            self.rpmField.text = rpmButtonTitlePassed
+            self.iptField.text = ""
+            self.teethField.text = ""
+        }
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {

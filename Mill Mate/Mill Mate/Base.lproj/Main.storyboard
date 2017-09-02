@@ -73,7 +73,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="b44-Ux-aOl" kind="show" id="hC5-s7-zfu"/>
+                                    <segue destination="dcb-zN-db8" kind="show" identifier="toolSegue" id="5bQ-gq-JLY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kde-3d-UfS" userLabel="Settings">
@@ -427,7 +427,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJO-z6-bQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5629.6000000000004" y="1107.7961019490256"/>
+            <point key="canvasLocation" x="6568.8000000000002" y="1107.7961019490256"/>
         </scene>
         <!--Calc View-->
         <scene sceneID="cnB-oV-02x">
@@ -542,7 +542,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhl-rz-qWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2786" y="1528"/>
+            <point key="canvasLocation" x="3724" y="1527.8860569715143"/>
         </scene>
         <!--Results View-->
         <scene sceneID="Kyh-yy-BBh">
@@ -636,7 +636,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gp-91-BYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3582" y="1528"/>
+            <point key="canvasLocation" x="4520.8000000000002" y="1527.8860569715143"/>
         </scene>
         <!--Calc View-->
         <scene sceneID="Jas-da-616">
@@ -1107,10 +1107,10 @@
             </objects>
             <point key="canvasLocation" x="261.60000000000002" y="792.95352323838085"/>
         </scene>
-        <!--Tools Table View-->
+        <!--Tools Save View-->
         <scene sceneID="fRk-W9-4Rk">
             <objects>
-                <viewController id="b44-Ux-aOl" customClass="ToolsTableView" customModule="Mill_Mate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="b44-Ux-aOl" customClass="ToolsSaveView" customModule="Mill_Mate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Ed-Ju-bln"/>
                         <viewControllerLayoutGuide type="bottom" id="fyn-cN-GDV"/>
@@ -1271,13 +1271,55 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addToolButton" destination="5ck-tW-cwb" id="kBn-iy-Hjt"/>
+                        <outlet property="iptRatingField" destination="E6h-DW-zSN" id="pSo-oh-CdK"/>
                         <outlet property="manufacturerField" destination="FCB-RT-hAJ" id="XIZ-yh-XLw"/>
+                        <outlet property="materialRating" destination="rEz-Lf-uAa" id="bMI-d1-yWs"/>
+                        <outlet property="partNumberField" destination="gzI-pw-3Pv" id="hfG-6E-VP6"/>
+                        <outlet property="sfmRatingField" destination="pdV-vr-haf" id="roi-r6-VRg"/>
+                        <outlet property="teethField" destination="bLV-Ry-WvW" id="Xlz-4G-f1q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujo-Lo-kAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="down" id="JtY-7h-sIh"/>
             </objects>
             <point key="canvasLocation" x="262" y="1691"/>
+        </scene>
+        <!--Tools Table View-->
+        <scene sceneID="Vs5-Gn-b53">
+            <objects>
+                <tableViewController id="dcb-zN-db8" customClass="ToolsTableView" customModule="Mill_Mate" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="22f-8b-ZBU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="toolCell" id="T5g-kR-6p2">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T5g-kR-6p2" id="SdF-6E-mHZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dcb-zN-db8" id="Xrj-jp-tyc"/>
+                            <outlet property="delegate" destination="dcb-zN-db8" id="WZV-GN-v5t"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Zlu-z2-gWV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lyh-3b-sYM">
+                            <connections>
+                                <segue destination="b44-Ux-aOl" kind="show" id="xS4-mc-TX8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVf-qx-1Q9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1274" y="1691"/>
         </scene>
     </scenes>
     <resources>
