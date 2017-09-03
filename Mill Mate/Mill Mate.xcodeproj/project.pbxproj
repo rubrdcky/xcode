@@ -22,6 +22,8 @@
 		23B9449C1F3494E400B9C191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23B9449B1F3494E400B9C191 /* Assets.xcassets */; };
 		23B9449F1F3494E400B9C191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B9449D1F3494E400B9C191 /* LaunchScreen.storyboard */; };
 		23CAC84C1F52EEE7008974CE /* ToolsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CAC84B1F52EEE7008974CE /* ToolsTableView.swift */; };
+		23CAC84E1F5AE2E5008974CE /* ToolSaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CAC84D1F5AE2E5008974CE /* ToolSaveModel.swift */; };
+		23CAC8541F5C5159008974CE /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CAC8531F5C5159008974CE /* Tool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		23B9449E1F3494E400B9C191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23B944A01F3494E400B9C191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23CAC84B1F52EEE7008974CE /* ToolsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsTableView.swift; sourceTree = "<group>"; };
+		23CAC84D1F5AE2E5008974CE /* ToolSaveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolSaveModel.swift; sourceTree = "<group>"; };
+		23CAC8531F5C5159008974CE /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tool.swift; path = ../Tool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +78,9 @@
 		23B944931F3494E400B9C191 /* Mill Mate */ = {
 			isa = PBXGroup;
 			children = (
+				23CAC8531F5C5159008974CE /* Tool.swift */,
 				237443F21F4FA05100196AB9 /* ToolModel.swift */,
+				23CAC84D1F5AE2E5008974CE /* ToolSaveModel.swift */,
 				23B944941F3494E400B9C191 /* AppDelegate.swift */,
 				23B63D7D1F3A7DF90080EF44 /* SFMCalcView.swift */,
 				23311A281F41DB5C00CD0891 /* SFMResultsView.swift */,
@@ -169,6 +175,7 @@
 			files = (
 				2353746B1F46103300F20253 /* IPRResultsView.swift in Sources */,
 				23311A2B1F41DCD700CD0891 /* IPMCalcView.swift in Sources */,
+				23CAC84E1F5AE2E5008974CE /* ToolSaveModel.swift in Sources */,
 				23311A291F41DB5C00CD0891 /* SFMResultsView.swift in Sources */,
 				23CAC84C1F52EEE7008974CE /* ToolsTableView.swift in Sources */,
 				2328667E1F4287730061FC3C /* RPMCalcView.swift in Sources */,
@@ -178,6 +185,7 @@
 				235374691F460F4500F20253 /* IPRCalcView.swift in Sources */,
 				23774E991F437B05009D0163 /* IPMResultsView.swift in Sources */,
 				23774E971F4322C9009D0163 /* RPMResultsView.swift in Sources */,
+				23CAC8541F5C5159008974CE /* Tool.swift in Sources */,
 				237443F11F4F71A200196AB9 /* ToolsSaveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

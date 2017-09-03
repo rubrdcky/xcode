@@ -11,15 +11,19 @@ import UIKit
 
 class ToolsTableView: UITableViewController
 {
-    let cellIdentifier = "toolCell"
     
     var toolModel = ToolModel()
+    var toolSaveModel = ToolSaveModel()
+    var tools: [Tool] = []
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        toolModel.loadData()
+        //toolSaveModel.loadToolData()
+        
+        tools = try! Tool.loadFromPlist()
+        print(tools)
         
         self.editButtonItem.title = "Add"
         
@@ -31,21 +35,30 @@ class ToolsTableView: UITableViewController
     
     override func viewWillAppear(_ animated: Bool) {
         
-        toolModel.loadData()
+        toolSaveModel.loadToolData()
         tableView.reloadData()
         
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return toolModel.saveTool.count
+        return tools.count
         
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        cell.textLabel?.text = "Hello"
+        let tool:Tool
+        
+        tool = tools[indexPath.row]
+
+        let cellIdentifier = "toolCell"
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) ?? UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
+        //cell.textLabel?.text = toolSaveModel.resultDictionary.object(forKey: manufacturerKey)
+        
+        
+        cell.textLabel?.text = tool.manufacturer
     
         
         return cell
