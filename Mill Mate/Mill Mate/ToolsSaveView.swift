@@ -13,6 +13,7 @@ class ToolsSaveView: UIViewController {
     
     var toolModel = ToolModel()
     var toolSaveModel = ToolSaveModel()
+    var savedTools: [Tool] = []
     
     @IBOutlet weak var manufacturerField: UITextField!
     @IBOutlet weak var partNumberField: UITextField!
@@ -31,15 +32,11 @@ class ToolsSaveView: UIViewController {
         saveItem()
         toolSaveModel.saveToolData()
         
-       // print("succeed", toolModel.dataFilePath())
+       //print("succeed", toolModel.dataFilePath())
+        self.clearTextField()
         
-        //manufacturerField.text = ""
-        //partNumberField.text = ""
-        //teethField.text = ""
-        //sfmRatingField.text = ""
-        //iptRatingField.text = ""
         
-
+        
     }
     
     
@@ -69,6 +66,17 @@ class ToolsSaveView: UIViewController {
         toolSaveModel.teethID = self.teethField.text!
         toolSaveModel.sfmRatingID = self.sfmRatingField.text!
         toolSaveModel.iptRatingID = self.iptRatingField.text!
+    }
+    
+    func clearTextField()
+    {
+        
+        manufacturerField.text = ""
+        partNumberField.text = ""
+        teethField.text = ""
+        sfmRatingField.text = ""
+        iptRatingField.text = ""
+        
     }
     
 }

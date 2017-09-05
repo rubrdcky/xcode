@@ -49,7 +49,7 @@ class ToolSaveModel: NSObject
         }
         
         resultDictionary = NSMutableDictionary(contentsOfFile: path)!
-        print("Loaded GameData.plist file is --> \(resultDictionary.description )")
+        print("Loaded SavedTools.plist file is --> \(resultDictionary.description )")
         
         let myDict = NSDictionary(contentsOfFile: path)
         
@@ -67,12 +67,27 @@ class ToolSaveModel: NSObject
         
     }
     
+    func from (dict: [String: AnyObject]) -> Tool {
+        let manufacturer = dict["manufacturer"] as! String
+        let partNumber = dict["partNumber"] as! String
+        let teeth = dict["teeth"] as! String
+        let sfmRating = dict["sfmRating"] as! String
+        let iptRating = dict["iptRating"] as! String
+        
+        return Tool(manufacturer: manufacturer,
+                    partNumber: partNumber,
+                    teeth: teeth,
+                    sfmRating: sfmRating,
+                    iptRating: iptRating)
+    }
+    
     func saveToolData()
     {
         
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as NSArray
         let documentsDirectory = paths.object(at: 0) as! NSString
         let path = documentsDirectory.appendingPathComponent("SavedTools.plist")
+
         
         let dict: NSMutableDictionary = ["XInitializerItem": "DoNotEverChange"]
         
@@ -87,6 +102,7 @@ class ToolSaveModel: NSObject
         //writing to SavedTools.plist
         
         dict.write(toFile: path, atomically: false)
+        
         
         resultDictionary = NSMutableDictionary(contentsOfFile: path)!
         print("Saved SavedTools.plist file is --> \(resultDictionary.description )")
