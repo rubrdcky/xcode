@@ -14,7 +14,7 @@ class ToolsTableView: UITableViewController
     
     var toolModel = ToolModel()
     var toolSaveModel = ToolSaveModel()
-    var tools: [ToolSaveModel] = []
+    var tools: [Tool] = []
 
     
     override func viewDidLoad() {
@@ -22,8 +22,8 @@ class ToolsTableView: UITableViewController
         
         toolSaveModel.loadToolData()
         
-        //tools = try! Tool.loadFromPlist()
-        //print(tools)
+        tools = try! Tool.loadFromPlist()
+        print(tools)
         
         self.editButtonItem.title = "Add"
         
@@ -42,15 +42,15 @@ class ToolsTableView: UITableViewController
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return toolSaveModel.resultDictionary.count
+        return tools.count
         
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //let tool:Tool
+        let tool:Tool
         
-        //tool = tools[indexPath.row]
+        tool = tools[indexPath.row]
         
         //let tool:ToolSaveModel
         //tool = tools[indexPath.row]
@@ -61,9 +61,10 @@ class ToolsTableView: UITableViewController
         //cell.textLabel?.text = toolSaveModel.resultDictionary.object(forKey: manufacturerKey)
         //cell.textLabel?.text = tool.manufacturerKey
         
-        //cell.textLabel?.text = tool.manufacturer
+        cell.textLabel?.text = tool.manufacturer
+        cell.detailTextLabel?.text = tool.partNumber
         
-        cell.textLabel?.text = toolSaveModel.manufacturerID
+        //cell.textLabel?.text = toolSaveModel.manufacturerID
     
         
         return cell

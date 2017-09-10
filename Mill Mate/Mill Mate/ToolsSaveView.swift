@@ -29,8 +29,10 @@ class ToolsSaveView: UIViewController {
         
         //toolModel.saveData()
         //onCreateData()
-        saveItem()
-        toolSaveModel.saveToolData()
+        //saveItem()
+        //toolSaveModel.saveToolData()
+        
+        self.gatherToolData()
         
        //print("succeed", toolModel.dataFilePath())
         self.clearTextField()
@@ -77,6 +79,15 @@ class ToolsSaveView: UIViewController {
         sfmRatingField.text = ""
         iptRatingField.text = ""
         
+    }
+    
+    func gatherToolData()
+    {
+        let tools = Tool(manufacturer: self.manufacturerField.text!, partNumber: partNumberField.text!, teeth: teethField.text!, sfmRating: sfmRatingField.text!, iptRating: iptRatingField.text!)
+        
+        savedTools.append(tools)
+        
+        print("\(tools)")
     }
     
 }

@@ -47,15 +47,10 @@ extension Tool {
     //Load all the elements from the plist file
     static func loadFromPlist() throws -> [Tool] {
         
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as NSArray
-        let documentsDirectory = paths.object(at: 0) as! NSString
-        let path = documentsDirectory.appendingPathComponent("SavedTools.plist")
-        
-
         //First we need to find the plist
         guard let file = Bundle.main.path(forResource: "SavedTools", ofType: "plist") else {
             throw noPlistError.noPlistFile
-            
+        }
         
         //Then we read it as an array of dict
         guard let array = NSArray(contentsOfFile: file) as? [[String: AnyObject]] else {
@@ -77,6 +72,5 @@ extension Tool {
         return tools
     
         }
-}
 }
 
