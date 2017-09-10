@@ -19,6 +19,8 @@ struct Polymer {
     let secondLayout:String?
     let thirdPart:String?
     let thirdLayout:String?
+    let fourthPart:String?
+    let fourthLayout:String?
     
 
 }
@@ -36,6 +38,8 @@ func from (dict: [String: AnyObject]) -> Polymer{
     let secondLayout = dict["secondLayout"] as! String?
     let thirdPart = dict["thirdPart"] as! String?
     let thirdLayout = dict["thirdLayout"] as! String?
+    let fourthPart = dict["thirdPart"] as! String?
+    let fourthLayout = dict["thirdLayout"] as! String?
     
     return Polymer (workcenter: workcenter,
                     partNumber: partNumber,
@@ -44,7 +48,9 @@ func from (dict: [String: AnyObject]) -> Polymer{
                     secondPart:secondPart,
                     secondLayout: secondLayout,
                     thirdPart: thirdPart,
-                    thirdLayout: thirdLayout
+                    thirdLayout: thirdLayout,
+                    fourthPart: fourthPart,
+                    fourthLayout: fourthLayout
                     )
 }
 

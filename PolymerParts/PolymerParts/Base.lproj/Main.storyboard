@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -747,16 +747,16 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </searchFieldCell>
                                 <connections>
-                                    <binding destination="jyd-fc-XMn" name="predicate2" keyPath="filterPredicate.workcenter" previousBinding="04f-yk-5g7" id="8QD-9d-Fkg">
-                                        <dictionary key="options">
-                                            <string key="NSDisplayName">predicate3</string>
-                                            <string key="NSPredicateFormat">workcenter contains [cd] $value</string>
-                                        </dictionary>
-                                    </binding>
                                     <binding destination="jyd-fc-XMn" name="predicate" keyPath="filterPredicate" id="04f-yk-5g7">
                                         <dictionary key="options">
                                             <string key="NSDisplayName">Part Number</string>
                                             <string key="NSPredicateFormat">partNumber contains [cd] $value</string>
+                                        </dictionary>
+                                    </binding>
+                                    <binding destination="jyd-fc-XMn" name="predicate2" keyPath="filterPredicate.workcenter" previousBinding="04f-yk-5g7" id="8QD-9d-Fkg">
+                                        <dictionary key="options">
+                                            <string key="NSDisplayName">predicate3</string>
+                                            <string key="NSPredicateFormat">workcenter contains [cd] $value</string>
                                         </dictionary>
                                     </binding>
                                 </connections>

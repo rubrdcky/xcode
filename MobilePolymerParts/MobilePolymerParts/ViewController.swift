@@ -26,6 +26,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             let secondLayout = detailPolymer.secondLayout
             let thirdPart = detailPolymer.thirdPart
             let thirdLayout = detailPolymer.thirdLayout
+            let fourthPart = detailPolymer.fourthPart
+            let fourthLayout = detailPolymer.fourthLayout
             
             print("Part number from detail polymer is \(partNumber)")
             print("Layout from detail polymer is \(layout)")
@@ -37,6 +39,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             secondLayoutToPass = secondLayout
             thirdPartToPass = thirdPart
             thirdLayoutToPass = thirdLayout
+            fourthPartToPass = fourthPart
+            fourthLayoutToPass = fourthLayout
             
             
             performSegue(withIdentifier: detailSequeIdentifier, sender: self)
@@ -54,6 +58,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             let secondLayout = detailPolymer.secondLayout
             let thirdPart = detailPolymer.thirdPart
             let thirdLayout = detailPolymer.thirdLayout
+            let fourthPart = detailPolymer.fourthPart
+            let fourthLayout = detailPolymer.fourthLayout
         
             print("Part number from detail polymer is \(partNumber)")
             print("Layout from detail polymer is \(layout)")
@@ -65,6 +71,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             secondLayoutToPass = secondLayout
             thirdPartToPass = thirdPart
             thirdLayoutToPass = thirdLayout
+            fourthPartToPass = fourthPart
+            fourthLayoutToPass = fourthLayout
 
             performSegue(withIdentifier: detailSequeIdentifier, sender: self)
         }
@@ -92,6 +100,8 @@ class ViewController: UIViewController {
     var secondLayoutToPass:String!
     var thirdPartToPass:String!
     var thirdLayoutToPass:String!
+    var fourthPartToPass:String!
+    var fourthLayoutToPass: String!
     let detailSequeIdentifier = "detailSegue"
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -181,6 +191,8 @@ class ViewController: UIViewController {
             viewController.secondLayoutPassed = secondLayoutToPass
             viewController.thirdPartPassed = thirdPartToPass
             viewController.thirdLayoutPassed = thirdLayoutToPass
+            viewController.fourthPartPassed = fourthPartToPass
+            viewController.fourthLayoutPassed = fourthLayoutToPass
             
             
             let backItem = UIBarButtonItem()

@@ -9,15 +9,15 @@
 import Foundation
 import UIKit
 
-class PolymerDetail: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class PolymerDetail: UIViewController, UITableViewDelegate, UITableViewDataSource
 
-    @IBOutlet weak var collectionImage: UIImageView!
+{
     
     @IBOutlet weak var tableView: UITableView!
     let cellIdentifier = "Polymer Cell"
     var detail = [String]()
     var detailSecond = [String]()
-    let category = ["WORKCENTER", "COLLECTION","PART NUMBER", "LAYOUT", "SECOND PART", "SECOND LAYOUT", "THIRD PART", "THIRD LAYOUT"]
+    let category = ["WORKCENTER", "COLLECTION","PART NUMBER", "LAYOUT", "SECOND PART", "SECOND LAYOUT", "THIRD PART", "THIRD LAYOUT", "FOURTH PART", "FOURTH LAYOUT"]
     var partNumberPassed:String!
     var layoutPassed:String!
     var workcenterPassed:String!
@@ -26,6 +26,8 @@ class PolymerDetail: UIViewController, UITableViewDelegate, UITableViewDataSourc
     var secondLayoutPassed:String!
     var thirdPartPassed:String!
     var thirdLayoutPassed:String!
+    var fourthPartPassed:String!
+    var fourthLayoutPassed:String!
     
     
     
@@ -39,9 +41,13 @@ class PolymerDetail: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }else if (thirdPartPassed == nil) {
             
             detailSecond = [workcenterPassed, collectionPassed,partNumberPassed, layoutPassed, secondPartPassed, secondLayoutPassed]
-        }else {
+        }else if (fourthPartPassed == nil) {
             
             detailSecond = [workcenterPassed, collectionPassed,partNumberPassed, layoutPassed, secondPartPassed, secondLayoutPassed, thirdPartPassed, thirdLayoutPassed]
+        }else{
+            
+            detailSecond = [workcenterPassed, collectionPassed,partNumberPassed, layoutPassed, secondPartPassed, secondLayoutPassed, thirdPartPassed, thirdLayoutPassed, fourthPartPassed, fourthLayoutPassed]
+            
         }
         
         navigationItem.title = partNumberPassed + " " + "Detail"
@@ -50,7 +56,7 @@ class PolymerDetail: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     override func viewWillAppear(_ animated: Bool) {
         
-        self.findCollection()
+        //self.findCollection()
     }
     
     
@@ -80,7 +86,7 @@ class PolymerDetail: UIViewController, UITableViewDelegate, UITableViewDataSourc
         return cell
     }
     
-    func findCollection()
+   /* func findCollection()
     {
         let collection:String = collectionPassed
         let URL:String
@@ -164,5 +170,5 @@ class PolymerDetail: UIViewController, UITableViewDelegate, UITableViewDataSourc
             collectionImage.image = UIImage(data:data as Data)
             collectionImage.contentMode = UIViewContentMode(rawValue: 2)!
             }}
-    }
+    }*/
 }
