@@ -24,7 +24,7 @@ struct Tool {
 }
 
 //Create an element corresponding to the given dict
-func from (dict: [String: AnyObject]) -> Tool {
+func saveTool (dict: [String: AnyObject]) -> Tool {
     let manufacturer = dict["manufacturer"] as! String
     let partNumber = dict["partNumber"] as! String
     let teeth = dict["teeth"] as! String
@@ -63,7 +63,7 @@ extension Tool {
         //For each dictionary
         for dict in array {
             //We implement the element
-            let tool = from(dict: dict)
+            let tool = saveTool(dict: dict)
             //And add it to the array
             tools.append(tool)
             }
