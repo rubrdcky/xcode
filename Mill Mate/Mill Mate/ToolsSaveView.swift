@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 
 var savedToolArrayGlobal: [[String:String]] = []
-var toolManufacturerGlobal:NSDictionary = [:]
+var toolManufacturerGlobal = [String]()
 let manufacturerKey2Global = "Manufacturer"
+var toolPartNumberGlobal = [String]()
 
 class ToolsSaveView: UIViewController {
     
@@ -36,7 +37,7 @@ class ToolsSaveView: UIViewController {
     var manufacturerTableLabel:String = ""
     var partNumberTableLabel:String = ""
     var toolValueArray = [String]()
-    var toolManufacturer:NSDictionary = [:]
+    var toolManufacturer = [String]()
     //var lookForDict = savedToolArrayGlobal[1]
     
     @IBOutlet weak var materialRating: UISegmentedControl!
@@ -45,16 +46,8 @@ class ToolsSaveView: UIViewController {
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         
-        //toolModel.saveData()
-        //onCreateData()
-        //saveItem()
-        //toolSaveModel.saveToolData()
+        self.gatherToolData()
         
-        //self.gatherToolData()
-        
-        self.saveTool()
-        
-       //print("succeed", toolModel.dataFilePath())
         self.clearTextField()
     }
     
@@ -62,30 +55,8 @@ class ToolsSaveView: UIViewController {
     override func viewDidLoad() {
     
         super.viewDidLoad()
-       // onCreateData()
-        
         
     }
-    
-    
-    //func onCreateData() {
-        
-    //}
-    
-   /* func saveItem()
-    {
-        //toolModel.saveTool.append(.init(manufacturer: manufacturerField.text!, partNumber: partNumberField.text!, teeth: teethField.text!, sfmRating: sfmRatingField.text!, iptRating: iptRatingField.text!))
-        
-        //toolModel.saveTool.append(.init(coder: manufacturerField.text)
-        
-        //toolModel.saveData()
-        
-        toolSaveModel.manufacturerID = self.manufacturerField.text!
-        toolSaveModel.partNumberID = self.partNumberField.text!
-        toolSaveModel.teethID = self.teethField.text!
-        toolSaveModel.sfmRatingID = self.sfmRatingField.text!
-        toolSaveModel.iptRatingID = self.iptRatingField.text!
-    }*/
     
     func clearTextField()
     {
@@ -100,36 +71,17 @@ class ToolsSaveView: UIViewController {
     
     func gatherToolData()
     {
-        let tools = Tool(manufacturer: self.manufacturerField.text!, partNumber: partNumberField.text!, teeth: teethField.text!, sfmRating: sfmRatingField.text!, iptRating: iptRatingField.text!)
+        let tempTool:NSDictionary = [manufacturerKey: self.manufacturerField.text!, partNumberKey: partNumberField.text!, teethKey: teethField.text!, sfmRatingKey: sfmRatingField.text!, iptRatingKey: iptRatingField.text!] as NSDictionary
         
-        savedTools.append(tools)
+        savedToolArrayGlobal.append(tempTool as! [String : String])
         
-        print("\(tools)")
-    }
-    
-    func saveTool()
-    {
-        let tempToolDic = [manufacturerKey2Global:manufacturerField.text!, partNumberKey:partNumberField.text!]
+        print("\(savedToolArrayGlobal)")
         
-        manufacturerTableLabel = self.manufacturerField.text!
-        partNumberTableLabel = self.manufacturerField.text!
+        toolManufacturerGlobal.append(String(describing: tempTool.value(forKey: manufacturerKey)!))
         
-        savedToolArrayGlobal.append(tempToolDic)
+        print("\(toolManufacturerGlobal.count)")
         
-        print("Added \(tempToolDic)")
-        
-        print ("Current contents of ToolDict: \(savedToolArrayGlobal)")
-        
-        for i in 0 ..< savedToolArrayGlobal.count
-        {
-            toolManufacturerGlobal = savedToolArrayGlobal[i] as NSDictionary!
-            
-            print("\(String(describing: toolManufacturerGlobal .value(forKey: manufacturerKey2Global)!))")
-        }
-        
-        //lookForDict[manufacturerKey2Global]
-        //print("\(lookForDict[manufacturerKey2Global]!)")
-        
+        toolPartNumberGlobal.append(String(describing: tempTool.value(forKey: partNumberKey)!))
     }
     
 }

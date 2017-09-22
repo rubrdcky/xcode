@@ -43,47 +43,20 @@ class ToolsTableView: UITableViewController
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //return tools.count
-        return savedToolArrayGlobal.count
+        return toolManufacturerGlobal.count
         
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //let tool:Tool
-        
-        //tool = tools[indexPath.row]
-        
-        //let tool:ToolSaveModel
-        //tool = tools[indexPath.row]
 
         let cellIdentifier = "toolCell"
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) ?? UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
-        //cell.textLabel?.text = toolSaveModel.resultDictionary.object(forKey: manufacturerKey)
-        //cell.textLabel?.text = tool.manufacturerKey
+
         
-        
-        //Tool Model Stuff
-        //cell.textLabel?.text = tool.manufacturer
-        //cell.detailTextLabel?.text = tool.partNumber
-        
-        //cell.textLabel?.text = toolSaveModel.manufacturerID
-    
-        //cell.textLabel?.text = savedToolView.toolValueArray[indexPath.row]
-        
-        //cell.textLabel?.text = "Still Working on it"
-        
-        /*if let dict = savedToolArrayGlobal[indexPath.section] as? [String:AnyObject],
-        let rows = dict["rows"] as? [AnyObject],
-        let result = rows[indexPath.row] as? [String:AnyObject],
-        let title  = result["title"]  {
-            
-            cell.textLabel?.text = title as? String
-            
-        }*/
-        
-        cell.textLabel?.text = String(describing: savedToolView.toolManufacturer.value(forKey: manufacturerKey2Global))
-        cell.detailTextLabel?.text = manufacturerKey2Global
+        cell.textLabel?.text  = toolManufacturerGlobal[indexPath.row]
+        cell.detailTextLabel?.text = toolPartNumberGlobal[indexPath.row]
         
         return cell
     }
