@@ -9,21 +9,25 @@
 import Foundation
 import UIKit
 
+/*extension ToolsTableView: UITableViewDataSource, UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let detailToolData = toolManufacturerGlobal[indexPath.row]
+        let manufacturer = detailToolData
+    }
+    
+}*/
+
 class ToolsTableView: UITableViewController
 {
     
-    //var toolModel = ToolModel()
-    //var toolSaveModel = ToolSaveModel()
-    var tools: [Tool] = []
+    //var tools: [Tool] = []
     var savedToolView = ToolsSaveView()
+    let detailSegueIdentifier = "detailToolSegue"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //toolSaveModel.loadToolData()
-        
-        //tools = try! Tool.loadFromPlist()
-        //print(tools)
         
         self.editButtonItem.title = "Add"
         
@@ -35,14 +39,12 @@ class ToolsTableView: UITableViewController
     
     override func viewWillAppear(_ animated: Bool) {
         
-        //toolSaveModel.loadToolData()
         tableView.reloadData()
         
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        //return tools.count
         return toolManufacturerGlobal.count
         
     }

@@ -16,10 +16,7 @@ var toolPartNumberGlobal = [String]()
 
 class ToolsSaveView: UIViewController {
     
-   // var toolModel = ToolModel()
-   // var toolSaveModel = ToolSaveModel()
     var savedTools: [Tool] = []
-    
     
     
     @IBOutlet weak var manufacturerField: UITextField!
@@ -38,7 +35,7 @@ class ToolsSaveView: UIViewController {
     var partNumberTableLabel:String = ""
     var toolValueArray = [String]()
     var toolManufacturer = [String]()
-    //var lookForDict = savedToolArrayGlobal[1]
+    
     
     @IBOutlet weak var materialRating: UISegmentedControl!
     

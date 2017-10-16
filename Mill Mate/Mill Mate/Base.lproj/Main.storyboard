@@ -542,7 +542,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhl-rz-qWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3724" y="1527.8860569715143"/>
+            <point key="canvasLocation" x="2812" y="1479"/>
         </scene>
         <!--Results View-->
         <scene sceneID="Kyh-yy-BBh">
@@ -636,7 +636,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gp-91-BYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4520.8000000000002" y="1527.8860569715143"/>
+            <point key="canvasLocation" x="3609" y="1479"/>
         </scene>
         <!--Calc View-->
         <scene sceneID="Jas-da-616">
@@ -1282,7 +1282,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujo-Lo-kAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="down" id="JtY-7h-sIh"/>
             </objects>
-            <point key="canvasLocation" x="262" y="1691"/>
+            <point key="canvasLocation" x="-95" y="1691"/>
         </scene>
         <!--Tools Table View-->
         <scene sceneID="Vs5-Gn-b53">
@@ -1332,10 +1332,41 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="dXg-zH-zF0" kind="show" identifier="detailToolSegue" id="C8C-iY-lLH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gVf-qx-1Q9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1274" y="1691"/>
+        </scene>
+        <!--Detail Tools Table View-->
+        <scene sceneID="EUJ-lJ-Vj0">
+            <objects>
+                <tableViewController id="dXg-zH-zF0" customClass="detailToolsTableView" customModule="Mill_Mate" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZV0-GQ-NfR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailToolCell" id="uEe-lv-v03">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uEe-lv-v03" id="wcH-3R-2nd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dXg-zH-zF0" id="y2w-Bg-57q"/>
+                            <outlet property="delegate" destination="dXg-zH-zF0" id="LA4-uR-iTb"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RyH-3C-oPE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1273" y="2583"/>
         </scene>
     </scenes>
     <resources>
