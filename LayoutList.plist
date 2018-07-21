@@ -4,6 +4,282 @@
 <array>
 	<dict>
 		<key>collection</key>
+		<string>Dune Hydrolounge</string>
+		<key>workcenter</key>
+		<string>48009</string>
+		<key>partNumber</key>
+		<string>9N80-7</string>
+		<key>layout</key>
+		<string>56</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Dune Hydrolounge</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>fourthLayout</key>
+		<string>5</string>
+		<key>fourthPart</key>
+		<string>9N80-4L</string>
+		<key>partNumber</key>
+		<string>9N80-5R</string>
+		<key>layout</key>
+		<string>5</string>
+		<key>secondPart</key>
+		<string>9N80-5L</string>
+		<key>secondLayout</key>
+		<string>5</string>
+		<key>thirdPart</key>
+		<string>9N80-4R</string>
+		<key>thirdLayout</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Dune Hydrolounge</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>fourthLayout</key>
+		<string>5</string>
+		<key>fourthPart</key>
+		<string>9N80-4L</string>
+		<key>partNumber</key>
+		<string>9N80-5L</string>
+		<key>layout</key>
+		<string>5</string>
+		<key>secondPart</key>
+		<string>9N80-5R</string>
+		<key>secondLayout</key>
+		<string>5</string>
+		<key>thirdPart</key>
+		<string>9N80-4R</string>
+		<key>thirdLayout</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Dune Hydrolounge</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>fourthLayout</key>
+		<string>5</string>
+		<key>fourthPart</key>
+		<string>9N80-5R</string>
+		<key>partNumber</key>
+		<string>9N80-4R</string>
+		<key>layout</key>
+		<string>5</string>
+		<key>secondPart</key>
+		<string>9N80-4L</string>
+		<key>secondLayout</key>
+		<string>5</string>
+		<key>thirdPart</key>
+		<string>9N80-5R</string>
+		<key>thirdLayout</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Dune Hydrolounge</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>fourthLayout</key>
+		<string>5</string>
+		<key>fourthPart</key>
+		<string>9N80-5R</string>
+		<key>partNumber</key>
+		<string>9N80-4L</string>
+		<key>layout</key>
+		<string>5</string>
+		<key>secondPart</key>
+		<string>9N80-4R</string>
+		<key>secondLayout</key>
+		<string>5</string>
+		<key>thirdPart</key>
+		<string>9N80-5R</string>
+		<key>thirdLayout</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Wexler</string>
+		<key>workcenter</key>
+		<string>48009</string>
+		<key>partNumber</key>
+		<string>5W70-7</string>
+		<key>layout</key>
+		<string>58</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Wexler</string>
+		<key>workcenter</key>
+		<string>48009</string>
+		<key>partNumber</key>
+		<string>5W70-8</string>
+		<key>layout</key>
+		<string>58</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Wexler</string>
+		<key>workcenter</key>
+		<string>48009</string>
+		<key>secondLayout</key>
+		<string>29</string>
+		<key>secondPart</key>
+		<string>5W70-8</string>
+		<key>partNumber</key>
+		<string>5W70-7</string>
+		<key>layout</key>
+		<string>29</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Wexler</string>
+		<key>workcenter</key>
+		<string>48009</string>
+		<key>secondLayout</key>
+		<string>29</string>
+		<key>secondPart</key>
+		<string>5W70-7</string>
+		<key>partNumber</key>
+		<string>5W70-8</string>
+		<key>layout</key>
+		<string>29</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Fire Tables</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>layout</key>
+		<string>7</string>
+		<key>partNumber</key>
+		<string>6F20-4</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Fire Tables</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>layout</key>
+		<string>7</string>
+		<key>partNumber</key>
+		<string>6F20-3</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Ashbee</string>
+		<key>workcenter</key>
+		<string>48007</string>
+		<key>partNumber</key>
+		<string>1A30-P50</string>
+		<key>layout</key>
+		<string>8</string>
+	</dict>
+	<dict>
+		<key>Note</key>
+		<string>P70 Only</string>
+		<key>secondLayout</key>
+		<string>106</string>
+		<key>secondPart</key>
+		<string>5220-25L</string>
+		<key>collection</key>
+		<string>Extension Table</string>
+		<key>workcenter</key>
+		<string>48001</string>
+		<key>partNumber</key>
+		<string>5220-25R</string>
+		<key>layout</key>
+		<string>106</string>
+	</dict>
+	<dict>
+		<key>Note</key>
+		<string>P70 Only</string>
+		<key>secondLayout</key>
+		<string>106</string>
+		<key>secondPart</key>
+		<string>5220-25R</string>
+		<key>collection</key>
+		<string>Extension Table</string>
+		<key>workcenter</key>
+		<string>48001</string>
+		<key>partNumber</key>
+		<string>5220-25L</string>
+		<key>layout</key>
+		<string>106</string>
+	</dict>
+	<dict>
+		<key>sixthLayout</key>
+		<string>13</string>
+		<key>sixthPart</key>
+		<string>5W70-6R</string>
+		<key>fifthLayout</key>
+		<string>13</string>
+		<key>fifthPart</key>
+		<string>5W70-6L</string>
+		<key>collection</key>
+		<string>Wexler</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>fourthLayout</key>
+		<string>13</string>
+		<key>fourthPart</key>
+		<string>5W70-5R</string>
+		<key>partNumber</key>
+		<string>5W70-4L (5W70)</string>
+		<key>layout</key>
+		<string>13</string>
+		<key>secondPart</key>
+		<string>5W70-4R</string>
+		<key>secondLayout</key>
+		<string>13</string>
+		<key>thirdPart</key>
+		<string>5W70-5L</string>
+		<key>thirdLayout</key>
+		<string>13</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Hudson</string>
+		<key>workcenter</key>
+		<string>48009</string>
+		<key>partNumber</key>
+		<string>2H70-1</string>
+		<key>layout</key>
+		<string>45</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Wexler</string>
+		<key>workcenter</key>
+		<string>48001</string>
+		<key>secondLayout</key>
+		<string>20</string>
+		<key>secondPart</key>
+		<string>5W70-3R</string>
+		<key>partNumber</key>
+		<string>5W70-3L</string>
+		<key>layout</key>
+		<string>20</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Wexler</string>
+		<key>workcenter</key>
+		<string>48001</string>
+		<key>secondLayout</key>
+		<string>20</string>
+		<key>secondPart</key>
+		<string>5W70-3L</string>
+		<key>partNumber</key>
+		<string>5W70-3R</string>
+		<key>layout</key>
+		<string>20</string>
+	</dict>
+	<dict>
+		<key>collection</key>
 		<string>Leeward Sectional</string>
 		<key>workcenter</key>
 		<string>48009</string>
@@ -126,7 +402,7 @@
 		<key>thirdPart</key>
 		<string>8510-5R</string>
 		<key>thirdLayout</key>
-		<string>30`</string>
+		<string>30</string>
 	</dict>
 	<dict>
 		<key>collection</key>
@@ -942,7 +1218,7 @@
 		<key>workcenter</key>
 		<string>48001</string>
 		<key>partNumber</key>
-		<string>L070-3</string>
+		<string>L072-3</string>
 		<key>layout</key>
 		<string>56</string>
 	</dict>
@@ -962,7 +1238,7 @@
 		<key>workcenter</key>
 		<string>48007</string>
 		<key>partNumber</key>
-		<string>1A90-P50</string>
+		<string>1A90-P5S</string>
 		<key>layout</key>
 		<string>8</string>
 	</dict>
@@ -1028,7 +1304,7 @@
 		<key>secondPart</key>
 		<string>9410-6</string>
 		<key>partNumber</key>
-		<string>2M10-P50</string>
+		<string>2M10-P5S</string>
 		<key>layout</key>
 		<string>1</string>
 	</dict>
@@ -1138,7 +1414,7 @@
 		<key>secondLayout</key>
 		<string>42</string>
 		<key>secondPart</key>
-		<string>B070-3</string>
+		<string>B072-3</string>
 		<key>partNumber</key>
 		<string>3S00-7</string>
 		<key>layout</key>
@@ -1154,7 +1430,7 @@
 		<key>secondPart</key>
 		<string>3S00-7</string>
 		<key>partNumber</key>
-		<string>B070-3</string>
+		<string>B072-3</string>
 		<key>layout</key>
 		<string>42</string>
 	</dict>
@@ -2984,7 +3260,7 @@
 		<key>workcenter</key>
 		<string>48007</string>
 		<key>partNumber</key>
-		<string>5220-P50</string>
+		<string>5220-P5S</string>
 		<key>layout</key>
 		<string>1</string>
 	</dict>
@@ -2994,7 +3270,7 @@
 		<key>workcenter</key>
 		<string>48007</string>
 		<key>partNumber</key>
-		<string>3M70-P50</string>
+		<string>3M70-P5S</string>
 		<key>layout</key>
 		<string>2</string>
 	</dict>
@@ -3004,7 +3280,7 @@
 		<key>workcenter</key>
 		<string>48007</string>
 		<key>partNumber</key>
-		<string>3130-P50</string>
+		<string>3130-P5S</string>
 		<key>layout</key>
 		<string>3</string>
 	</dict>
@@ -3014,7 +3290,7 @@
 		<key>workcenter</key>
 		<string>48007</string>
 		<key>partNumber</key>
-		<string>5160-P50</string>
+		<string>5160-P5S</string>
 		<key>layout</key>
 		<string>2</string>
 	</dict>
@@ -3024,7 +3300,7 @@
 		<key>workcenter</key>
 		<string>48007</string>
 		<key>partNumber</key>
-		<string>5150-P50</string>
+		<string>5150-P5S</string>
 		<key>layout</key>
 		<string>8</string>
 	</dict>
@@ -3064,7 +3340,7 @@
 		<key>workcenter</key>
 		<string>48007</string>
 		<key>partNumber</key>
-		<string>3S00-P50</string>
+		<string>3S00-P5S</string>
 		<key>layout</key>
 		<string>5</string>
 	</dict>
@@ -3088,7 +3364,7 @@
 		<key>workcenter</key>
 		<string>48007</string>
 		<key>partNumber</key>
-		<string>5210-P50</string>
+		<string>5210-P5S</string>
 		<key>layout</key>
 		<string>20</string>
 	</dict>
@@ -3176,7 +3452,7 @@
 		<key>workcenter</key>
 		<string>48007</string>
 		<key>partNumber</key>
-		<string>5100-P50</string>
+		<string>5101-P50</string>
 		<key>layout</key>
 		<string>18</string>
 	</dict>
@@ -3186,7 +3462,7 @@
 		<key>workcenter</key>
 		<string>48007</string>
 		<key>partNumber</key>
-		<string>5020-P50</string>
+		<string>5020-P5S</string>
 		<key>layout</key>
 		<string>2</string>
 	</dict>
@@ -3248,7 +3524,7 @@
 		<key>layout</key>
 		<string>2</string>
 		<key>partNumber</key>
-		<string>4F70-P50</string>
+		<string>4F70-P5S</string>
 	</dict>
 	<dict>
 		<key>collection</key>
@@ -3256,7 +3532,7 @@
 		<key>workcenter</key>
 		<string>48007</string>
 		<key>partNumber</key>
-		<string>4F10-P50</string>
+		<string>4F10-P5S</string>
 		<key>layout</key>
 		<string>3</string>
 	</dict>
@@ -3296,7 +3572,7 @@
 		<key>workcenter</key>
 		<string>48007</string>
 		<key>partNumber</key>
-		<string>9520-P50</string>
+		<string>9520-P5S</string>
 		<key>layout</key>
 		<string>8</string>
 	</dict>
@@ -3306,7 +3582,7 @@
 		<key>workcenter</key>
 		<string>48007</string>
 		<key>partNumber</key>
-		<string>5120-P50</string>
+		<string>5120-P5S</string>
 		<key>layout</key>
 		<string>2</string>
 	</dict>
@@ -3316,7 +3592,7 @@
 		<key>workcenter</key>
 		<string>48007</string>
 		<key>partNumber</key>
-		<string>5070-P50</string>
+		<string>5070-P5S</string>
 		<key>layout</key>
 		<string>2</string>
 	</dict>
@@ -3326,7 +3602,7 @@
 		<key>workcenter</key>
 		<string>48007</string>
 		<key>partNumber</key>
-		<string>5060-P50</string>
+		<string>5061-P5S</string>
 		<key>layout</key>
 		<string>1</string>
 	</dict>
@@ -3338,7 +3614,7 @@
 		<key>layout</key>
 		<string>4</string>
 		<key>partNumber</key>
-		<string>5050-P50</string>
+		<string>5050-P5S</string>
 	</dict>
 	<dict>
 		<key>collection</key>
@@ -3348,7 +3624,7 @@
 		<key>layout</key>
 		<string>8</string>
 		<key>partNumber</key>
-		<string>5000-P50</string>
+		<string>5000-P5S</string>
 	</dict>
 	<dict>
 		<key>collection</key>
@@ -3358,7 +3634,7 @@
 		<key>layout</key>
 		<string>8</string>
 		<key>partNumber</key>
-		<string>5140-P50</string>
+		<string>5140-P5S</string>
 	</dict>
 	<dict>
 		<key>collection</key>
@@ -3366,7 +3642,7 @@
 		<key>workcenter</key>
 		<string>48007</string>
 		<key>partNumber</key>
-		<string>5180-P50</string>
+		<string>5180-P5S</string>
 		<key>layout</key>
 		<string>1</string>
 	</dict>
