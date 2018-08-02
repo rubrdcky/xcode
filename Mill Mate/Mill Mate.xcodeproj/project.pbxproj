@@ -10,6 +10,7 @@
 		2328667E1F4287730061FC3C /* RPMCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328667D1F4287730061FC3C /* RPMCalcView.swift */; };
 		23311A291F41DB5C00CD0891 /* SFMResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23311A281F41DB5C00CD0891 /* SFMResultsView.swift */; };
 		23311A2B1F41DCD700CD0891 /* IPMCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23311A2A1F41DCD700CD0891 /* IPMCalcView.swift */; };
+		233E603D210769AC00851267 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233E603C210769AC00851267 /* CollectionViewController.swift */; };
 		235374691F460F4500F20253 /* IPRCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235374681F460F4500F20253 /* IPRCalcView.swift */; };
 		2353746B1F46103300F20253 /* IPRResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2353746A1F46103300F20253 /* IPRResultsView.swift */; };
 		237443F11F4F71A200196AB9 /* ToolsSaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237443F01F4F71A200196AB9 /* ToolsSaveView.swift */; };
@@ -30,6 +31,7 @@
 		2328667D1F4287730061FC3C /* RPMCalcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMCalcView.swift; sourceTree = "<group>"; };
 		23311A281F41DB5C00CD0891 /* SFMResultsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFMResultsView.swift; sourceTree = "<group>"; };
 		23311A2A1F41DCD700CD0891 /* IPMCalcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPMCalcView.swift; sourceTree = "<group>"; };
+		233E603C210769AC00851267 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		235374681F460F4500F20253 /* IPRCalcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPRCalcView.swift; sourceTree = "<group>"; };
 		2353746A1F46103300F20253 /* IPRResultsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPRResultsView.swift; sourceTree = "<group>"; };
 		237443F01F4F71A200196AB9 /* ToolsSaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsSaveView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				23B9449D1F3494E400B9C191 /* LaunchScreen.storyboard */,
 				23A965BA1F65760A008496F6 /* SavedTools.plist */,
 				23B944A01F3494E400B9C191 /* Info.plist */,
+				233E603C210769AC00851267 /* CollectionViewController.swift */,
 			);
 			path = "Mill Mate";
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				23B944951F3494E400B9C191 /* AppDelegate.swift in Sources */,
 				235374691F460F4500F20253 /* IPRCalcView.swift in Sources */,
 				23774E991F437B05009D0163 /* IPMResultsView.swift in Sources */,
+				233E603D210769AC00851267 /* CollectionViewController.swift in Sources */,
 				23774E971F4322C9009D0163 /* RPMResultsView.swift in Sources */,
 				23B057441F77D91A001190AD /* detailToolsTableView.swift in Sources */,
 				23CAC8541F5C5159008974CE /* Tool.swift in Sources */,
