@@ -3,6 +3,28 @@
 <plist version="1.0">
 <array>
 <dict>
+		<key>collection</key>
+		<string>Wexler Swivel Rocker</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>fourthLayout</key>
+		<string>16 Each</string>
+		<key>fourthPart</key>
+		<string>5W60-4LR</string>
+		<key>partNumber</key>
+		<string>5W60-7LR</string>
+		<key>layout</key>
+		<string>16 each</string>
+		<key>secondPart</key>
+		<string>5W60-6LR</string>
+		<key>secondLayout</key>
+		<string>16 Each</string>
+		<key>thirdPart</key>
+		<string>5W60-5LR</string>
+		<key>thirdLayout</key>
+		<string>16 each</string>
+	</dict>
+<dict>
 		<key>sixthLayout</key>
 		<string>11</string>
 		<key>sixthPart</key>
