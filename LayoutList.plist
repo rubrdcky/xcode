@@ -2,7 +2,37 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-<dict>
+	<dict>
+		<key>sixthLayout</key>
+		<string>13</string>
+		<key>sixthPart</key>
+		<string>5W50-6R</string>
+		<key>fifthLayout</key>
+		<string>13</string>
+		<key>fifthPart</key>
+		<string>5W50-6L</string>
+		<key>collection</key>
+		<string>Wexler</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>fourthLayout</key>
+		<string>13</string>
+		<key>fourthPart</key>
+		<string>5W50-5R</string>
+		<key>partNumber</key>
+		<string>5W70-4L (5W50)</string>
+		<key>layout</key>
+		<string>13</string>
+		<key>secondPart</key>
+		<string>5W70-4R</string>
+		<key>secondLayout</key>
+		<string>13</string>
+		<key>thirdPart</key>
+		<string>5W50-5L</string>
+		<key>thirdLayout</key>
+		<string>13</string>
+	</dict>
+	<dict>
 		<key>collection</key>
 		<string>Wexler Swivel Rocker</string>
 		<key>workcenter</key>
@@ -24,7 +54,7 @@
 		<key>thirdLayout</key>
 		<string>16 each</string>
 	</dict>
-<dict>
+	<dict>
 		<key>sixthLayout</key>
 		<string>11</string>
 		<key>sixthPart</key>
@@ -54,8 +84,7 @@
 		<key>thirdLayout</key>
 		<string>11</string>
 	</dict>
-
-<dict>
+	<dict>
 		<key>sixthLayout</key>
 		<string>11</string>
 		<key>sixthPart</key>
@@ -85,7 +114,7 @@
 		<key>thirdLayout</key>
 		<string>11</string>
 	</dict>
-<dict>
+	<dict>
 		<key>sixthLayout</key>
 		<string>11</string>
 		<key>sixthPart</key>
@@ -115,7 +144,7 @@
 		<key>thirdLayout</key>
 		<string>11</string>
 	</dict>
-<dict>
+	<dict>
 		<key>sixthLayout</key>
 		<string>11</string>
 		<key>sixthPart</key>
@@ -145,7 +174,7 @@
 		<key>thirdLayout</key>
 		<string>11</string>
 	</dict>
-<dict>
+	<dict>
 		<key>sixthLayout</key>
 		<string>11</string>
 		<key>sixthPart</key>
@@ -175,7 +204,7 @@
 		<key>thirdLayout</key>
 		<string>11</string>
 	</dict>
-<dict>
+	<dict>
 		<key>sixthLayout</key>
 		<string>11</string>
 		<key>sixthPart</key>
