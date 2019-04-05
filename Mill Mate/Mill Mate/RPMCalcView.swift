@@ -14,7 +14,8 @@ class RPMCalcView: UIViewController
     
     var toolDiaNum: Float!
     var sfmNum: Float!
-    var storedRPM: Float!
+    var storedRPM:Int!
+    var tempRPM:Float!
     var rpmResultsSegue = "rpmResultSegue"
     
     var diamParamToPass: String!
@@ -28,13 +29,13 @@ class RPMCalcView: UIViewController
         
         if (self.toolDiameterField.text == "" || self.sfmField.text == "")
         {
-            storedRPM = 0.0
+            storedRPM = 0
         }else{
             
             toolDiaNum = Float(toolDiameterField.text!)!
             sfmNum = Float(sfmField.text!)!
-            storedRPM = (sfmNum * (12/Float.pi))/toolDiaNum
-            
+            tempRPM = (sfmNum * (12/Float.pi))/toolDiaNum
+            storedRPM = Int(tempRPM)
             self.diamParamToPass = toolDiameterField.text
             self.sfmParamToPass = sfmField.text
         }
@@ -49,7 +50,7 @@ class RPMCalcView: UIViewController
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         if let ident = identifier{
             if ident == rpmResultsSegue{
-                if storedRPM == 0.0{
+                if storedRPM == 0{
                     self.errorLabel.text = "You seem to be missing something"
                 return false
                 }

@@ -14,6 +14,8 @@ class RPMResultsView: UIViewController
     var rpmCalc = RPMCalcView()
     var ipmCalc = IPMCalcView()
     var rpmPassed:String!
+    var rpmToPass:String!
+    
     @IBOutlet weak var rpmResultButton: UIButton!
     
     @IBOutlet weak var diamParamLabel: UILabel!
@@ -29,6 +31,7 @@ class RPMResultsView: UIViewController
         
         //ipmCalc.rpmField.text = self.rpmPassed
         //ipmCalc.rpmField.text = self.rpmResultButton.title(for: .normal)
+        //rpmToPass = self.rpmResultButton.titleLabel?.text
         
     }
     
@@ -36,6 +39,7 @@ class RPMResultsView: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         self.reloadLabel()
+        rpmToPass = rpmResultButton.titleLabel?.text
         
     }
     
@@ -47,7 +51,7 @@ class RPMResultsView: UIViewController
     
     func reloadLabel()
     {
-        if (rpmPassed == nil)
+        if(rpmPassed == nil)
         {
             self.rpmResultButton.setTitle("Error", for: .normal)
             
@@ -63,11 +67,11 @@ class RPMResultsView: UIViewController
             self.sfmParamLabel.text = sfmParamPassed
         }
     }
-    
-  /*override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
+ 
+  override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         if let ident = identifier{
             if ident == rpmToIpmSegue{
-                if  (ipmCalc.rpmField.text == nil || ipmCalc.iptField.text == nil || ipmCalc.teethField.text == nil){
+                if  (rpmToPass == nil){
                     return false
                 }
             }
@@ -79,9 +83,10 @@ class RPMResultsView: UIViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == rpmToIpmSegue {
             let viewController = segue.destination as! IPMCalcView
-            viewController.rpmField.text = rpmPassed
+            
+            viewController.rpmButtonTitlePassed = rpmToPass
 
         }
-    }*/
+    }
     
 }
