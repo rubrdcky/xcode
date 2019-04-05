@@ -15,7 +15,7 @@ class IPMCalcView: UIViewController
     var rpmNum: Float!
     var iptNum: Float!
     var teethNum: Float!
-    var storedIPM: Float!
+    var storedIPM: Int!
     var ipmResultsSegue = "ipmResultsSegue"
     //var rpmResultsSeque = "rpmToIpm"
     
@@ -37,7 +37,7 @@ class IPMCalcView: UIViewController
         
         if (self.rpmField.text == "" || self.iptField.text == "" || self.teethField.text == "")
         {
-            storedIPM = 0.0
+            storedIPM = 0
         }else{
             
             rpmNum = Float(rpmField.text!)!
@@ -46,7 +46,9 @@ class IPMCalcView: UIViewController
             
             let tempStore = teethNum * iptNum
             
-            storedIPM = tempStore * rpmNum
+            storedIPM = Int(tempStore * rpmNum)
+            
+            //let shorttempStore = storedIPM
             
             rpmParamToPass = self.rpmField.text
             iptParamToPass = self.iptField.text
@@ -87,7 +89,7 @@ class IPMCalcView: UIViewController
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         if let ident = identifier{
             if ident == ipmResultsSegue{
-                if storedIPM == 0.0{
+                if storedIPM == 0{
                     self.errorLabel.text = "You seem to be missing something"
                     return false
                 }

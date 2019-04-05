@@ -53,7 +53,6 @@ class IPMResultsView: UIViewController
             self.ipmResultButton.setTitle("Error", for: .normal)
             
         }else{
-            
             self.ipmResultButton.setTitle(ipmPassed, for: .normal)
             
         }

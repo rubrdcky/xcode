@@ -35,7 +35,9 @@ class RPMCalcView: UIViewController
             toolDiaNum = Float(toolDiameterField.text!)!
             sfmNum = Float(sfmField.text!)!
             tempRPM = (sfmNum * (12/Float.pi))/toolDiaNum
+            
             storedRPM = Int(tempRPM)
+            
             self.diamParamToPass = toolDiameterField.text
             self.sfmParamToPass = sfmField.text
         }
