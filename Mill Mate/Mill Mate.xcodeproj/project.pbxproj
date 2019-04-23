@@ -11,6 +11,7 @@
 		23311A291F41DB5C00CD0891 /* SFMResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23311A281F41DB5C00CD0891 /* SFMResultsView.swift */; };
 		23311A2B1F41DCD700CD0891 /* IPMCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23311A2A1F41DCD700CD0891 /* IPMCalcView.swift */; };
 		233E603D210769AC00851267 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233E603C210769AC00851267 /* CollectionViewController.swift */; };
+		234D591B2258D38B00BD9D9C /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234D591A2258D38B00BD9D9C /* Tools.swift */; };
 		235374691F460F4500F20253 /* IPRCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235374681F460F4500F20253 /* IPRCalcView.swift */; };
 		2353746B1F46103300F20253 /* IPRResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2353746A1F46103300F20253 /* IPRResultsView.swift */; };
 		237443F11F4F71A200196AB9 /* ToolsSaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237443F01F4F71A200196AB9 /* ToolsSaveView.swift */; };
@@ -24,7 +25,6 @@
 		23B9449C1F3494E400B9C191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23B9449B1F3494E400B9C191 /* Assets.xcassets */; };
 		23B9449F1F3494E400B9C191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B9449D1F3494E400B9C191 /* LaunchScreen.storyboard */; };
 		23CAC84C1F52EEE7008974CE /* ToolsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CAC84B1F52EEE7008974CE /* ToolsTableView.swift */; };
-		23CAC8541F5C5159008974CE /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CAC8531F5C5159008974CE /* Tool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +32,7 @@
 		23311A281F41DB5C00CD0891 /* SFMResultsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFMResultsView.swift; sourceTree = "<group>"; };
 		23311A2A1F41DCD700CD0891 /* IPMCalcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPMCalcView.swift; sourceTree = "<group>"; };
 		233E603C210769AC00851267 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		234D591A2258D38B00BD9D9C /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		235374681F460F4500F20253 /* IPRCalcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPRCalcView.swift; sourceTree = "<group>"; };
 		2353746A1F46103300F20253 /* IPRResultsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPRResultsView.swift; sourceTree = "<group>"; };
 		237443F01F4F71A200196AB9 /* ToolsSaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsSaveView.swift; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		23B9449E1F3494E400B9C191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23B944A01F3494E400B9C191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23CAC84B1F52EEE7008974CE /* ToolsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsTableView.swift; sourceTree = "<group>"; };
-		23CAC8531F5C5159008974CE /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tool.swift; path = ../Tool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 		23B944931F3494E400B9C191 /* Mill Mate */ = {
 			isa = PBXGroup;
 			children = (
-				23CAC8531F5C5159008974CE /* Tool.swift */,
+				234D591A2258D38B00BD9D9C /* Tools.swift */,
 				23B944941F3494E400B9C191 /* AppDelegate.swift */,
 				23B63D7D1F3A7DF90080EF44 /* SFMCalcView.swift */,
 				23311A281F41DB5C00CD0891 /* SFMResultsView.swift */,
@@ -189,8 +189,8 @@
 				23774E991F437B05009D0163 /* IPMResultsView.swift in Sources */,
 				233E603D210769AC00851267 /* CollectionViewController.swift in Sources */,
 				23774E971F4322C9009D0163 /* RPMResultsView.swift in Sources */,
+				234D591B2258D38B00BD9D9C /* Tools.swift in Sources */,
 				23B057441F77D91A001190AD /* detailToolsTableView.swift in Sources */,
-				23CAC8541F5C5159008974CE /* Tool.swift in Sources */,
 				237443F11F4F71A200196AB9 /* ToolsSaveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

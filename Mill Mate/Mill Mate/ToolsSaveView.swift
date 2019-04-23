@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import os.log
 
 var savedToolArrayGlobal: [[String:String]] = []
 var toolManufacturerGlobal = [String]()
@@ -16,7 +17,9 @@ var toolPartNumberGlobal = [String]()
 
 class ToolsSaveView: UIViewController {
     
-    var savedTools: [Tool] = []
+    //var savedTools: [Tool] = []
+    var tools = [Tools]()
+    var tool: Tools?
     
     
     @IBOutlet weak var manufacturerField: UITextField!
@@ -43,9 +46,17 @@ class ToolsSaveView: UIViewController {
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         
-        self.gatherToolData()
+        
+        if let savedTools = loadTools()
+        {
+            tools += savedTools
+        }
+        //self.gatherToolData()
+        
+        self.saveTools()
         
         self.clearTextField()
+        
     }
     
     
@@ -79,6 +90,44 @@ class ToolsSaveView: UIViewController {
         print("\(toolManufacturerGlobal.count)")
         
         toolPartNumberGlobal.append(String(describing: tempTool.value(forKey: partNumberKey)!))
+    }
+    
+    private func addTool()
+    {
+        //add a new tool
+        let newIndexPath = IndexPath(row: tools.count, section:0)
+        
+        let manufacturer = manufacturerField.text ?? ""
+        let partNumber = partNumberField.text ?? ""
+        
+        tool = Tools(manufacturer: manufacturer, partNumber: partNumber)
+        
+        tools.append(tool!)
+        
+        //tableView
+    }
+    
+    private func saveTools()
+    {
+        
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(tools, toFile: Tools.ArchiveURL.path)
+        
+        if isSuccessfulSave
+        {
+            os_log("Tool successully saved.", log: OSLog.default, type: .debug)
+        }else{
+            
+            os_log("Failed to save tool...", log: OSLog.default, type: .error)
+            
+        }
+        
+    }
+    
+    private func loadTools() -> [Tools]?
+    {
+        
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Tools.ArchiveURL.path) as? [Tools]
+        
     }
     
 }
