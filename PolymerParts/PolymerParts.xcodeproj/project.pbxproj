@@ -14,7 +14,7 @@
 		23474AFD1B002F7B0029A04C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23474AFC1B002F7B0029A04C /* Images.xcassets */; };
 		23474B001B002F7B0029A04C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23474AFE1B002F7B0029A04C /* Main.storyboard */; };
 		23474B0C1B002F7B0029A04C /* PolymerPartsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23474B0B1B002F7B0029A04C /* PolymerPartsTests.m */; };
-		23474B161B0037200029A04C /* LayoutList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23474B151B0037200029A04C /* LayoutList.plist */; };
+		23E5240222CF99CF0062E9B2 /* LayoutList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23E5240122CF99CF0062E9B2 /* LayoutList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 		23474B051B002F7B0029A04C /* PolymerPartsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolymerPartsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23474B0A1B002F7B0029A04C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23474B0B1B002F7B0029A04C /* PolymerPartsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolymerPartsTests.m; sourceTree = "<group>"; };
-		23474B151B0037200029A04C /* LayoutList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = LayoutList.plist; sourceTree = "<group>"; };
+		23E5240122CF99CF0062E9B2 /* LayoutList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LayoutList.plist; path = ../../LayoutList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 			children = (
 				23474AF31B002F7B0029A04C /* Info.plist */,
 				23474AF71B002F7B0029A04C /* main.m */,
-				23474B151B0037200029A04C /* LayoutList.plist */,
+				23E5240122CF99CF0062E9B2 /* LayoutList.plist */,
 				230A36B01B13F9EA00E3676E /* Localizable.strings */,
 			);
 			name = "Supporting Files";
@@ -204,9 +204,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E5240222CF99CF0062E9B2 /* LayoutList.plist in Resources */,
 				230A36B11B13F9EA00E3676E /* Localizable.strings in Resources */,
 				23474AFD1B002F7B0029A04C /* Images.xcassets in Resources */,
-				23474B161B0037200029A04C /* LayoutList.plist in Resources */,
 				23474B001B002F7B0029A04C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
