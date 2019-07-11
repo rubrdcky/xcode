@@ -92,7 +92,7 @@
     
     return weekday;
 }
-
+//I should convert this to a switch
 - (IBAction)heartButton:(id)sender {
     
     if ([self getDate] == 1){
@@ -108,6 +108,15 @@
         [alert addButtonWithTitle:@"I love You Too"];
         [alert setMessageText:@"I hope your Monday goes swimmingly! \n I Love You!!"];
         [alert runModal];
+        
+    }else if ([self getDate] == 5){
+        
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle:@"Cancel"];
+        [alert addButtonWithTitle:@"I love You Too"];
+        [alert setMessageText:@"Happy Thursday! Hope its a good one! /n Payday ¯\\_(ツ)_/¯"];
+        [alert runModal];
+        
         
     }else{
     
