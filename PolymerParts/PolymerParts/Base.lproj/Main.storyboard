@@ -725,11 +725,11 @@
                                         </tableView>
                                     </subviews>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="r58-5I-ClB">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="r58-5I-ClB">
                                     <rect key="frame" x="1" y="250" width="366" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="gBZ-bb-HaC">
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="gBZ-bb-HaC">
                                     <rect key="frame" x="-15" y="23" width="16" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -829,11 +829,11 @@
                                         </tableView>
                                     </subviews>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="eXb-XQ-K2a">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="eXb-XQ-K2a">
                                     <rect key="frame" x="1" y="250" width="215" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="JF5-Pe-xzn">
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="JF5-Pe-xzn">
                                     <rect key="frame" x="-15" y="23" width="16" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -843,18 +843,21 @@
                                 </tableHeaderView>
                             </scrollView>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XsZ-t6-WX5">
-                                <rect key="frame" x="476" y="5" width="77" height="25"/>
-                                <popUpButtonCell key="cell" type="push" title="Item 2" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="87z-Pc-NwQ" id="Hed-7b-j8O">
+                                <rect key="frame" x="465" y="5" width="88" height="25"/>
+                                <popUpButtonCell key="cell" type="push" title="Polymer" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Mfm-kg-rZ0" id="Hed-7b-j8O">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="VNa-FK-oZh">
                                         <items>
-                                            <menuItem title="Item 1" id="Mfm-kg-rZ0"/>
-                                            <menuItem title="Item 2" state="on" id="87z-Pc-NwQ"/>
+                                            <menuItem title="Polymer" state="on" id="Mfm-kg-rZ0"/>
+                                            <menuItem title="Rustic" id="87z-Pc-NwQ"/>
                                             <menuItem title="Item 3" id="6Hr-GY-YI0"/>
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="polyTypeButton:" target="XfG-lQ-9wD" id="ysI-az-jFm"/>
+                                </connections>
                             </popUpButton>
                         </subviews>
                         <constraints>

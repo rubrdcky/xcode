@@ -24,6 +24,8 @@ NSDictionary *currentPart;
 
 -(NSArray *)sortDesc;
 - (IBAction)heartButton:(id)sender;
+- (IBAction)polyTypeButton:(id)sender;
+
 
 
 @end
