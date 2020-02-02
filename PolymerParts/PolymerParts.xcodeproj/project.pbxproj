@@ -166,7 +166,7 @@
 		23474AE71B002F7B0029A04C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Jacob Warren";
 				TargetAttributes = {
 					23474AEE1B002F7B0029A04C = {
@@ -372,6 +372,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B69K859836;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = PolymerParts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
@@ -389,6 +390,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B69K859836;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = PolymerParts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
