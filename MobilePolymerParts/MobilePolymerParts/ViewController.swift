@@ -28,6 +28,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             let thirdLayout = detailPolymer.thirdLayout
             let fourthPart = detailPolymer.fourthPart
             let fourthLayout = detailPolymer.fourthLayout
+            let fifthPart = detailPolymer.fifthPart
+            let fifthLayout = detailPolymer.fifthLayout
             
             print("Part number from detail polymer is \(partNumber)")
             print("Layout from detail polymer is \(layout)")
@@ -41,6 +43,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             thirdLayoutToPass = thirdLayout
             fourthPartToPass = fourthPart
             fourthLayoutToPass = fourthLayout
+            fifthPartToPass = fifthPart
+            fifthLayoutToPass = fifthLayout
             
             
             performSegue(withIdentifier: detailSequeIdentifier, sender: self)
