@@ -28,6 +28,8 @@ class PolymerDetail: UIViewController, UITableViewDelegate, UITableViewDataSourc
     var thirdLayoutPassed:String!
     var fourthPartPassed:String!
     var fourthLayoutPassed:String!
+    var fifthPartPassed:String!
+    var fifthLayoutPassed:String!
     
     
     
