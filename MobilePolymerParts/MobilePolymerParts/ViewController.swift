@@ -64,6 +64,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             let thirdLayout = detailPolymer.thirdLayout
             let fourthPart = detailPolymer.fourthPart
             let fourthLayout = detailPolymer.fourthLayout
+            let fifthPart = detailPolymer.fifthPart
+            let firthLayout = detailPolymer.fifthLayout
         
             print("Part number from detail polymer is \(partNumber)")
             print("Layout from detail polymer is \(layout)")
