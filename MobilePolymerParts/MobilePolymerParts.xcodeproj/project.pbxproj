@@ -26,7 +26,7 @@
 		2389C35E1E8BBE6100C7A5AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2389C3601E8BBE6100C7A5AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2389C3661E8BBFB100C7A5AD /* PartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartModel.swift; sourceTree = "<group>"; };
-		2389C3681E8BC2B600C7A5AD /* LayoutList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LayoutList.plist; sourceTree = "<group>"; };
+		2389C3681E8BC2B600C7A5AD /* LayoutList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LayoutList.plist; path = ../../LayoutList.plist; sourceTree = "<group>"; };
 		23C50A041E8FCF2F00A13BF4 /* PolymerDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolymerDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
