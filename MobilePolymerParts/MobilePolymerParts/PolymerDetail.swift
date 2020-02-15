@@ -17,7 +17,7 @@ class PolymerDetail: UIViewController, UITableViewDelegate, UITableViewDataSourc
     let cellIdentifier = "Polymer Cell"
     var detail = [String]()
     var detailSecond = [String]()
-    let category = ["WORKCENTER", "COLLECTION","PART NUMBER", "LAYOUT", "SECOND PART", "SECOND LAYOUT", "THIRD PART", "THIRD LAYOUT", "FOURTH PART", "FOURTH LAYOUT"]
+    let category = ["WORKCENTER", "COLLECTION","PART NUMBER", "LAYOUT", "SECOND PART", "SECOND LAYOUT", "THIRD PART", "THIRD LAYOUT", "FOURTH PART", "FOURTH LAYOUT", "FIFTH PART", "FIFTH LAYOUT", "SIXTH PART", "SIXTH LAYOUT"]
     var partNumberPassed:String!
     var layoutPassed:String!
     var workcenterPassed:String!
@@ -30,6 +30,8 @@ class PolymerDetail: UIViewController, UITableViewDelegate, UITableViewDataSourc
     var fourthLayoutPassed:String!
     var fifthPartPassed:String!
     var fifthLayoutPassed:String!
+    var sixthPartPassed:String!
+    var sixthLayoutPassed:String!
     
     
     
@@ -46,9 +48,16 @@ class PolymerDetail: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }else if (fourthPartPassed == nil) {
             
             detailSecond = [workcenterPassed, collectionPassed,partNumberPassed, layoutPassed, secondPartPassed, secondLayoutPassed, thirdPartPassed, thirdLayoutPassed]
-        }else{
+        }else if (fifthPartPassed == nil){
             
             detailSecond = [workcenterPassed, collectionPassed,partNumberPassed, layoutPassed, secondPartPassed, secondLayoutPassed, thirdPartPassed, thirdLayoutPassed, fourthPartPassed, fourthLayoutPassed]
+        }else if (sixthPartPassed == nil){
+            
+            detailSecond = [workcenterPassed, collectionPassed,partNumberPassed, layoutPassed, secondPartPassed, secondLayoutPassed, thirdPartPassed, thirdLayoutPassed, fourthPartPassed, fourthLayoutPassed, fifthPartPassed, fifthLayoutPassed]
+            
+        }else{
+            
+            detailSecond = [workcenterPassed, collectionPassed,partNumberPassed, layoutPassed, secondPartPassed, secondLayoutPassed, thirdPartPassed, thirdLayoutPassed, fourthPartPassed, fourthLayoutPassed, fifthPartPassed, fifthLayoutPassed, sixthPartPassed, sixthLayoutPassed]
             
         }
         

@@ -30,6 +30,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             let fourthLayout = detailPolymer.fourthLayout
             let fifthPart = detailPolymer.fifthPart
             let fifthLayout = detailPolymer.fifthLayout
+            let sixthPart = detailPolymer.sixthPart
+            let sixthLayout = detailPolymer.sixthLayout
             
             print("Part number from detail polymer is \(partNumber)")
             print("Layout from detail polymer is \(layout)")
@@ -45,6 +47,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             fourthLayoutToPass = fourthLayout
             fifthPartToPass = fifthPart
             fifthLayoutToPass = fifthLayout
+            sixthPartToPass = sixthPart
+            sixthLayoutToPass = sixthLayout
             
             
             performSegue(withIdentifier: detailSequeIdentifier, sender: self)
@@ -65,7 +69,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             let fourthPart = detailPolymer.fourthPart
             let fourthLayout = detailPolymer.fourthLayout
             let fifthPart = detailPolymer.fifthPart
-            let firthLayout = detailPolymer.fifthLayout
+            let fifthLayout = detailPolymer.fifthLayout
+            let sixthPart = detailPolymer.sixthPart
+            let sixthLayout = detailPolymer.sixthLayout
         
             print("Part number from detail polymer is \(partNumber)")
             print("Layout from detail polymer is \(layout)")
@@ -79,6 +85,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
             thirdLayoutToPass = thirdLayout
             fourthPartToPass = fourthPart
             fourthLayoutToPass = fourthLayout
+            fifthPartToPass = fifthPart
+            fifthLayoutToPass = fifthLayout
+            sixthPartToPass = sixthPart
+            sixthLayoutToPass = sixthLayout
 
             performSegue(withIdentifier: detailSequeIdentifier, sender: self)
         }
@@ -108,6 +118,10 @@ class ViewController: UIViewController {
     var thirdLayoutToPass:String!
     var fourthPartToPass:String!
     var fourthLayoutToPass: String!
+    var fifthPartToPass: String!
+    var fifthLayoutToPass: String!
+    var sixthPartToPass: String!
+    var sixthLayoutToPass: String!
     let detailSequeIdentifier = "detailSegue"
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -199,6 +213,10 @@ class ViewController: UIViewController {
             viewController.thirdLayoutPassed = thirdLayoutToPass
             viewController.fourthPartPassed = fourthPartToPass
             viewController.fourthLayoutPassed = fourthLayoutToPass
+            viewController.fifthPartPassed = fifthPartToPass
+            viewController.fifthLayoutPassed = fifthLayoutToPass
+            viewController.sixthPartPassed = sixthPartToPass
+            viewController.sixthLayoutPassed = sixthLayoutToPass
             
             
             let backItem = UIBarButtonItem()
