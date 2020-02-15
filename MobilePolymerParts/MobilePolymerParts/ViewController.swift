@@ -148,7 +148,6 @@ class ViewController: UIViewController {
         
         //SearchController Stuff
         searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
     }
