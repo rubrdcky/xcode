@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //if self.polyTypeButton.sele
+    
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *path = [bundle pathForResource:@"LayoutList" ofType:@"plist"];
     NSArray *listFromFile = [NSMutableArray arrayWithContentsOfFile:path];

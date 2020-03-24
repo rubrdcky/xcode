@@ -15,7 +15,8 @@
 IBOutlet NSTableView *tableView;
 IBOutlet NSDictionaryController *dictController;
 IBOutlet NSArrayController *partList;
-NSDictionary *currentPart;
+IBOutlet NSPopUpButton *polyTypeButton;
+    NSDictionary *currentPart;
 }
 
 
