@@ -4,6 +4,294 @@
 <array>
 	<dict>
 		<key>collection</key>
+		<string>Avant</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>partNumber</key>
+		<string>89L0-2</string>
+		<key>layout</key>
+		<string>9</string>
+		<key>secondPart</key>
+		<string>89L0-1</string>
+		<key>secondLayout</key>
+		<string>9</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Avant</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>partNumber</key>
+		<string>89L0-1</string>
+		<key>layout</key>
+		<string>9</string>
+		<key>secondPart</key>
+		<string>89L0-2</string>
+		<key>secondLayout</key>
+		<string>9</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Tables</string>
+		<key>workcenter</key>
+		<string>48007</string>
+		<key>partNumber</key>
+		<string>18N0-P</string>
+		<key>layout</key>
+		<string>18</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Rustic Tables</string>
+		<key>workcenter</key>
+		<string>48009</string>
+		<key>partNumber</key>
+		<string>53C0-R</string>
+		<key>layout</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Tables</string>
+		<key>workcenter</key>
+		<string>48007</string>
+		<key>partNumber</key>
+		<string>5C30-P</string>
+		<key>layout</key>
+		<string>6</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Rustic Fire Tables</string>
+		<key>workcenter</key>
+		<string>48009</string>
+		<key>partNumber</key>
+		<string>6F30-R</string>
+		<key>layout</key>
+		<string>1</string>
+		<key>secondPart</key>
+		<string>6F30-S-R</string>
+		<key>secondLayout</key>
+		<string>2</string>
+		<key>thirdPart</key>
+		<string>6F30-C-R</string>
+		<key>thirdLayout</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Wexler Swivel Rocker</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>fourthLayout</key>
+		<string>16</string>
+		<key>fourthPart</key>
+		<string>6W60-4LR</string>
+		<key>partNumber</key>
+		<string>6W60-7LR (6W60)</string>
+		<key>layout</key>
+		<string>16</string>
+		<key>secondPart</key>
+		<string>6W60-6LR</string>
+		<key>secondLayout</key>
+		<string>16</string>
+		<key>thirdPart</key>
+		<string>6W60-5LR</string>
+		<key>thirdLayout</key>
+		<string>16</string>
+	</dict>
+	<dict>
+		<key>sixthLayout</key>
+		<string>15</string>
+		<key>sixthPart</key>
+		<string>6W30-6R</string>
+		<key>fifthLayout</key>
+		<string>15</string>
+		<key>fifthPart</key>
+		<string>6W30-6L</string>
+		<key>collection</key>
+		<string>Wexler</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>fourthLayout</key>
+		<string>15</string>
+		<key>fourthPart</key>
+		<string>6W30-5R</string>
+		<key>partNumber</key>
+		<string>6W30-4L (6W30)</string>
+		<key>layout</key>
+		<string>15</string>
+		<key>secondPart</key>
+		<string>6W30-4R</string>
+		<key>secondLayout</key>
+		<string>15</string>
+		<key>thirdPart</key>
+		<string>6W30-5L</string>
+		<key>thirdLayout</key>
+		<string>15</string>
+	</dict>
+	<dict>
+		<key>sixthPart</key>
+		<string>2H70-9L</string>
+		<key>sixthLayout</key>
+		<string>8</string>
+		<key>fifthPart</key>
+		<string>2H70-9R</string>
+		<key>fifthLayout</key>
+		<string>8</string>
+		<key>secondLayout</key>
+		<string>8</string>
+		<key>secondPart</key>
+		<string>2H80-4L</string>
+		<key>thirdLayout</key>
+		<string>8</string>
+		<key>thirdPart</key>
+		<string>2H80-4R</string>
+		<key>collection</key>
+		<string>Hudson</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>fourthLayout</key>
+		<string>8</string>
+		<key>fourthPart</key>
+		<string>2H80-5L</string>
+		<key>partNumber</key>
+		<string>2H80-5R (2H80)</string>
+		<key>layout</key>
+		<string>8</string>
+	</dict>
+	<dict>
+		<key>secondLayout</key>
+		<string>12</string>
+		<key>secondPart</key>
+		<string>2H80-3L</string>
+		<key>thirdLayout</key>
+		<string>12</string>
+		<key>thirdPart</key>
+		<string>2H80-3R</string>
+		<key>collection</key>
+		<string>Hudson</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>fourthLayout</key>
+		<string>12</string>
+		<key>fourthPart</key>
+		<string>2H80-6</string>
+		<key>partNumber</key>
+		<string>2H80-7 (2H80)</string>
+		<key>layout</key>
+		<string>12</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Hudson</string>
+		<key>workcenter</key>
+		<string>48009</string>
+		<key>partNumber</key>
+		<string>2H80-2</string>
+		<key>layout</key>
+		<string>45</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Hudson</string>
+		<key>workcenter</key>
+		<string>48009</string>
+		<key>partNumber</key>
+		<string>2H80-1</string>
+		<key>layout</key>
+		<string>45</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Newport</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>partNumber</key>
+		<string>1N30-3R</string>
+		<key>layout</key>
+		<string>23?</string>
+		<key>secondPart</key>
+		<string>1N30-3L</string>
+		<key>secondLayout</key>
+		<string>23?</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Bazza</string>
+		<key>workcenter</key>
+		<string>48009</string>
+		<key>partNumber</key>
+		<string>8Z60-5-R</string>
+		<key>layout</key>
+		<string>12</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Bazza</string>
+		<key>workcenter</key>
+		<string>48009</string>
+		<key>partNumber</key>
+		<string>8Z60-1-R</string>
+		<key>layout</key>
+		<string>12</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Bazza</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>partNumber</key>
+		<string>8ZB0-1</string>
+		<key>layout</key>
+		<string>19</string>
+		<key>secondPart</key>
+		<string>8ZB0-2</string>
+		<key>secondLayout</key>
+		<string>19</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Wexler</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>partNumber</key>
+		<string>5W30-9</string>
+		<key>layout</key>
+		<string>51</string>
+	</dict>
+	<dict>
+		<key>sixthLayout</key>
+		<string>15</string>
+		<key>sixthPart</key>
+		<string>5W30-6R</string>
+		<key>fifthLayout</key>
+		<string>15</string>
+		<key>fifthPart</key>
+		<string>5W30-6L</string>
+		<key>collection</key>
+		<string>Wexler</string>
+		<key>workcenter</key>
+		<string>48008</string>
+		<key>fourthLayout</key>
+		<string>15</string>
+		<key>fourthPart</key>
+		<string>5W30-5R</string>
+		<key>partNumber</key>
+		<string>5W30-4L (5W30)</string>
+		<key>layout</key>
+		<string>15</string>
+		<key>secondPart</key>
+		<string>5W30-4R</string>
+		<key>secondLayout</key>
+		<string>15</string>
+		<key>thirdPart</key>
+		<string>5W30-5L</string>
+		<key>thirdLayout</key>
+		<string>15</string>
+	</dict>
+	<dict>
+		<key>collection</key>
 		<string>Tables</string>
 		<key>workcenter</key>
 		<string>48007</string>
@@ -184,11 +472,11 @@
 		<key>workcenter</key>
 		<string>48009</string>
 		<key>partNumber</key>
-		<string>1N30-3R</string>
+		<string>1N30-3R-R</string>
 		<key>layout</key>
 		<string>25</string>
 		<key>secondPart</key>
-		<string>1N30-3L</string>
+		<string>1N30-3L-R</string>
 		<key>secondLayout</key>
 		<string>25</string>
 	</dict>
@@ -198,11 +486,11 @@
 		<key>workcenter</key>
 		<string>48009</string>
 		<key>partNumber</key>
-		<string>1N30-3L</string>
+		<string>1N30-3L-R</string>
 		<key>layout</key>
 		<string>25</string>
 		<key>secondPart</key>
-		<string>1N30-3R</string>
+		<string>1N30-3R-R</string>
 		<key>secondLayout</key>
 		<string>25</string>
 	</dict>
