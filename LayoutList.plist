@@ -6022,5 +6022,47 @@
 		<key>layout</key>
 		<string>56</string>
 	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Rustic Fire Tables</string>
+		<key>workcenter</key>
+		<string>48009</string>
+		<key>partNumber</key>
+		<string>4F71-R</string>
+		<key>layout</key>
+		<string>4</string>
+		<key>secondPart</key>
+		<string>4F71-S-R</string>
+		<key>secondLayout</key>
+		<string>8</string>
+		<key>thirdPart</key>
+		<string>4F71-C-R</string>
+		<key>thirdLayout</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Rustic Tables</string>
+		<key>workcenter</key>
+		<string>48009</string>
+		<key>partNumber</key>
+		<string>5151-R</string>
+		<key>layout</key>
+		<string>4</string>
+		<key>secondPart</key>
+		<string>5151-1-R</string>
+		<key>secondLayout</key>
+		<string>8</string>
+	</dict>
+	<dict>
+		<key>collection</key>
+		<string>Rustic Tables</string>
+		<key>workcenter</key>
+		<string>48009</string>
+		<key>partNumber</key>
+		<string>51B0-R</string>
+		<key>layout</key>
+		<string>12</string>
+	</dict>
 </array>
 </plist>
